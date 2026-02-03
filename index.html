@@ -1,0 +1,3071 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NEUMATIC - Professionelle Dienstleistungen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Playfair+Display:wght@700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* Keyframes */
+        @keyframes floatParticle {
+
+            0%,
+            100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: translateY(-100px) translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes rotateShape {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulseShape {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.05;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.1;
+            }
+        }
+
+        @keyframes pulseDot {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.3);
+            }
+        }
+
+        @keyframes rotateRing {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes charReveal {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes glow {
+            0%,
+            100% {
+                text-shadow: 0 0 8px rgba(212, 175, 55, 0.6), 0 0 12px rgba(212, 175, 55, 0.4);
+            }
+
+            50% {
+                text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        @keyframes slideInNavbar {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInModal {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Scroll Animations */
+        .premium-testimonials {
+            scroll-margin-top: 100px;
+        }
+
+        .premium-testimonials.animated .testimonial-card {
+            opacity: 1 !important;
+            transform: translateY(0) rotateX(0) !important;
+        }
+
+        .premium-testimonials.animated .fade-in-text {
+            animation: fadeUp 0.8s ease-out 0.5s forwards;
+        }
+
+        .premium-testimonials.animated .char {
+            animation: charReveal 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .premium-testimonials.animated .stats-bar {
+            animation: fadeUp 0.8s ease-out 1s forwards;
+        }
+
+        .premium-testimonials.animated .floating-cta {
+            animation: fadeUp 0.8s ease-out 1.2s forwards;
+        }
+
+        .premium-testimonials.animated .testimonial-card.animated .quote-icon {
+            animation: scaleIn 0.5s ease-out 0.3s forwards;
+        }
+
+        .premium-testimonials.animated .testimonial-card.animated .client-info h3,
+        .premium-testimonials.animated .testimonial-card.animated .client-info>div {
+            animation: fadeUp 0.5s ease-out 0.5s forwards;
+        }
+
+        .premium-testimonials.animated .testimonial-card.animated .rating-stars {
+            animation: fadeUp 0.5s ease-out 0.6s forwards;
+        }
+
+        .premium-testimonials.animated .testimonial-card.animated .testimonial-text p {
+            animation: fadeUp 0.5s ease-out 0.7s forwards;
+        }
+
+        .premium-testimonials.animated .testimonial-card.animated .project-highlight {
+            animation: fadeUp 0.5s ease-out 0.8s forwards;
+        }
+
+        .premium-testimonials.animated .stats-bar.animated .stat-number {
+            animation: fadeUp 0.5s ease-out forwards;
+        }
+
+        /* Hover Effects */
+        .testimonial-card:hover {
+            transform: translateY(-10px) !important;
+            border-color: rgba(212, 175, 55, 0.4) !important;
+        }
+
+        .testimonial-card:hover .card-hover-effect {
+            opacity: 1;
+            animation: shimmer 2s infinite;
+        }
+
+        .testimonial-card:hover .card-glow {
+            opacity: 0.5;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .cta-button:hover {
+            background: rgba(212, 175, 55, 0.2) !important;
+            border-color: rgba(212, 175, 55, 0.5) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            h2.split-text {
+                font-size: 2.5rem !important;
+            }
+
+            .testimonial-card {
+                padding: 30px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2.split-text {
+                font-size: 2rem !important;
+            }
+
+            .stats-bar {
+                padding: 20px !important;
+            }
+
+            .stat-number {
+                font-size: 2rem !important;
+            }
+        }
+
+        /* CSS Variables */
+        :root {
+            --primary: #C4B59D;
+            --primary-dark: #a8987d;
+            --background-light: #f8f7f6;
+            --background-dark: #0A0A0A;
+            --text-white: #ffffff;
+            --text-gray: #A9A9A9;
+            --card-bg: #0A0A0A;
+            --border-gray: rgba(169, 169, 169, 0.2);
+            --success-green: #25D366;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --gold: #D4AF37;
+            --gold-light: #E6C158;
+            --gold-dark: #B8961E;
+        }
+
+        /* Import Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap');
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Roboto', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            opacity: 0;
+            animation: fadeInBody 0.8s ease-out forwards;
+        }
+
+        /* إصلاح مشكلة الـscroll عند فتح المودال */
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        /* Animation for body */
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ========================================= */
+        /* NAVBAR PROFESSIONAL - UPDATED WITH GOLD LOGO + CIRCULAR IMAGE */
+        /* ========================================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 1000;
+            width: 100%;
+            animation: slideInNavbar 0.8s ease-out forwards;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.7rem 2rem;
+            background-color: rgba(10, 10, 10, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 1px;
+            animation: glow 2s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover .logo-text {
+            color: var(--gold-light);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+        }
+
+        .logo-icon {
+            color: var(--gold);
+            font-size: 1.8rem;
+            animation: logoPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes logoPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Profile Image on Right */
+        .profile-image-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+
+        .profile-image {
+            width: 70px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(212, 163, 0, 0.945);
+        }
+
+        /* Navigation */
+        .nav-desktop {
+            display: none;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-desktop {
+                display: flex;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: width 0.4s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            color: var(--text-white);
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 1.5rem;
+            z-index: 999;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-nav-link {
+            font-family: 'Montserrat', sans-serif;
+            padding: 1rem;
+            color: var(--text-white);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-10px);
+            animation: slideInRight 0.3s ease-out forwards;
+            border-left: 3px solid transparent;
+        }
+
+        .mobile-nav-link:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            border-left-color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .mobile-nav-link:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .mobile-nav-link:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .mobile-nav-link:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .mobile-nav-link:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        /* Layout Container */
+        .layout-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        /* Hero Slider */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 100vh;
+            max-height: 100vh;
+            overflow: hidden;
+            margin: 0;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+            /* إزالة الظلال */
+            box-shadow: none !important;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-track {
+            display: flex;
+            width: 400%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide-card {
+            flex: 0 0 25%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            /* إزالة الظلال */
+            box-shadow: none !important;
+        }
+
+        /* تحسين الطبقة الشفافة للنص */
+        .slide-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom,
+                    rgba(10, 10, 10, 0.1) 0%,
+                    rgba(10, 10, 10, 0.3) 30%,
+                    rgba(10, 10, 10, 0.7) 70%,
+                    rgba(10, 10, 10, 0.9) 100%);
+            z-index: 1;
+        }
+
+        .slide-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 2rem;
+            z-index: 2;
+            max-width: 48rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideInfoIn 1s ease-out 1s forwards;
+        }
+
+        @keyframes slideInfoIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .slide-info {
+                padding: 4rem;
+            }
+        }
+
+        .slide-title {
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-white);
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .slide-title {
+                font-size: 3.75rem;
+            }
+        }
+
+        .slide-desc {
+            font-family: 'Lato', 'Open Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            max-width: 36rem;
+        }
+
+        @media (min-width: 768px) {
+            .slide-desc {
+                font-size: 1.125rem;
+            }
+        }
+
+        .slide-info button {
+            min-width: 200px;
+            height: 3rem;
+            padding: 0 1.5rem;
+            background-color: var(--gold);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            .slide-info button {
+                height: 3rem;
+                padding: 0 1.25rem;
+                font-size: 1rem;
+            }
+        }
+
+        .slide-info button:hover {
+            background-color: var(--gold-light);
+            transform: translateY(-3px);
+            /* ظلال خفيفة فقط */
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .slide-info button:active {
+            transform: translateY(0);
+        }
+
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            z-index: 3;
+        }
+
+        .slide-btn {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInButtons 0.5s ease-out 1.5s forwards;
+        }
+
+        @keyframes fadeInButtons {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .slide-btn:hover {
+            background-color: var(--text-white);
+            transform: scale(1.1);
+        }
+
+        @media (min-width: 768px) {
+            .slider-buttons {
+                padding: 0 2rem;
+            }
+
+            .slide-btn {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        /* Content Container */
+        .layout-content-container {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .layout-content-container {
+                padding: 0 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .layout-content-container {
+                padding: 0 5rem;
+            }
+        }
+
+        /* ========================================= */
+        /* DIENSTLEISTUNGEN SECTION - UPDATED WITH NEW SERVICES */
+        /* ========================================= */
+        .features-section {
+            padding: 4rem 0;
+        }
+
+        .features-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .features-header.animated {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-white);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-gray);
+            max-width: 42rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0;
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .service-card.animated {
+            animation: cardSlideUp 0.6s ease-out forwards;
+        }
+
+        .service-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .service-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .service-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .service-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .service-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes cardSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+
+        .service-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(10, 10, 10, 0.9));
+            color: var(--gold);
+            font-size: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(10, 10, 10, 0.8));
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .service-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-white);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-description {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .service-features li {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .service-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .service-action {
+            padding: 1.5rem;
+            padding-top: 0;
+            margin-top: auto;
+        }
+
+        .service-btn {
+            width: 100%;
+            padding: 0.8rem 1.5rem;
+            background-color: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .service-btn:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* About Section */
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .about-text {
+            flex: 1 1 500px;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: var(--text-white);
+        }
+
+        .ceo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .ceo img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-right: 25px;
+            object-fit: contain;
+            border: 3px solid var(--gold);
+        }
+
+        .ceo-info {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-white);
+        }
+
+        .features {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            flex: 1 1 150px;
+            background-color: rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-white);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--gold);
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .cta-button:hover {
+            background-color: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .about-image {
+            flex: 1 1 400px;
+            max-width: 500px;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .about-image img {
+            width: 250px;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 900px) {
+            .about-section {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .ceo {
+                justify-content: center;
+            }
+        }
+
+        /* ========================================= */
+        /* CTA SECTION - UPDATED STYLES */
+        /* ========================================= */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(10, 10, 10, 0.9));
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            margin: 4rem auto;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            max-width: 1000px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .cta-section.animated {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1600490812513-1c2c51316165?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .cta-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-white);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .cta-title {
+                font-size: 3rem;
+            }
+        }
+
+        .cta-description {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .cta-buttons {
+                flex-direction: row;
+                gap: 2rem;
+            }
+        }
+
+        .order-now-btn,
+        .whatsapp-btn {
+            min-width: 250px;
+            height: 3.5rem;
+            padding: 0 2rem;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            border: none;
+            text-decoration: none;
+        }
+
+        .order-now-btn {
+            background-color: var(--gold);
+            color: #000;
+        }
+
+        .order-now-btn:hover {
+            background-color: var(--gold-light);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .whatsapp-btn {
+            background-color: var(--success-green);
+            color: var(--text-white);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1DA851;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .order-now-btn i,
+        .whatsapp-btn i {
+            font-size: 1.3rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0A0A0A;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            margin-top: auto;
+            padding: 2rem 1rem 1rem;
+            position: relative;
+            width: 100%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .footer-about {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo-icon {
+            font-size: 1.8rem;
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .footer-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-white);
+            letter-spacing: 0.5px;
+        }
+
+        .footer-about-text {
+            font-family: 'Open Sans', sans-serif;
+            color: #A0A0A0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            max-width: 300px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-title {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-link {
+            font-family: 'Open Sans', sans-serif;
+            color: #B0B0B0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-link:hover {
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .footer-contact p {
+            font-family: 'Open Sans', sans-serif;
+            color: #B0B0B0;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .footer-contact .footer-link {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .footer-contact .footer-link:hover {
+            color: var(--text-white);
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .copyright {
+            font-family: 'Open Sans', sans-serif;
+            color: #808080;
+            font-size: 0.85rem;
+            order: 2;
+        }
+
+        @media (min-width: 640px) {
+            .copyright {
+                order: 1;
+            }
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            order: 1;
+        }
+
+        @media (min-width: 640px) {
+            .social-links {
+                order: 2;
+            }
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #B0B0B0;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-link:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+            background-color: var(--gold-dark);
+            animation: none;
+        }
+
+        .whatsapp-float img {
+            width: 35px;
+            height: 35px;
+            filter: brightness(0) invert(1);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            z-index: 9999;
+            transition: width 0.3s ease;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(196, 181, 157, 0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--gold-dark);
+            transform: translateY(-5px);
+        }
+
+        /* ========================================= */
+        /* CONTACT MODAL - FIXED SCROLL ISSUE */
+        /* ========================================= */
+        .contact-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 9998;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+        }
+
+        .contact-modal.active {
+            display: flex;
+            animation: fadeInModal 0.3s ease-out forwards;
+        }
+
+        .contact-modal-content {
+            background-color: var(--background-dark);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin: 20px auto;
+        }
+
+        .contact-modal-header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .contact-modal-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .close-modal-btn {
+            background: none;
+            border: none;
+            color: var(--text-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal-btn:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .contact-modal-body {
+            padding: 2rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-label i {
+            color: var(--gold);
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            padding: 0.9rem 1rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 8px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            color: var(--text-white);
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23D4AF37' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 16px;
+        }
+
+        .form-submit-btn {
+            padding: 1rem;
+            background-color: var(--gold);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .form-submit-btn:hover {
+            background-color: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .form-submit-btn i {
+            font-size: 1.2rem;
+        }
+
+        /* Form Success Message */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .form-success.active {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        .success-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 1rem;
+        }
+
+        .success-message {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-links {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.3rem;
+            }
+
+            .profile-image {
+                width: 45px;
+                height: 45px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 3rem 1.5rem;
+                margin: 3rem auto;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .contact-modal-content {
+                max-width: 95%;
+                max-height: 95vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+
+            .cta-description {
+                font-size: 1rem;
+            }
+
+            .order-now-btn,
+            .whatsapp-btn {
+                min-width: 100%;
+                font-size: 1rem;
+            }
+        }
+
+        /* ========================================= */
+        /* KUNDENSTIMMEN SECTION - NEW DESIGN */
+        /* ========================================= */
+        .testimonials-section {
+            padding: 4rem 0;
+            background: rgba(10, 10, 10, 0.7);
+            border-radius: 24px;
+            margin: 3rem 0;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .stats-bar {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+
+        .quote-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            opacity: 0.3;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-white);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+        }
+
+        .client-info div {
+            flex: 1;
+        }
+
+        .client-info h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-white);
+            margin-bottom: 0.25rem;
+        }
+
+        .client-service {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-stars {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .floating-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+            border-radius: 16px;
+            border: 1px dashed rgba(212, 175, 55, 0.3);
+        }
+
+        .floating-cta p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        /* ========================================= */
+        /* FAQ SECTION - NEW DESIGN */
+        /* ========================================= */
+        .faq-section {
+            padding: 4rem 0;
+            background: rgba(10, 10, 10, 0.9);
+            border-radius: 24px;
+            margin: 3rem 0;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: rgba(212, 175, 55, 0.03);
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .faq-question h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-white);
+            margin: 0;
+            flex: 1;
+            padding-right: 1rem;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer p {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer li {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .faq-answer li:before {
+            content: "•";
+            color: var(--gold);
+            font-weight: bold;
+            position: absolute;
+            left: -1rem;
+        }
+
+        .faq-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+            border-radius: 16px;
+            border: 1px dashed rgba(212, 175, 55, 0.3);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-cta p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2rem;
+            color: var(--text-white);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-modal-content">
+            <div class="contact-modal-header">
+                <h3 class="contact-modal-title">Anfrage schicken</h3>
+                <button class="close-modal-btn" id="closeModalBtn">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+
+            <div class="contact-modal-body">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label class="form-label" for="name">
+                            <i class="fas fa-user"></i>
+                            Vollständiger Name *
+                        </label>
+                        <input type="text" id="name" name="name" class="form-input" required placeholder="Ihr Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">
+                            <i class="fas fa-envelope"></i>
+                            E-Mail-Adresse *
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input" required
+                            placeholder="ihre@email.de">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="phone">
+                            <i class="fas fa-phone"></i>
+                            Telefonnummer
+                        </label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="+49 1511 53 58 451">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="service">
+                            <i class="fas fa-concierge-bell"></i>
+                            Gewünschte Dienstleistung *
+                        </label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="">Bitte wählen Sie eine Dienstleistung</option>
+                            <option value="Küchenmontage">Küchenmontage</option>
+                            <option value="Umzug">Umzug</option>
+                            <option value="Entrümpelungen">Entrümpelungen</option>
+                            <option value="Klaviertransport">Klaviertransport</option>
+                            <option value="Möbeltransport">Möbeltransport</option>
+                            <option value="Andere">Andere Dienstleistung</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">
+                            <i class="fas fa-comment"></i>
+                            Ihre Nachricht *
+                        </label>
+                        <textarea id="message" name="message" class="form-textarea" required
+                            placeholder="Bitte beschreiben Sie Ihre Anfrage detailliert..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Anfrage senden
+                    </button>
+                </form>
+
+                <!-- Success Message (hidden by default) -->
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="success-title">Vielen Dank für Ihre Anfrage!</h3>
+                    <p class="success-message">
+                        Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.
+                        Für dringende Anfragen rufen Sie uns bitte unter <strong>+49 1511 53 58 451</strong> an.
+                    </p>
+                    <button class="form-submit-btn" id="closeSuccessBtn">
+                        <i class="fas fa-times"></i>
+                        Schließen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="layout-container">
+        <!-- Header / Navigation - Professional Navbar -->
+        <header id="mainHeader">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <span class="material-symbols-outlined logo-icon">diamond</span>
+                    <span class="logo-text">NEUMATIC</span>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav-desktop">
+                <div class="nav-links">
+                    <a class="nav-link" href="Home.html">Startseite</a>
+                    <a class="nav-link" href="#dienstleistungen">Dienstleistungen</a>
+                    <a class="nav-link" href="#faq">FAQ</a>
+                    <a class="nav-link" href="About.html">Über uns</a>
+                    <a class="nav-link" href="Contact.html">Kontakt</a>
+                </div>
+            </nav>
+
+            <!-- Profile Image on Right -->
+            <div class="profile-image-container">
+                <img src="./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg" alt="Geschäftsführer"
+                    class="profile-image">
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-nav">
+                <a class="mobile-nav-link" href="Home.html">Startseite</a>
+                <a class="mobile-nav-link" href="#dienstleistungen">Dienstleistungen</a>
+                <a class="mobile-nav-link" href="#kundenstimmen">Kundenstimmen</a>
+                <a class="mobile-nav-link" href="#faq">FAQ</a>
+                <a class="mobile-nav-link" href="About.html">Über uns</a>
+                <a class="mobile-nav-link" href="Contact.html">Kontakt</a>
+            </div>
+        </div>
+
+        <!-- Hero Slider - FULL SCREEN -->
+        <div class="hero-slider">
+            <div class="hero-track" id="heroTrack">
+                <!-- Slide 1 -->
+                <div class="slide-card"
+                    style="background-image: url('https://images.pexels.com/photos/29455191/pexels-photo-29455191.jpeg');">
+                    <div class="slide-info">
+                        <div class="slide-title">Küchenmontage, Umzug, Möbeltransport</div>
+                        <button id="heroRequestBtn">Anfrage schicken</button>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide-card"
+                    style="background-image: url('https://images.pexels.com/photos/7203788/pexels-photo-7203788.jpeg');">
+                    <div class="slide-info">
+                        <div class="slide-title">Deutsch: Effiziente Entrümpelung von Wohnungen, Kellern und Büros.</div>
+                        <button id="heroRequestBtn2">Anfrage schicken</button>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide-card"
+                    style="background-image: url('https://images.pexels.com/photos/5997050/pexels-photo-5997050.jpeg');">
+                    <div class="slide-info">
+                        <div class="slide-title">Sicherer Klaviertransport – wir bringen Ihr Klavier fachgerecht ans
+                            Ziel.</div>
+                        <button id="heroRequestBtn3">Anfrage schicken</button>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide-card"
+                    style="background-image: url('https://media.istockphoto.com/id/1596035688/photo/unloading-boxes-and-furniture-from-a-pickup-truck-to-a-new-house-with-service-cargo-two-men.jpg?s=1024x1024&w=is&k=20&c=QlAcGukiw-7-_-C8vrii6JtjvJv5fuxQvz6hKHDF_5A=');">
+                    <div class="slide-info">
+                        <div class="slide-title">Professionelle Umzugsdienstleistungen</div>
+                        <button id="heroRequestBtn4">Anfrage schicken</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <!-- Company Text -->
+            <div class="about-text">
+                <h2>Geschäftsführer Suliman Bani Yaseen</h2>
+                <p>Seit über 10 Jahren bieten wir in Deutschland professionelle Dienstleistungen rund um Umzug, Möbel-
+                    und Klaviertransport, Küchenmontage und Entrümpelungen. Unser erfahrenes Team sorgt dafür, dass Ihre
+                    Wünsche zuverlässig und effizient umgesetzt werden.</p>
+
+                <!-- CEO Image -->
+                <div class="ceo">
+                    <img src="./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg" alt="CEO Bild">
+                    <div class="ceo-info">NEUMATIC - Ihr Partner für Umzug & Transport</div>
+                </div>
+
+                <!-- CTA Button -->
+                <button class="cta-button" id="aboutRequestBtn">Anfrage schicken</button>
+            </div>
+
+            <!-- Side Image -->
+            <div class="about-image">
+                <img src="./img/WhatsApp Image 2026-02-02 at 4.19.33 PM.jpeg" alt="Company Team">
+            </div>
+        </section>
+
+        <!-- Content Container -->
+        <div class="layout-content-container">
+            <main>
+                <!-- Dienstleistungen Section -->
+                <section class="features-section" id="dienstleistungen">
+                    <div class="features-header">
+                        <h2 class="section-title">Unsere Dienstleistungen</h2>
+                        <p class="section-description">
+                            Von der Planung bis zur Umsetzung – wir bieten professionelle Umzugs-, Möbel- und
+                            Klaviertransporte, Küchenmontage und Entrümpelungen aus einer Hand.
+                        </p>
+                    </div>
+
+                    <div class="services-grid" id="servicesGrid">
+                        <!-- Service 1: Küchenmontage -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Küchenmontage</h3>
+                                <p class="service-description">
+                                    Professionelle Montage Ihrer neuen Küche durch erfahrene Handwerker. Wir sorgen für
+                                    eine fachgerechte Installation aller Elemente.
+                                </p>
+                                <ul class="service-features">
+                                    <li>Präzise Montage nach Plan</li>
+                                    <li>Anschluss von Elektrogeräten</li>
+                                    <li>Wasseranschlüsse fachgerecht</li>
+                                    <li>Sauberes Arbeiten garantiert</li>
+                                </ul>
+                            </div>
+                            <div class="service-action">
+                                <button class="service-btn" id="serviceRequestBtn1">
+                                    <span>Anfrage</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Service 2: Umzug -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-truck-moving"></i>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Umzug</h3>
+                                <p class="service-description">
+                                    Stressfreier Umzugsservice für Privat- und Geschäftskunden. Wir kümmern uns um alle
+                                    Details Ihres Umzugs.
+                                </p>
+                                <ul class="service-features">
+                                    <li>Komplettservice inkl. Verpackung</li>
+                                    <li>Sorgfältiger Transport</li>
+                                    <li>Auf- und Abbau von Möbeln</li>
+                                    <li>Versicherter Transport</li>
+                                </ul>
+                            </div>
+                            <div class="service-action">
+                                <button class="service-btn" id="serviceRequestBtn2">
+                                    <span>Anfrage</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Service 3: Entrümpelungen -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Entrümpelungen</h3>
+                                <p class="service-description">
+                                    Schnelle und zuverlässige Entrümpelung von Wohnungen, Häusern, Kellern, Dachböden
+                                    und Büros.
+                                </p>
+                                <ul class="service-features">
+                                    <li>Wohnungs- und Hausentrümpelung</li>
+                                    <li>Keller- und Dachbodenräumung</li>
+                                    <li>Büroauflösung</li>
+                                    <li>Fachgerechte Entsorgung</li>
+                                </ul>
+                            </div>
+                            <div class="service-action">
+                                <button class="service-btn" id="serviceRequestBtn3">
+                                    <span>Anfrage</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Service 4: Klaviertransport -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Klaviertransport</h3>
+                                <p class="service-description">
+                                    Fachgerechter Transport Ihres Klaviers oder Flügels. Wir behandeln Ihr Instrument
+                                    mit der nötigen Sorgfalt.
+                                </p>
+                                <ul class="service-features">
+                                    <li>Professionelle Klavierverpackung</li>
+                                    <li>Spezialtransportfahrzeuge</li>
+                                    <li>Treppen- und Engstellentransport</li>
+                                    <li>Stimmstabiler Transport</li>
+                                </ul>
+                            </div>
+                            <div class="service-action">
+                                <button class="service-btn" id="serviceRequestBtn4">
+                                    <span>Anfrage</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Service 5: Möbeltransport -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-couch"></i>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Möbeltransport</h3>
+                                <p class="service-description">
+                                    Sicherem Transport Ihrer Möbel. Ob einzelne Möbelstücke oder komplette Einrichtungen
+                                    – wir transportieren alles sicher.
+                                </p>
+                                <ul class="service-features">
+                                    <li>Möbelverpackung und Schutz</li>
+                                    <li>Transport schwerer Möbel</li>
+                                    <li>Zerlegung und Wiederaufbau</li>
+                                    <li>Termingerechte Auslieferung</li>
+                                </ul>
+                            </div>
+                            <div class="service-action">
+                                <button class="service-btn" id="serviceRequestBtn5">
+                                    <span>Anfrage</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Kundenstimmen Section -->
+                <section class="testimonials-section" id="kundenstimmen">
+                    <div class="features-header">
+                        <h2 class="section-title">Was unsere Kunden sagen</h2>
+                        <p class="section-description">
+                            Vertrauen und Zufriedenheit stehen bei uns an erster Stelle. Lesen Sie, was unsere Kunden
+                            über unsere Arbeit berichten.
+                        </p>
+                    </div>
+
+                    <!-- Recent Testimonials -->
+                    <div class="testimonials-grid">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Hervorragender Service! Die Küchenmontage wurde termingerecht und professionell
+                                    durchgeführt. Sehr kompetentes Team."</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kunde"
+                                    class="client-avatar">
+                                <div>
+                                    <h3>Thomas Schmidt</h3>
+                                    <div class="client-service">Küchenmontage</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Der Klaviertransport war absolut professionell. Mein Flügel kam sicher und ohne
+                                    Beschädigungen an. Vielen Dank!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Kunde"
+                                    class="client-avatar">
+                                <div>
+                                    <h3>Maria Weber</h3>
+                                    <div class="client-service">Klaviertransport</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Stressfreier Umzug dank NEUMATIC. Alles wurde perfekt organisiert. Sehr zuverlässig
+                                    und preiswert!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Kunde"
+                                    class="client-avatar">
+                                <div>
+                                    <h3>Robert Müller</h3>
+                                    <div class="client-service">Umzugsservice</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating CTA -->
+                    <div class="floating-cta">
+                        <p>Teilen Sie auch Ihre Erfahrungen mit uns!</p>
+                        <button class="cta-button" id="testimonialBtn">
+                            <i class="fas fa-comment-alt"></i>
+                            Bewertung schreiben
+                        </button>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="faq-section" id="faq">
+                    <div class="features-header">
+                        <h2 class="section-title">Häufig gestellte Fragen</h2>
+                        <p class="section-description">
+                            Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu unseren
+                            Dienstleistungen.
+                        </p>
+                    </div>
+
+                    <div class="faq-container">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Wie kann ich einen Service bei NEUMATIC anfragen?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sie können uns über mehrere Wege kontaktieren:</p>
+                                <ul>
+                                    <li>Per Telefon: +49 1511 53 58 451</li>
+                                    <li>Per E-Mail: Info@neumaticgmbh.de</li>
+                                    <li>Über das Kontaktformular auf unserer Website</li>
+                                </ul>
+                                <p>Wir melden uns innerhalb von 24 Stunden bei Ihnen zurück.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Bietet NEUMATIC auch Dienstleistungen für Studenten an?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ja, wir bieten spezielle Angebote für Studenten:</p>
+                                <ul>
+                                    <li>Studierendenrabatt von 15% auf alle Dienstleistungen</li>
+                                    <li>Flexible Terminvereinbarung</li>
+                                    <li>Entrümpelung von WG-Zimmern</li>
+                                </ul>
+                                <p>Bei der Anfrage bitte Studentenausweis erwähnen.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Wie lange dauert ein typischer Umzug?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Die Dauer hängt von mehreren Faktoren ab:</p>
+                                <ul>
+                                    <li>1-Zimmer-Wohnung: 4-6 Stunden</li>
+                                    <li>2-Zimmer-Wohnung: 6-8 Stunden</li>
+                                    <li>3-Zimmer-Wohnung: 8-10 Stunden</li>
+                                    <li>Hausumzug: 1-2 Tage</li>
+                                </ul>
+                                <p>Wir bieten vorab eine kostenlose Besichtigung an, um die genaue Dauer zu schätzen.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Wie wird die Qualität der Dienstleistungen sichergestellt?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Wir setzen auf höchste Qualitätsstandards:</p>
+                                <ul>
+                                    <li>Erfahrenes und geschultes Personal</li>
+                                    <li>Professionelle Ausrüstung und Fahrzeuge</li>
+                                    <li>Qualitätskontrollen nach jedem Einsatz</li>
+                                    <li>Kundenzufriedenheitsbefragungen</li>
+                                </ul>
+                                <p>Unsere Zufriedenheitsrate liegt bei 98%.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Wie viel kostet ein Klaviertransport?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Die Kosten variieren je nach:</p>
+                                <ul>
+                                    <li>Art des Klaviers (Piano/Flügel)</li>
+                                    <li>Entfernung</li>
+                                    <li>Treppen bzw. Aufzug</li>
+                                    <li>Verpackungsservice</li>
+                                </ul>
+                                <p>Durchschnittlich liegen die Kosten zwischen 200€ und 500€. Ein genaues Angebot
+                                    erhalten Sie nach Besichtigung.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ CTA -->
+                    <div class="faq-cta">
+                        <p>Haben Sie weitere Fragen? Wir helfen Ihnen gerne weiter!</p>
+                        <button class="cta-button" id="faqQuestionBtn">
+                            <i class="fas fa-question-circle"></i>
+                            Frage stellen
+                        </button>
+                    </div>
+                </section>
+
+                <!-- CTA Section - Updated with WhatsApp number -->
+                <section class="cta-section">
+                    <h2 class="cta-title">Bereit für Ihren Umzug oder Transport?</h2>
+                    <p class="cta-description">
+                        Kontaktieren Sie uns für ein unverbindliches Angebot. Wir beraten Sie gerne zu allen unseren
+                        Dienstleistungen und stehen Ihnen telefonisch oder per WhatsApp zur Verfügung.
+                    </p>
+
+                    <div class="cta-buttons">
+                        <button class="order-now-btn" id="orderNowBtn">
+                            <i class="fas fa-envelope"></i>
+                            Anfrage per E-Mail
+                        </button>
+                        <button class="whatsapp-btn" id="whatsappBtn">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp: +49 1511 53 58 451
+                        </button>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="material-symbols-outlined footer-logo-icon">local_shipping</span>
+                        <h2 class="footer-logo-text">NEUMATIC</h2>
+                    </div>
+                    <p class="footer-about-text">
+                        Professionelle Umzugs- und Transportdienstleistungen in ganz Deutschland. Seit über 10 Jahren für
+                        Sie im Einsatz.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Menü</h3>
+                    <div class="footer-links">
+                        <a class="footer-link" href="Home.html">Startseite</a>
+                        <a class="footer-link" href="#dienstleistungen">Dienstleistungen</a>
+                        <a class="footer-link" href="#kundenstimmen">Kundenstimmen</a>
+                        <a class="footer-link" href="#faq">FAQ</a>
+                        <a class="footer-link" href="About.html">Über uns</a>
+                        <a class="footer-link" href="Contact.html">Kontakt</a>
+                    </div>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3 class="footer-title">Kontakt</h3>
+                    <div class="footer-links">
+                        <p>Deutschlandweit im Einsatz</p>
+                        <a class="footer-link" href="mailto:Info@neumaticgmbh.de">Info@neumaticgmbh.de</a>
+                        <a class="footer-link" href="tel:+4915115358451">+49 1511 53 58 451</a>
+                        <a class="footer-link" href="https://wa.me/4915115358451" target="_blank">WhatsApp: +49 1511 53
+                            58 451</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2024 NEUMATIC GmbH. Alle Rechte vorbehalten.
+                </div>
+
+                <div class="social-links">
+                    <a class="social-link" href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="social-link" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="social-link" href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/4915115358451" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+        // متغيرات أساسية
+        let currentSlide = 0;
+        const totalSlides = 4;
+        let autoSlideInterval;
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('NEUMATIC Website geladen');
+
+            setupEventListeners();
+            initSlider();
+            initScrollAnimations();
+            initScrollProgress();
+            initNavbarScroll();
+            initFAQ();
+
+            // إضافة كلمة "animated" للعناصر التي يجب أن تظهر
+            setTimeout(() => {
+                document.querySelectorAll('.features-header, .cta-section').forEach(el => {
+                    el.classList.add('animated');
+                });
+
+                document.querySelectorAll('.service-card').forEach((el, index) => {
+                    el.classList.add('animated');
+                    el.style.animationDelay = `${index * 0.1}s`;
+                });
+            }, 500);
+        });
+
+        // إعداد جميع الأحداث
+        function setupEventListeners() {
+            // زر قائمة الموبايل
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+
+            // إغلاق القائمة عند النقر على رابط
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // زر Order Now في CTA
+            const orderNowBtn = document.getElementById('orderNowBtn');
+            if (orderNowBtn) {
+                orderNowBtn.addEventListener('click', function () {
+                    openContactModal();
+                });
+            }
+
+            // زر WhatsApp في CTA
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            if (whatsappBtn) {
+                whatsappBtn.addEventListener('click', function () {
+                    window.open('https://wa.me/4915115358451', '_blank');
+                });
+            }
+
+            // زر Bewertung schreiben
+            const testimonialBtn = document.getElementById('testimonialBtn');
+            if (testimonialBtn) {
+                testimonialBtn.addEventListener('click', function () {
+                    openContactModal();
+                });
+            }
+
+            // زر Frage stellen
+            const faqQuestionBtn = document.getElementById('faqQuestionBtn');
+            if (faqQuestionBtn) {
+                faqQuestionBtn.addEventListener('click', function () {
+                    openContactModal();
+                });
+            }
+
+            // Back to Top button
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                backToTop.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Scroll event for back to top button
+            window.addEventListener('scroll', function () {
+                if (backToTop) {
+                    if (window.scrollY > 300) {
+                        backToTop.classList.add('show');
+                    } else {
+                        backToTop.classList.remove('show');
+                    }
+                }
+            });
+
+            // Contact Modal Events
+            const contactModal = document.getElementById('contactModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', function () {
+                    closeContactModal();
+                });
+            }
+
+            if (closeSuccessBtn) {
+                closeSuccessBtn.addEventListener('click', function () {
+                    closeContactModal();
+                    // Reset form
+                    document.getElementById('contactForm').reset();
+                    document.getElementById('formSuccess').classList.remove('active');
+                    document.getElementById('contactForm').style.display = 'flex';
+                });
+            }
+
+            // Close modal when clicking outside
+            contactModal.addEventListener('click', function (e) {
+                if (e.target === contactModal) {
+                    closeContactModal();
+                }
+            });
+
+            // Close modal with ESC key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeContactModal();
+                }
+            });
+
+            // Contact Form Submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Here you would normally send the form data to your server
+                    // For demonstration, we'll just show the success message
+
+                    // Show success message
+                    document.getElementById('contactForm').style.display = 'none';
+                    document.getElementById('formSuccess').classList.add('active');
+
+                    // In a real implementation, you would send the data to your email
+                    // using PHP, Node.js, or a form service like Formspree
+                    console.log('Form submitted with data:', {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        service: document.getElementById('service').value,
+                        message: document.getElementById('message').value
+                    });
+
+                    // Optional: Send to email using mailto (fallback)
+                    const email = 'Info@neumaticgmbh.de';
+                    const subject = 'Anfrage von Website: ' + document.getElementById('service').value;
+                    const body = `
+Name: ${document.getElementById('name').value}
+E-Mail: ${document.getElementById('email').value}
+Telefon: ${document.getElementById('phone').value}
+Dienstleistung: ${document.getElementById('service').value}
+Nachricht: ${document.getElementById('message').value}
+                    `.trim();
+
+                    // You can uncomment this to use mailto as a fallback
+                    // window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                });
+            }
+
+            // Open Contact Modal from various buttons
+            const requestButtons = [
+                'heroRequestBtn', 'heroRequestBtn2', 'heroRequestBtn3', 'heroRequestBtn4',
+                'aboutRequestBtn', 'serviceRequestBtn1', 'serviceRequestBtn2',
+                'serviceRequestBtn3', 'serviceRequestBtn4', 'serviceRequestBtn5'
+            ];
+
+            requestButtons.forEach(btnId => {
+                const btn = document.getElementById(btnId);
+                if (btn) {
+                    btn.addEventListener('click', openContactModal);
+                }
+            });
+        }
+
+        // Function to open contact modal
+        function openContactModal() {
+            const contactModal = document.getElementById('contactModal');
+            contactModal.classList.add('active');
+            document.body.classList.add('modal-open');
+        }
+
+        // Function to close contact modal
+        function closeContactModal() {
+            const contactModal = document.getElementById('contactModal');
+            contactModal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+
+        // FAQ Accordion Functionality
+        function initFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        }
+
+        // Navbar Scroll Effect
+        function initNavbarScroll() {
+            const header = document.getElementById('mainHeader');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Hero Slider Functions
+        function initSlider() {
+            updateSlider();
+            startAutoSlide();
+
+            const heroSlider = document.querySelector('.hero-slider');
+            if (heroSlider) {
+                heroSlider.addEventListener('mouseenter', pauseAutoSlide);
+                heroSlider.addEventListener('mouseleave', startAutoSlide);
+            }
+        }
+
+        function updateSlider() {
+            const heroTrack = document.getElementById('heroTrack');
+            if (heroTrack) {
+                heroTrack.style.transform = `translateX(-${currentSlide * 25}%)`;
+            }
+        }
+
+        function goToNextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function goToPrevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(goToNextSlide, 5000);
+        }
+
+        function pauseAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        function resetAutoSlide() {
+            pauseAutoSlide();
+            startAutoSlide();
+        }
+
+        // Initialize scroll animations
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.service-card').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Initialize scroll progress bar
+        function initScrollProgress() {
+            const scrollProgress = document.getElementById('scrollProgress');
+            if (scrollProgress) {
+                window.addEventListener('scroll', function () {
+                    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scrolled = (window.scrollY / windowHeight) * 100;
+                    scrollProgress.style.width = scrolled + '%';
+                });
+            }
+        }
+
+        // إصلاح نهائي للصور المحملة
+        window.addEventListener('load', function () {
+            document.querySelectorAll('img').forEach(img => {
+                img.style.opacity = '1';
+            });
+        });
+
+        // Service Card Animation on Hover
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-10px)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+
+</html>
