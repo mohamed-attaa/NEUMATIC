@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kontakt - NEUMATIC GmbH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #E6C158;
+            --gold-dark: #B8961E;
+            --background-dark: #0A0A0A;
+            --background-light: #1A1A1A;
+            --text-white: #FFFFFF;
+            --text-gray: #A9A9A9;
+            --border-color: rgba(212, 175, 55, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* ========================================= */
+        /* NAVBAR PROFESSIONAL */
+        /* ========================================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 1000;
+            width: 100%;
+            animation: slideInNavbar 0.8s ease-out forwards;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.7rem 2rem;
+            background-color: rgba(10, 10, 10, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 1px;
+            animation: glow 2s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover .logo-text {
+            color: var(--gold-light);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+        }
+
+        .logo-icon {
+            color: var(--gold);
+            font-size: 1.8rem;
+            animation: logoPulse 2s ease-in-out infinite;
+        }
+
+        .profile-image-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+
+        .profile-image {
+            width: 70px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(212, 163, 0, 0.945);
+        }
+
+        /* Navigation */
+        .nav-desktop {
+            display: none;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-desktop {
+                display: flex;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: width 0.4s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            color: var(--text-white);
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 1.5rem;
+            z-index: 999;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-nav-link {
+            font-family: 'Montserrat', sans-serif;
+            padding: 1rem;
+            color: var(--text-white);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-10px);
+            animation: slideInRight 0.3s ease-out forwards;
+            border-left: 3px solid transparent;
+        }
+
+        .mobile-nav-link:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            border-left-color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .mobile-nav-link:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .mobile-nav-link:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .mobile-nav-link:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .mobile-nav-link:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        /* Animations needed for Navbar */
+        @keyframes slideInNavbar {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 8px rgba(212, 175, 55, 0.6), 0 0 12px rgba(212, 175, 55, 0.4);
+            }
+            50% {
+                text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        @keyframes logoPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Main Content Container */
+        .main-content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        .contact-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .page-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 30px auto 0;
+            line-height: 1.8;
+        }
+
+        /* Main Content Grid */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background-color: var(--background-light);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .form-description {
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .required {
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            padding: 14px 16px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-white);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23D4AF37' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+        }
+
+        /* Checkbox */
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .checkbox-input {
+            width: 20px;
+            height: 20px;
+            margin-top: 3px;
+            accent-color: var(--gold);
+        }
+
+        .checkbox-label {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .checkbox-label a {
+            color: var(--gold-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .checkbox-label a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+        }
+
+        /* Company Info Section */
+        .company-info-section {
+            background-color: var(--background-light);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Company Card */
+        .company-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .company-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .company-tagline {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--text-white);
+            margin-bottom: 3px;
+        }
+
+        .contact-value {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .contact-value a {
+            color: var(--gold-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        /* Availability Section */
+        .availability-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+
+        .availability-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .availability-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .availability-day {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .day-name {
+            font-weight: 500;
+            color: var(--text-white);
+        }
+
+        .day-hours {
+            color: var(--text-gray);
+        }
+
+        .closed {
+            color: #ff6b6b;
+            font-weight: 500;
+        }
+
+        .open-24h {
+            color: #4CAF50;
+            font-weight: 500;
+        }
+
+        .availability-note {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid var(--gold);
+            font-size: 0.95rem;
+            color: var(--text-white);
+            line-height: 1.5;
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .map-container {
+            background-color: var(--background-light);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .map-placeholder {
+            height: 300px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(10, 10, 10, 0.8));
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            color: var(--text-white);
+            margin-top: 20px;
+        }
+
+        .map-icon {
+            font-size: 4rem;
+            color: var(--gold);
+        }
+
+        .map-text {
+            font-size: 1.1rem;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .page-footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-page {
+                padding: 20px 10px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-form-section,
+            .company-info-section {
+                padding: 25px;
+            }
+            
+            .company-name {
+                font-size: 1.8rem;
+            }
+            
+            .main-content {
+                margin-top: 80px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .form-input,
+            .form-textarea,
+            .form-select {
+                padding: 12px 14px;
+            }
+            
+            header {
+                padding: 0.8rem 1rem;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .profile-image {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background-color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+            background-color: var(--gold-dark);
+        }
+
+        .whatsapp-float img {
+            width: 30px;
+            height: 30px;
+            filter: brightness(0) invert(1);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float img {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        /* Footer Styles */
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #E6C158;
+            --gold-dark: #B8961E;
+            --text-white: #ffffff;
+            --text-gray: #A9A9A9;
+            --background-dark: #0A0A0A;
+            --card-bg: #0A0A0A;
+        }
+
+        /* Animations */
+        @keyframes fadeInFooter {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseGold {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                border-color: rgba(212, 175, 55, 0.3);
+            }
+            50% {
+                border-color: rgba(212, 175, 55, 0.7);
+            }
+        }
+
+        /* ========================================= */
+        /* ENHANCED GOLDEN FOOTER */
+        /* ========================================= */
+        footer {
+            background: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
+            border-top: 3px solid var(--gold);
+            margin-top: auto;
+            padding: 3rem 1rem 1.5rem;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            animation: fadeInFooter 1s ease-out forwards;
+        }
+
+        /* Golden Decorative Elements */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                var(--gold) 20%, 
+                var(--gold-light) 50%, 
+                var(--gold) 80%, 
+                transparent 100%);
+            z-index: 1;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .footer-about {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            animation: pulseGold 3s ease-in-out infinite;
+        }
+
+        .footer-logo-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            animation: borderGlow 2s ease-in-out infinite;
+        }
+
+        .footer-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .footer-about-text {
+            font-family: 'Open Sans', sans-serif;
+            color: #B0B0B0;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 320px;
+            padding-left: 0.5rem;
+            border-left: 3px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .footer-title {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .footer-link {
+            font-family: 'Open Sans', sans-serif;
+            color: #D0D0D0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.3rem 0;
+            position: relative;
+        }
+
+        .footer-link::before {
+            content: '→';
+            color: var(--gold);
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .footer-link:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .footer-contact p {
+            font-family: 'Open Sans', sans-serif;
+            color: #D0D0D0;
+            font-size: 0.9rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+
+        .footer-contact .footer-link {
+            color: var(--gold-light);
+            font-size: 0.9rem;
+        }
+
+        .footer-contact .footer-link:hover {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Updated Footer Bottom */
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 640px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .copyright {
+            font-family: 'Montserrat', sans-serif;
+            color: #909090;
+            font-size: 0.85rem;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-link i {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .social-link:hover::before {
+            opacity: 1;
+        }
+
+        .social-link:hover i {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/4915115358451" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <!-- Header / Navigation -->
+    <header id="mainHeader">
+        <div class="logo-container">
+            <a href="./index.html" class="logo">
+                <span class="material-symbols-outlined logo-icon">local_shipping</span>
+                <span class="logo-text">NEUMATIC</span>
+            </a>
+        </div>
+
+        <!-- Navigation for Desktop -->
+        <nav class="nav-desktop">
+            <div class="nav-links">
+                <a class="nav-link" href="./index.html">Startseite</a>
+                <a class="nav-link" href="./index.html#dienstleistungen">Dienstleistungen</a>
+                <a class="nav-link" href="./index.html#faq">FAQ</a>
+                <a class="nav-link" href="./index.html#about">Über uns</a>
+                <a class="nav-link" href="./Kontakt.html">Kontakt</a>
+            </div>
+        </nav>
+
+        <!-- Profile Image on Right -->
+        <div class="profile-image-container">
+            <img src="./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg" alt="Geschäftsführer" class="profile-image">
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav">
+            <a class="mobile-nav-link" href="./index.html">Startseite</a>
+            <a class="mobile-nav-link" href="./index.html#dienstleistungen">Dienstleistungen</a>
+            <a class="mobile-nav-link" href="./index.html#faq">FAQ</a>
+            <a class="mobile-nav-link" href="./index.html#about">Über uns</a>
+            <a class="mobile-nav-link" href="./Kontakt.html">Kontakt</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="contact-page">
+            <!-- Header -->
+            <div class="page-header">
+                <h1>Kontaktieren Sie uns</h1>
+                <p>Wir freuen uns auf Ihre Anfrage! Nutzen Sie das Kontaktformular oder rufen Sie uns direkt an. Unser Team steht Ihnen gerne zur Verfügung, um Ihre Fragen zu beantworten und individuelle Lösungen anzubieten.</p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2 class="section-title">Kontaktformular</h2>
+                    <p class="form-description">Sie können uns über das untenstehende Formular kontaktieren. Felder mit einem Stern (*) sind Pflichtfelder. Alle übermittelten Daten werden vertraulich behandelt.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <!-- Name -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Vorname <span class="required">*</span></label>
+                                <input type="text" class="form-input" name="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nachname <span class="required">*</span></label>
+                                <input type="text" class="form-input" name="last_name" required>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-group">
+                            <label class="form-label">Straße, Hausnummer <span class="required">*</span></label>
+                            <input type="text" class="form-input" name="address" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Postleitzahl <span class="required">*</span></label>
+                                <input type="text" class="form-input" name="zip" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Stadt <span class="required">*</span></label>
+                                <input type="text" class="form-input" name="city" required>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">E-Mail-Adresse</label>
+                                <input type="email" class="form-input" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Telefonnummer</label>
+                                <input type="tel" class="form-input" name="phone">
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label class="form-label">Nachricht <span class="required">*</span></label>
+                            <textarea class="form-textarea" name="message" required placeholder="Bitte beschreiben Sie Ihr Anliegen..."></textarea>
+                        </div>
+
+                        <!-- Privacy Policy -->
+                        <div class="checkbox-group">
+                            <input type="checkbox" class="checkbox-input" id="privacy" required>
+                            <label class="checkbox-label" for="privacy">
+                                Ich stimme hiermit der Datenschutzerklärung zu, die ich gelesen und verstanden habe.
+                                Sie können diese Einwilligung jederzeit widerrufen. Es genügt eine formlose Mitteilung per E-Mail an uns.
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn" id="sendEmailBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            Nachricht senden
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Company Information -->
+                <div class="company-info-section">
+                    <h2 class="section-title">Unsere Kontaktdaten</h2>
+                    
+                    <!-- Company Card -->
+                    <div class="company-card">
+                        <div class="company-name">NEUMATIC</div>
+                        <div class="company-tagline">Exportverpackung & Professionelle Dienstleistungen</div>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <div class="contact-label">Geschäftsführer</div>
+                                    <div class="contact-value">SULIMAN BANI YASEEN</div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <div class="contact-label">Firma</div>
+                                    <div class="contact-value">NEUMATIC GmbH</div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <div class="contact-label">Adresse</div>
+                                    <div class="contact-value">Hauptstraße 48, 63811 Stockstadt, Deutschland</div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <div class="contact-label">Telefon</div>
+                                    <div class="contact-value">
+                                        <a href="tel:+4915115358451">+49 1511 53 58 451</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <div class="contact-label">E-Mail</div>
+                                    <div class="contact-value">
+                                        <a href="mailto:neumatic.trading.dienstleistung-@gmail.com">neumatic.trading.dienstleistung-@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Availability -->
+                    <div class="availability-section">
+                        <h3 class="availability-title">
+                            <i class="fas fa-clock"></i>
+                            Unsere Erreichbarkeit
+                        </h3>
+                        
+                        <div class="availability-grid">
+                            <div class="availability-day">
+                                <span class="day-name">Montag</span>
+                                <span class="day-hours open-24h">24 Stunden</span>
+                            </div>
+                            <div class="availability-day">
+                                <span class="day-name">Dienstag</span>
+                                <span class="day-hours open-24h">24 Stunden</span>
+                            </div>
+                            <div class="availability-day">
+                                <span class="day-name">Mittwoch</span>
+                                <span class="day-hours open-24h">24 Stunden</span>
+                            </div>
+                            <div class="availability-day">
+                                <span class="day-name">Donnerstag</span>
+                                <span class="day-hours open-24h">24 Stunden</span>
+                            </div>
+                            <div class="availability-day">
+                                <span class="day-name">Freitag</span>
+                                <span class="day-hours open-24h">24 Stunden</span>
+                            </div>
+                            <div class="availability-day">
+                                <span class="day-name">Samstag</span>
+                                <span class="day-hours open-24h">24 Stunden</span>
+                            </div>
+                            <div class="availability-day">
+                                <span class="day-name">Sonntag</span>
+                                <span class="day-hours closed">Geschlossen</span>
+                            </div>
+                        </div>
+                        
+                        <div class="availability-note">
+                            <i class="fas fa-info-circle"></i>
+                            Wir sind für Sie von Montag bis Samstag rund um die Uhr erreichbar. Am Sonntag ist unser Büro geschlossen. Für dringende Anfragen außerhalb der Bürozeiten nutzen Sie bitte unsere E-Mail oder hinterlassen Sie eine Nachricht auf unserem Anrufbeantworter.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <h2 class="section-title">Unser Standort</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="map-text">
+                            <p>Wir sind in Stockstadt am Main für Sie da. Besuchen Sie uns in der Hauptstraße 48 oder kontaktieren Sie uns für einen Termin.</p>
+                            <p style="margin-top: 15px; font-size: 1rem; color: var(--gold);">
+                                <i class="fas fa-car"></i> Gute Parkmöglichkeiten vorhanden
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Gold Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="material-symbols-outlined footer-logo-icon">local_shipping</span>
+                    <h2 class="footer-logo-text">NEUMATIC</h2>
+                </div>
+                <p class="footer-about-text">
+                    Professionelle Umzugs- und Transportdienstleistungen in ganz Deutschland. Seit über 10 Jahren für
+                    Sie im Einsatz.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-title">Menü</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="./index.html">Startseite</a>
+                    <a class="footer-link" href="./index.html#dienstleistungen">Dienstleistungen</a>
+                    <a class="footer-link" href="./index.html#faq">FAQ</a>
+                    <a class="footer-link" href="./index.html#about">Über uns</a>
+                    <a class="footer-link" href="./Kontakt.html">Kontakt</a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title">Kontakt</h3>
+                <div class="footer-links">
+                    <p>Deutschlandweit im Einsatz</p>
+                    <a class="footer-link" href="mailto:neumatic.trading.dienstleistung-@gmail.com">
+                        <i class="fas fa-envelope"></i> neumatic.trading.dienstleistung-@gmail.com
+                    </a>
+                    <a class="footer-link" href="tel:+4915115358451">
+                        <i class="fas fa-phone"></i> +49 1511 53 58 451
+                    </a>
+                    <a class="footer-link" href="https://wa.me/4915115358451" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp: +49 1511 53 58 451
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2026 NEUMATIC GmbH. Alle Rechte vorbehalten.
+            </div>
+            
+            <div class="social-links">
+                <a class="social-link" href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="social-link" href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="social-link" href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+
+            // إغلاق القائمة عند النقر على رابط
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // Navbar Scroll Effect
+            const header = document.getElementById('mainHeader');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Form Submission to Email
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Collect form data
+                const formData = {
+                    firstName: this.first_name.value,
+                    lastName: this.last_name.value,
+                    address: this.address.value,
+                    zip: this.zip.value,
+                    city: this.city.value,
+                    email: this.email.value,
+                    phone: this.phone.value,
+                    message: this.message.value,
+                    privacyAccepted: this.privacy.checked
+                };
+                
+                // Basic validation
+                if (!formData.privacyAccepted) {
+                    alert('Bitte akzeptieren Sie die Datenschutzerklärung.');
+                    return;
+                }
+                
+                // Prepare email content
+                const subject = "Neue Kontaktanfrage von " + formData.firstName + " " + formData.lastName;
+                const body = 
+                    "Neue Kontaktanfrage von der Website:\n\n" +
+                    "Name: " + formData.firstName + " " + formData.lastName + "\n" +
+                    "Adresse: " + formData.address + ", " + formData.zip + " " + formData.city + "\n" +
+                    "E-Mail: " + formData.email + "\n" +
+                    "Telefon: " + formData.phone + "\n\n" +
+                    "Nachricht:\n" + formData.message + "\n\n" +
+                    "Diese Nachricht wurde über das Kontaktformular auf der Website gesendet.";
+                
+                // Encode for mailto link
+                const encodedSubject = encodeURIComponent(subject);
+                const encodedBody = encodeURIComponent(body);
+                const mailtoLink = "mailto:neumatic.trading.dienstleistung-@gmail.com?subject=" + encodedSubject + "&body=" + encodedBody;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                alert('Ihre Nachricht wurde vorbereitet. Bitte senden Sie die E-Mail von Ihrem E-Mail-Client aus.');
+                
+                // Reset form after a short delay
+                setTimeout(() => {
+                    this.reset();
+                }, 1000);
+            });
+
+            // Form validation
+            const formInputs = document.querySelectorAll('.form-input, .form-textarea, .form-select');
+            
+            formInputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        this.style.borderColor = '#ff4444';
+                    } else {
+                        this.style.borderColor = 'var(--border-color)';
+                    }
+                });
+                
+                input.addEventListener('focus', function() {
+                    this.style.borderColor = 'var(--gold)';
+                });
+            });
+
+            // Add animation on scroll
+            const sections = document.querySelectorAll('.contact-form-section, .company-info-section, .map-section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            // WhatsApp float button hover effect
+            const whatsappFloat = document.querySelector('.whatsapp-float');
+            if (whatsappFloat) {
+                whatsappFloat.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.1)';
+                    this.style.boxShadow = '0 6px 25px rgba(212, 175, 55, 0.5)';
+                    this.style.backgroundColor = 'var(--gold-dark)';
+                });
+                
+                whatsappFloat.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = '0 4px 20px rgba(212, 175, 55, 0.4)';
+                    this.style.backgroundColor = 'var(--gold)';
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Only process internal anchor links
+                    if (href.startsWith('#') && href.length > 1) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
