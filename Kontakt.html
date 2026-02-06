@@ -31,26 +31,12 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--background-dark);
+            background-color: #FFFFFF;
             color: var(--text-white);
             line-height: 1.6;
             min-height: 100vh;
         }
-        body {
-            background:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.26),
-                    rgba(0, 0, 0, 0.301)
-                ),
-
-                /* الصورة الأساسية - تملى الشاشة */
-                url("./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg")
-                center / cover no-repeat fixed,
-
-                /* نفس الصورة - عشان الكلام يبان كله */
-                url("./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg")
-                center / contain no-repeat fixed;
-        }
+        
         
         /* ========================================= */
         /* NAVBAR PROFESSIONAL */
@@ -64,7 +50,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 1rem 2rem;
-            background-color: rgba(10, 10, 10, 0.85);
+            background-color: rgb(10, 10, 10);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
@@ -76,8 +62,8 @@
 
         header.scrolled {
             padding: 0.7rem 2rem;
-            background-color: rgba(10, 10, 10, 0.95);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            background-color: rgb(10, 10, 10);
+            box-shadow: 0 4px 20px rgb(0, 0, 0);
         }
 
         .logo-container {
@@ -882,9 +868,8 @@
 
         /* ========================================= */
         /* ENHANCED GOLDEN FOOTER */
-        /* ========================================= */
-        footer {
-            background: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
+          footer {
+            background-color: #000000;
             border-top: 3px solid var(--gold);
             margin-top: auto;
             padding: 3rem 1rem 1.5rem;
@@ -909,6 +894,22 @@
                 var(--gold) 80%, 
                 transparent 100%);
             z-index: 1;
+        }
+
+        footer::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(212, 175, 55, 0.1) 20%, 
+                rgba(212, 175, 55, 0.3) 50%, 
+                rgba(212, 175, 55, 0.1) 80%, 
+                transparent 100%);
+            transform: translateY(-50%);
         }
 
         .footer-grid {
@@ -947,10 +948,10 @@
         .footer-logo-icon {
             font-size: 2rem;
             color: var(--gold);
-            background: rgba(212, 175, 55, 0.1);
+            background: var(--gold-softer);
             padding: 10px;
             border-radius: 10px;
-            border: 2px solid rgba(212, 175, 55, 0.3);
+            border: 2px solid rgb(216, 167, 7);
             animation: borderGlow 2s ease-in-out infinite;
         }
 
@@ -958,19 +959,19 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--gold);
+            color: #B8961E;
             letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
 
         .footer-about-text {
             font-family: 'Open Sans', sans-serif;
-            color: #B0B0B0;
+                        color: var(--gold);
+
             font-size: 0.9rem;
             line-height: 1.7;
             max-width: 320px;
             padding-left: 0.5rem;
-            border-left: 3px solid rgba(212, 175, 55, 0.2);
+            border-left: 3px solid rgb(204, 158, 6);
         }
 
         .footer-column {
@@ -1008,7 +1009,8 @@
 
         .footer-link {
             font-family: 'Open Sans', sans-serif;
-            color: #D0D0D0;
+                        color: var(--gold);
+
             text-decoration: none;
             font-size: 0.9rem;
             transition: all 0.3s ease;
@@ -1039,19 +1041,20 @@
 
         .footer-contact p {
             font-family: 'Open Sans', sans-serif;
-            color: #D0D0D0;
+                        color: var(--gold);
+
             font-size: 0.9rem;
             margin-bottom: 0.6rem;
             line-height: 1.6;
         }
 
         .footer-contact .footer-link {
-            color: var(--gold-light);
+            color: var(--gold);
             font-size: 0.9rem;
         }
 
         .footer-contact .footer-link:hover {
-            color: var(--gold);
+            color: var(--gold-light);
             text-decoration: none;
         }
 
@@ -1079,9 +1082,9 @@
 
         .copyright {
             font-family: 'Montserrat', sans-serif;
-            color: #909090;
+            color: var(--text-gray);
             font-size: 0.85rem;
-            background: rgba(212, 175, 55, 0.05);
+            background: var(--gold-softer);
             padding: 0.8rem 1.5rem;
             border-radius: 20px;
             border: 1px solid rgba(212, 175, 55, 0.1);
@@ -1096,7 +1099,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: rgba(212, 175, 55, 0.1);
+            background: var(--gold-softer);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1140,6 +1143,11 @@
             color: #000;
         }
 
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
 
         /* ========================================= */
         /* NEW SECTION AFTER HERO */
@@ -1147,7 +1155,7 @@
         .quick-info-section {
             padding: 4rem 0;
             text-align: center;
-            background: rgba(10, 10, 10, 0.7);
+            background: rgb(255, 255, 255);
             position: relative;
         }
 
@@ -1170,7 +1178,7 @@
             font-family: 'Open Sans', sans-serif;
             font-size: 1.2rem;
             line-height: 1.6;
-            color: var(--text-white);
+            color: #000000;
             font-weight: 300;
         }
 

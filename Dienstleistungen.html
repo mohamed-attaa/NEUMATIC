@@ -1,78 +1,114 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="light-mode">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEUMATIC - Navbar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NEUMATIC - Professionelle Dienstleistungen</title>
+    
+    <!-- تحسينات SEO وسرعة التحميل -->
+    <meta name="description" content="Professionelle Dienstleistungen für Küchenmontage, Umzug, Möbeltransport, Entrümpelungen und Klaviertransport in ganz Deutschland.">
+    <meta name="keywords" content="Umzug, Küchenmontage, Möbeltransport, Entrümpelung, Klaviertransport, Deutschland">
+    <meta name="author" content="NEUMATIC GmbH">
+    
+    <!-- Preconnect للموارد الخارجية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- تحميل CSS بشكل غير متزامن -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    </noscript>
+    
+    <!-- Fonts مع تحميل متأخر -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap" 
+          rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
+          rel="stylesheet" media="print" onload="this.media='all'" />
     
     <style>
-        /* CSS Variables */
+        /* CSS Variables - UPDATED FOR WHITE BACKGROUND */
         :root {
             --gold: #D4AF37;
             --gold-light: #E6C158;
             --gold-dark: #B8961E;
-            --background-dark: #0A0A0A;
-            --text-white: #ffffff;
+            --gold-soft: rgba(212, 175, 55, 0.1);
+            --gold-softer: rgba(212, 175, 55, 0.05);
+            --white: #ffffff;
+            --white-dark: #F5F5F5;
+            --white-light: #FAFAFA;
+            --black: #000000;
+            --black-light: #333333;
+            --black-lighter: #666666;
+            --text-dark: #1A1A1A;
+            --text-gray: #666666;
+            --text-light: #888888;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.12);
+            --border: rgba(0, 0, 0, 0.1);
         }
 
+        /* Reset and Base Styles */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        /* إزالة كل أشرطة التمرير */
         html, body {
-            overflow: hidden;
+            overflow-x: hidden;
             width: 100%;
-            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* إخفاء scrollbar لكن السماح بالتمرير */
-        body {
-            overflow: auto;
-            scrollbar-width: none;
-        }
-
+        /* Improved Scrollbar */
         body::-webkit-scrollbar {
-            display: none;
+            width: 8px;
         }
 
-        body {
-            background:
-                linear-gradient(
-                    rgba(0, 0, 0, 0),
-                    rgba(0, 0, 0, 0)
-                ),
-                url("./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg")
-                center / cover no-repeat fixed,
-                url("./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg")
-                center / contain no-repeat fixed;
+        body::-webkit-scrollbar-track {
+            background: var(--white-light);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 4px;
+        }
+
+        /* Performance Optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* ========================= */
-        /* NAVBAR PROFESSIONAL STYLE */
+        /* NAVBAR PROFESSIONAL STYLE - UPDATED FOR WHITE */
         /* ========================= */
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px 30px;
-            background-color: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            z-index: 1000;
-            width: 100%;
-            animation: slideDown 0.5s ease-out;
-        }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #000000; /* أسود صريح */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    width: 100%;
+}
 
         @keyframes slideDown {
             from {
@@ -119,9 +155,13 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 22px;
             font-weight: 700;
-            color: var(--gold);
+                        color: var(--gold);
+
             letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .logo-text span {
+            color: var(--gold);
         }
 
         /* Desktop Navigation */
@@ -137,36 +177,37 @@
             align-items: center;
             gap: 30px;
         }
+.nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff; /* أبيض */
+    text-decoration: none;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
 
-        .nav-link {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--text-white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 8px 0;
-        }
+.nav-link:hover {
+    color: var(--gold);
+}
 
-        .nav-link:hover {
-            color: var(--gold);
-        }
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+}
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--gold);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
+.nav-link:hover::after {
+    width: 100%;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+}
 
         /* Profile Image */
         .profile-image-container {
@@ -174,19 +215,19 @@
             align-items: center;
         }
 
-       .profile-image {
+        .profile-image {
             width: 70px;
             height: 60px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--gold);
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow);
             transition: all 0.3s ease;
         }
 
         .profile-image:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            box-shadow: var(--shadow-hover);
         }
 
         /* Mobile Menu Button */
@@ -194,9 +235,9 @@
             display: none;
             align-items: center;
             justify-content: center;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            color: var(--text-white);
+            background: var(--gold-soft);
+            border: 1px solid var(--border);
+            color: var(--text-dark);
             cursor: pointer;
             width: 45px;
             height: 45px;
@@ -206,7 +247,7 @@
         }
 
         .mobile-menu-btn:hover {
-            background: rgba(212, 175, 55, 0.2);
+            background: var(--gold-soft);
             transform: scale(0.95);
         }
 
@@ -218,7 +259,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(10, 10, 10, 0.98);
+            background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             z-index: 999;
@@ -234,17 +275,17 @@
 
         .mobile-nav-link {
             padding: 15px 20px;
-            color: var(--text-white);
+            color: var(--text-dark);
             text-decoration: none;
             font-size: 18px;
             border-radius: 8px;
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--white-light);
             transition: all 0.3s ease;
             border-left: 4px solid transparent;
         }
 
         .mobile-nav-link:hover {
-            background: rgba(212, 175, 55, 0.15);
+            background: var(--gold-soft);
             color: var(--gold);
             border-left-color: var(--gold);
             transform: translateX(5px);
@@ -256,10 +297,10 @@
             right: 20px;
             width: 45px;
             height: 45px;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: var(--gold-soft);
+            border: 1px solid var(--border);
             border-radius: 8px;
-            color: var(--text-white);
+            color: var(--text-dark);
             font-size: 24px;
             cursor: pointer;
             display: flex;
@@ -267,136 +308,68 @@
             justify-content: center;
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .nav-desktop {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: flex;
-            }
-            
-            .logo-text {
-                font-size: 20px;
-            }
-            
-            .profile-image {
-                width: 45px;
-                height: 45px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 12px 20px;
-            }
-            
-            .logo-text {
-                font-size: 18px;
-            }
-            
-            .logo-icon {
-                font-size: 24px;
-            }
-        }
-
-        /* ===== Hero Slider Section ===== */
-        .hero-slider {
+        /* ===== Hero Section - OPTIMIZED ===== */
+        .hero-section {
             position: relative;
             height: 100vh;
-            overflow: hidden;
+            min-height: 600px;
+              background:
+        url('https://media.istockphoto.com/id/1076613816/photo/electricity-installation-in-an-old-apartment.jpg?s=1024x1024&w=is&k=20&c=XveI1fxcKvnH00gjqV1XLIpwPm7ik0Qvh5LfW7ruDbc=')
+        center / cover no-repeat;
             display: flex;
             align-items: center;
-            color: #fff;
-            font-family: 'Arial', sans-serif;
+            padding: 0 5%;
+            margin-top: 80px;
         }
 
-        .slider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .hero-text {
+        .hero-content {
+            max-width: 700px;
             position: relative;
             z-index: 2;
-            max-width: 600px;
-            margin-left: 60px;
         }
 
-        .hero-text h1 {
-            font-size: 2rem;
-            line-height: 1.5;
+        .hero-title {
+            font-size: 2.5rem;
+            line-height: 1.3;
             margin-bottom: 30px;
-            color: #fff;
+            color: var(--text-dark);
+            font-weight: 700;
         }
 
-        .kontakt-btn {
+        .hero-title span {
+            color: var(--gold);
+            display: block;
+            margin-top: 10px;
+        }
+
+        .hero-btn {
             display: inline-block;
-            padding: 12px 25px;
-            font-size: 1rem;
-            color: #000;
-            background-color: #d4af37;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            color: var(--black);
+            background-color: var(--gold);
+            border: none;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: var(--shadow);
         }
 
-        .kontakt-btn:hover {
-            background-color: #b89128;
-            transform: scale(1.05);
-        }
-
-        /* Dark overlay for better text visibility */
-        .hero-slider::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.4);
-            z-index: 1;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-text {
-                margin-left: 30px;
-            }
-
-            .hero-text h1 {
-                font-size: 1.5rem;
-            }
+        .hero-btn:hover {
+            background-color: var(--gold-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
         }
 
         /* ========================================= */
-        /* NEW SECTION AFTER HERO */
+        /* QUICK INFO SECTION - OPTIMIZED */
         /* ========================================= */
         .quick-info-section {
-            padding: 4rem 0;
+            padding: 5rem 2rem;
             text-align: center;
-            background: rgba(10, 10, 10, 0.7);
+            background: var(--white-light);
             position: relative;
         }
 
@@ -416,74 +389,180 @@
         }
 
         .quick-info-text {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.2rem;
             line-height: 1.6;
-            color: var(--text-white);
-            font-weight: 300;
+            color: var(--text-gray);
+            font-weight: 400;
         }
 
         .quick-info-highlight {
-            color: var(--gold-light);
-            font-weight: 600;
+            color: var(--gold);
+            font-weight: 700;
             display: block;
             margin-top: 1rem;
             font-size: 1.3rem;
         }
 
         /* ========================================= */
-        /* PORTFOLIO SLIDER SECTION - FIXED */
+        /* SERVICES GRID SECTION - OPTIMIZED */
         /* ========================================= */
-        :root {
-            --primary: #D4AF37;
-            --background-dark: #0A0A0A;
-            --text-dark: #FFFFFF;
-            --border-dark: #333333;
+        .services-section {
+            padding: 5rem 2rem;
+            background: var(--white);
         }
 
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-gray);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--gold);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            font-size: 1rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .service-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+
+        .service-btn:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        /* ========================================= */
+        /* PORTFOLIO SLIDER SECTION - OPTIMIZED */
+        /* ========================================= */
         .portfolio-section {
-            padding: 60px 0;
-            background: rgba(0, 0, 0, 0.356);
+            padding: 5rem 2rem;
+            background: var(--white-light);
             position: relative;
         }
 
-        /* Slider Container */
         .slider-container {
             width: 100%;
-            height: 70vh;
-            min-height: 500px;
+            max-width: 1200px;
+            margin: 0 auto;
             position: relative;
             overflow: hidden;
-            background: #00000042;
-            margin-top: 20px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
         }
 
-        /* Slider Track */
         .slider-track {
             display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 500px;
         }
 
-        /* Slides */
         .slide-item {
             flex: 0 0 100%;
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             min-width: 100%;
+            height: 100%;
         }
 
         .slide-img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             object-position: center;
             display: block;
-            background: #00000041;
-            padding: 20px;
         }
 
         /* Navigation Buttons */
@@ -502,9 +581,9 @@
         .nav-btn {
             width: 50px;
             height: 50px;
-            background: rgba(0, 0, 0, 0.7);
-            border: 2px solid var(--primary);
-            color: var(--primary);
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid var(--gold);
+            color: var(--gold);
             border-radius: 50%;
             font-size: 24px;
             cursor: pointer;
@@ -513,11 +592,12 @@
             justify-content: center;
             transition: all 0.3s;
             z-index: 101;
+            box-shadow: var(--shadow);
         }
 
         .nav-btn:hover {
-            background: var(--primary);
-            color: #000;
+            background: var(--gold);
+            color: var(--white);
             transform: scale(1.1);
         }
 
@@ -537,66 +617,388 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.5);
             cursor: pointer;
             transition: all 0.3s;
+            border: 2px solid var(--gold);
         }
 
         .dot.active {
-            background: var(--primary);
+            background: var(--gold);
             transform: scale(1.2);
         }
 
-        /* Title */
+        /* Slider Title */
         .slider-title {
-            position: absolute;
-            top: 20px;
-            left: 0;
-            right: 0;
             text-align: center;
-            z-index: 50;
+            margin-bottom: 3rem;
         }
 
         .slider-title h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            color: var(--primary);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            margin-bottom: 0;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
         }
 
-        /* Loading State */
+        .slider-title h1 span {
+            color: var(--gold);
+        }
+
+        /* ========================================= */
+        /* ENHANCED GOLDEN FOOTER - UPDATED FOR WHITE */
+        /* ========================================= */
+       /* ENHANCED GOLDEN FOOTER */
+          footer {
+            background-color: #000000;
+            border-top: 3px solid var(--gold);
+            margin-top: auto;
+            padding: 3rem 1rem 1.5rem;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            animation: fadeInFooter 1s ease-out forwards;
+        }
+
+        /* Golden Decorative Elements */
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                var(--gold) 20%, 
+                var(--gold-light) 50%, 
+                var(--gold) 80%, 
+                transparent 100%);
+            z-index: 1;
+        }
+
+        footer::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(212, 175, 55, 0.1) 20%, 
+                rgba(212, 175, 55, 0.3) 50%, 
+                rgba(212, 175, 55, 0.1) 80%, 
+                transparent 100%);
+            transform: translateY(-50%);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .footer-about {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            animation: pulseGold 3s ease-in-out infinite;
+        }
+
+        .footer-logo-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            background: var(--gold-softer);
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid rgb(216, 167, 7);
+            animation: borderGlow 2s ease-in-out infinite;
+        }
+
+        .footer-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #B8961E;
+            letter-spacing: 1px;
+        }
+
+        .footer-about-text {
+            font-family: 'Open Sans', sans-serif;
+                        color: var(--gold);
+
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 320px;
+            padding-left: 0.5rem;
+            border-left: 3px solid rgb(204, 158, 6);
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .footer-title {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .footer-link {
+            font-family: 'Open Sans', sans-serif;
+                        color: var(--gold);
+
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.3rem 0;
+            position: relative;
+        }
+
+        .footer-link::before {
+            content: '→';
+            color: var(--gold);
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .footer-link:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .footer-contact p {
+            font-family: 'Open Sans', sans-serif;
+                        color: var(--gold);
+
+            font-size: 0.9rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+
+        .footer-contact .footer-link {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .footer-contact .footer-link:hover {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        /* Updated Footer Bottom */
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 640px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .copyright {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            background: var(--gold-softer);
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gold-softer);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-link i {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .social-link:hover::before {
+            opacity: 1;
+        }
+
+        .social-link:hover i {
+            color: #000;
+        }
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Loading Animation */
         .slide-loading {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary);
+            height: 100%;
+            color: var(--gold);
             font-size: 20px;
         }
 
-        /* Image Error Fallback */
-        .img-error {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 18px;
-            text-align: center;
-            padding: 40px;
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-desktop {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .logo-text {
+                font-size: 20px;
+            }
+            
+            .profile-image {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
         }
 
-        .img-error i {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
-
-        /* Mobile Responsive */
         @media (max-width: 768px) {
+            header {
+                padding: 12px 20px;
+            }
+            
+            .logo-text {
+                font-size: 18px;
+            }
+            
+            .logo-icon {
+                font-size: 28px;
+            }
+            
+            .hero-section {
+                min-height: 500px;
+                padding: 0 20px;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .slider-container {
-                height: 50vh;
-                min-height: 400px;
+                height: 400px;
             }
             
             .nav-btn {
@@ -605,434 +1007,277 @@
                 font-size: 20px;
             }
             
-            .slider-title h1 {
-                font-size: 2rem;
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
-            .slide-img {
-                object-fit: cover;
-                padding: 10px;
+            .footer-logo-text {
+                font-size: 1.5rem;
             }
         }
 
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+            
+            .quick-info-title {
+                font-size: 1.5rem;
+            }
+            
+            .quick-info-text {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-description {
+                font-size: 1rem;
+            }
+            
+            .service-card {
+                margin-bottom: 20px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .social-links {
+                order: 1;
+            }
+            
+            .copyright {
+                order: 2;
+            }
+        }
 
+        /* Performance Optimizations */
+        .hero-section {
+            will-change: transform;
+        }
 
+        .service-card {
+            will-change: transform, box-shadow;
+        }
 
+        .slide-img {
+            will-change: transform;
+        }
 
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
 
-
-
-
-
-
-        /* ========================================= */
-/* ENHANCED GOLDEN FOOTER */
-/* ========================================= */
-footer {
-    background: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
-    border-top: 3px solid var(--gold);
-    margin-top: auto;
-    padding: 3rem 1rem 1.5rem;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    animation: fadeInFooter 1s ease-out forwards;
-}
-
-/* Golden Decorative Elements */
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        var(--gold) 20%, 
-        var(--gold-light) 50%, 
-        var(--gold) 80%, 
-        transparent 100%);
-    z-index: 1;
-}
-
-footer::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        rgba(212, 175, 55, 0.1) 20%, 
-        rgba(212, 175, 55, 0.3) 50%, 
-        rgba(212, 175, 55, 0.1) 80%, 
-        transparent 100%);
-    transform: translateY(-50%);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 1rem;
-    position: relative;
-    z-index: 2;
-}
-
-@media (min-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1.5fr 1fr 1fr;
-        gap: 3rem;
-    }
-}
-
-.footer-about {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
-    animation: pulseGold 3s ease-in-out infinite;
-}
-
-.footer-logo-icon {
-    font-size: 2rem;
-    color: var(--gold);
-    background: rgba(212, 175, 55, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid rgba(212, 175, 55, 0.3);
-    animation: borderGlow 2s ease-in-out infinite;
-}
-
-.footer-logo-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-}
-
-.footer-about-text {
-    font-family: 'Open Sans', sans-serif;
-    color: #B0B0B0;
-    font-size: 0.9rem;
-    line-height: 1.7;
-    max-width: 320px;
-    padding-left: 0.5rem;
-    border-left: 3px solid rgba(212, 175, 55, 0.2);
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.footer-title {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--gold);
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
-    position: relative;
-}
-
-.footer-title::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background: var(--gold);
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-}
-
-.footer-link {
-    font-family: 'Open Sans', sans-serif;
-    color: #D0D0D0;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0.3rem 0;
-    position: relative;
-}
-
-.footer-link::before {
-    content: '→';
-    color: var(--gold);
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.3s ease;
-}
-
-.footer-link:hover {
-    color: var(--gold);
-    transform: translateX(5px);
-}
-
-.footer-link:hover::before {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.footer-contact p {
-    font-family: 'Open Sans', sans-serif;
-    color: #D0D0D0;
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem;
-    line-height: 1.6;
-}
-
-.footer-contact .footer-link {
-    color: var(--gold-light);
-    font-size: 0.9rem;
-}
-
-.footer-contact .footer-link:hover {
-    color: var(--gold);
-    text-decoration: none;
-}
-
-/* Updated Footer Bottom */
-.footer-bottom {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-@media (min-width: 640px) {
-    .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.copyright {
-    font-family: 'Montserrat', sans-serif;
-    color: #909090;
-    font-size: 0.85rem;
-    background: rgba(212, 175, 55, 0.05);
-    padding: 0.8rem 1.5rem;
-    border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.1);
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-link {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(212, 175, 55, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
-}
-
-.social-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.social-link i {
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    border-color: var(--gold);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-}
-
-.social-link:hover::before {
-    opacity: 1;
-}
-
-.social-link:hover i {
-    color: #000;
-}
-
-/* Keyframes needed for footer animations */
-@keyframes fadeInFooter {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulseGold {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 rgba(212, 175, 55, 0);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-    }
-}
-
-@keyframes borderGlow {
-    0%, 100% {
-        border-color: rgba(212, 175, 55, 0.3);
-    }
-    50% {
-        border-color: rgba(212, 175, 55, 0.7);
-    }
-}
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeIn 0.6s ease-out;
+        }
     </style>
 </head>
 <body>
     <!-- NAVBAR -->
-    <header id="mainHeader">
-        <!-- Logo -->
-        <div class="logo-container">
-            <a href="#" class="logo">
-                <span class="material-symbols-outlined logo-icon">local_shipping</span>
-                <span class="logo-text"> GmbH</span>
-            </a>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <nav class="nav-desktop">
-            <div class="nav-links">
-                <a class="nav-link" href="./index.html">Startseite</a>
-                <a class="nav-link" href="./Dienstleistungen.html">Dienstleistungen</a>
-                                <a class="nav-link" href="./index.html#faq">FAQ</a>
-                <a class="nav-link" href="./index.html#about">Über uns</a>
-
-                <a class="nav-link" href="./Kontakt.html">Kontakt</a>
+     <div class="layout-container">
+        <!-- Header / Navigation - Professional Navbar -->
+        <header id="mainHeader">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <span class="material-symbols-outlined logo-icon">local_shipping</span>
+                    <span class="logo-text">Gmbh</span>
+                </a>
             </div>
-        </nav>
+
+            <!-- Navigation -->
+            <nav class="nav-desktop">
+                <div class="nav-links">
+                    <a class="nav-link" href="./index.html">Startseite</a>
+                    <a class="nav-link" href="./Dienstleistungen.html">Dienstleistungen</a>
+                    <a class="nav-link" href="./index.html#faq">FAQ</a>
+                    <a class="nav-link" href="./index.html#about">Über uns</a>
+                    <a class="nav-link" href="./Kontakt.html">Kontakt</a>
+                </div>
+            </nav>
 
         <!-- Profile Image -->
         <div class="profile-image-container">
             <img src="./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg" 
                  alt="Geschäftsführer" 
                  class="profile-image"
-                 onerror="this.src='https://via.placeholder.com/50/0A0A0A/D4AF37?text=CEO'">
+                 loading="lazy"
+                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA3MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNzAiIGhlaWdodD0iNjAiIHJ4PSIzMCIgZmlsbD0iI0Q0QUYzNyIvPjx0ZXh0IHg9IjM1IiB5PSIzMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNFTzwvdGV4dD48L3N2Zz4='">
         </div>
 
         <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
             <span class="material-symbols-outlined">menu</span>
         </button>
     </header>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-close-btn" id="mobileCloseBtn">
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
             <span class="material-symbols-outlined">close</span>
         </button>
         <nav class="mobile-nav">
             <a class="mobile-nav-link" href="./index.html">Startseite</a>
-            <a class="mobile-nav-link" href="./Dienstleistungen.html">Dienstleistungen</a>
-                            <a class="nav-link" href="./index.html#about">Über uns</a>
-                <a class="nav-link" href="./index.html#faq">FAQ</a>
-
-            <a class="mobile-nav-link" href="./Kontakt.html">Kontakt</a>
+                <a class="mobile-nav-link" href="./Dienstleistungen.html">Dienstleistungen</a>
+                <a class="mobile-nav-link" href="#faq">FAQ</a>
+                <a class="mobile-nav-link" href="#about">Über uns</a>
+                <a class="mobile-nav-link" href="./Kontakt.html">Kontakt</a>
         </nav>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero-slider">
-        <div class="slider">
-            <div class="slide" style="background-image: url('https://images.pexels.com/photos/11555191/pexels-photo-11555191.jpeg');"></div>
-            <div class="slide" style="background-image: url('https://images.pexels.com/photos/6195288/pexels-photo-6195288.jpeg');"></div>
-            <div class="slide" style="background-image: url('https://images.pexels.com/photos/7203788/pexels-photo-7203788.jpeg');"></div>
-        </div>
-
-        <div class="hero-text">
-            <h1>
-                Ganz einfach – rufen Sie uns an, und wir vereinbaren einen Termin und klären die Transportdetails.<br>
-                Wir garantieren Pünktlichkeit, professionellen Service und die absolute Sicherheit Ihrer Gegenstände.<br>
-                Und ihre Zufriedenheit liegt uns am Herzen.
+    <section class="hero-section" id="home">
+        <div class="hero-content animate-on-scroll">
+            <h1 class="hero-title">
+                Professionelle Umzugs- und Transportdienstleistungen
+                <span>Seit über 10 Jahren für Sie im Einsatz</span>
             </h1>
-            <a href="contact.html" class="kontakt-btn">Kontakt</a>
+            <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
         </div>
     </section>
 
-    <!-- New Section After Hero -->
+    <!-- Quick Info Section -->
     <section class="quick-info-section animate-on-scroll">
         <div class="quick-info-content">
-            <h2 class="quick-info-title">Ganz einfach – rufen Sie uns an, und wir vereinbaren einen Termin und klären die Transportdetails.</h2>
+            <h2 class="quick-info-title">Ganz einfach – rufen Sie uns an</h2>
             <p class="quick-info-text">
-                Wir garantieren Pünktlichkeit, professionellen Service und die absolute Sicherheit Ihrer Gegenstände.
-                <span class="quick-info-highlight">Und ihre Zufriedenheit liegt uns am Herzen.</span>
+                Wir vereinbaren einen Termin und klären die Transportdetails. Wir garantieren Pünktlichkeit, 
+                professionellen Service und die absolute Sicherheit Ihrer Gegenstände.
+                <span class="quick-info-highlight">Und Ihre Zufriedenheit liegt uns am Herzen.</span>
             </p>
         </div>
     </section>
 
-    <!-- Portfolio Slider Section -->
-    <section class="portfolio-section">
-        <div class="slider-container">
-            <div class="slider-title">
-                <h1>Our Dienstleistungen</h1>
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-header animate-on-scroll">
+            <h2 class="section-title">Unsere Dienstleistungen</h2>
+            <p class="section-description">
+                Von der Planung bis zur Umsetzung – wir bieten professionelle Umzugs-, Möbel- und
+                Klaviertransporte, Küchenmontage und Entrümpelungen aus einer Hand.
+            </p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card animate-on-scroll">
+                <img src="https://plus.unsplash.com/premium_photo-1677182396996-d3bb8329ab7b?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Küchenmontage" 
+                     class="service-img"
+                     loading="lazy">
+                <div class="service-content">
+                    <h3 class="service-title">Küchenmontage</h3>
+                    <p class="service-description">Professionelle und präzise Küchenmontage nach deutschen Standards.</p>
+                    <a href="mailto:Info@neumaticgmbh.de?subject=Küchenmontage Anfrage" class="service-btn">Anfrage senden</a>
+                </div>
             </div>
             
+            <!-- Service 2 -->
+            <div class="service-card animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Umzug" 
+                     class="service-img"
+                     loading="lazy">
+                <div class="service-content">
+                    <h3 class="service-title">Umzug</h3>
+                    <p class="service-description">Stressfreier Umzug für Privat- und Geschäftskunden – zuverlässig und pünktlich.</p>
+                    <a href="mailto:Info@neumaticgmbh.de?subject=Umzug Anfrage" class="service-btn">Anfrage senden</a>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card animate-on-scroll">
+                <img src="https://media.istockphoto.com/id/1307825243/photo/photograph-of-dismantling-site.jpg?s=1024x1024&w=is&k=20&c=qUVzloo_RyuIjCUaE6ipY2AQnCMgzTr7R3_-2K-EAO8=" 
+                     alt="Entrümpelungen" 
+                     class="service-img"
+                     loading="lazy">
+                <div class="service-content">
+                    <h3 class="service-title">Entrümpelungen</h3>
+                    <p class="service-description">Fachgerechte Entrümpelung von Wohnungen, Häusern und Büros.</p>
+                    <a href="mailto:Info@neumaticgmbh.de?subject=Entrümpelung Anfrage" class="service-btn">Anfrage senden</a>
+                </div>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="service-card animate-on-scroll">
+                <img src="https://media.istockphoto.com/id/157636619/photo/piano-moving.jpg?s=1024x1024&w=is&k=20&c=3Ex2IwXh6ZuuHpPY4DNoDyxz51Oarr6AUsqRLXDJKZ4=" 
+                     alt="Klaviertransport" 
+                     class="service-img"
+                     loading="lazy">
+                <div class="service-content">
+                    <h3 class="service-title">Klaviertransport</h3>
+                    <p class="service-description">Sicherer und professioneller Transport von Klavieren durch Experten.</p>
+                    <a href="mailto:Info@neumaticgmbh.de?subject=Klaviertransport Anfrage" class="service-btn">Anfrage senden</a>
+                </div>
+            </div>
+            
+            <!-- Service 5 -->
+            <div class="service-card animate-on-scroll">
+                <img src="https://plus.unsplash.com/premium_photo-1661498005837-680e8bfcd60e?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Abbruch Reinigung" 
+                     class="service-img"
+                     loading="lazy">
+                <div class="service-content">
+                    <h3 class="service-title">Abbruch & Reinigung</h3>
+                    <p class="service-description">Schnell, sicher und gründlich – Abbruch und Reinigung aus einer Hand.</p>
+                    <a href="mailto:Info@neumaticgmbh.de?subject=Abbruch Reinigung Anfrage" class="service-btn">Anfrage senden</a>
+                </div>
+            </div>
+            
+            <!-- Service 6 -->
+            <div class="service-card animate-on-scroll">
+                <img src="https://media.istockphoto.com/id/957382582/photo/two-female-workers-with-a-truck-moving-furniture.jpg?s=1024x1024&w=is&k=20&c=il_LxIAZdQbMudUeEitoabkv88AvMbWI8ZD0GnJV-T4=" 
+                     alt="Möbeltransport" 
+                     class="service-img"
+                     loading="lazy">
+                <div class="service-content">
+                    <h3 class="service-title">Möbeltransport</h3>
+                    <p class="service-description">Zuverlässiger Möbeltransport mit größter Sorgfalt und Erfahrung.</p>
+                    <a href="mailto:Info@neumaticgmbh.de?subject=Möbeltransport Anfrage" class="service-btn">Anfrage senden</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Slider Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="slider-title animate-on-scroll">
+            <h1>Unsere <span>Arbeiten</span></h1>
+            <p class="section-description">Einblicke in unsere professionellen Dienstleistungen</p>
+        </div>
+        
+        <div class="slider-container">
             <div class="slider-track" id="sliderTrack">
-                <!-- Slides will be added by JavaScript -->
+                <!-- Slides will be loaded dynamically -->
                 <div class="slide-loading">
-                    <i class="fas fa-spinner fa-spin"></i> Loading images...
+                    <i class="fas fa-spinner fa-spin"></i> Loading...
                 </div>
             </div>
             
             <div class="slider-nav">
-                <button class="nav-btn prev-btn">❮</button>
-                <button class="nav-btn next-btn">❯</button>
+                <button class="nav-btn prev-btn" aria-label="Previous slide">❮</button>
+                <button class="nav-btn next-btn" aria-label="Next slide">❯</button>
             </div>
             
             <div class="dots-container" id="dotsContainer">
@@ -1040,133 +1285,164 @@ footer::after {
             </div>
         </div>
     </section>
-<!-- Enhanced Gold Footer -->
-<footer>
-    <div class="footer-grid">
-        <div class="footer-about">
-            <div class="footer-logo">
-                <span class="material-symbols-outlined footer-logo-icon">local_shipping</span>
-                <h2 class="footer-logo-text">Gmbh</h2>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="material-symbols-outlined footer-logo-icon">local_shipping</span>
+                    <h2 class="footer-logo-text">NEU<span>MATIC</span> GmbH</h2>
+                </div>
+                <p class="footer-about-text">
+                    Professionelle Umzugs- und Transportdienstleistungen in ganz Deutschland. 
+                    Seit über 10 Jahren für Sie im Einsatz.
+                </p>
             </div>
-            <p class="footer-about-text">
-                Professionelle Umzugs- und Transportdienstleistungen in ganz Deutschland. Seit über 10 Jahren für
-                Sie im Einsatz.
-            </p>
+
+            <div class="footer-column">
+                <h3 class="footer-title">Menü</h3>
+                <div class="footer-links">
+                    <a class="footer-link" href="#home">Startseite</a>
+                    <a class="footer-link" href="#services">Dienstleistungen</a>
+                    <a class="footer-link" href="#portfolio">Portfolio</a>
+                    <a class="footer-link" href="#contact">Kontakt</a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title">Kontakt</h3>
+                <div class="footer-links">
+                    <p>Deutschlandweit im Einsatz</p>
+                    <a class="footer-link" href="mailto:Info@neumaticgmbh.de">
+                        <i class="fas fa-envelope"></i> Info@neumaticgmbh.de
+                    </a>
+                    <a class="footer-link" href="tel:+4915115358451">
+                        <i class="fas fa-phone"></i> +49 1511 53 58 451
+                    </a>
+                    <a class="footer-link" href="https://wa.me/491725951898" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> WhatsApp: +49 172 5951898
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-column">
-            <h3 class="footer-title">Menü</h3>
-            <div class="footer-links">
-                <a class="footer-link" href="Home.html">Startseite</a>
-                <a class="footer-link" href="#dienstleistungen">Dienstleistungen</a>
-                <a class="footer-link" href="#faq">FAQ</a>
-                <a class="footer-link" href="#about">Über uns</a>
-                <a class="footer-link" href="Contact.html">Kontakt</a>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2026 NEUMATIC GmbH. Alle Rechte vorbehalten.
             </div>
-        </div>
-
-        <div class="footer-column footer-contact">
-            <h3 class="footer-title">Kontakt</h3>
-            <div class="footer-links">
-                <p>Deutschlandweit im Einsatz</p>
-                <a class="footer-link" href="mailto:Info@neumaticgmbh.de">
-                    <i class="fas fa-envelope"></i> Info@neumaticgmbh.de
+            
+            <div class="social-links">
+                <a class="social-link" href="#" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="footer-link" href="tel:+4915115358451">
-                    <i class="fas fa-phone"></i> +49 1511 53 58 451
+                <a class="social-link" href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
                 </a>
-                <a class="footer-link" href="https://wa.me/491725951898" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp: +49 172 5951898
+                <a class="social-link" href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <div class="footer-bottom">
-        <div class="copyright">
-            &copy; 2026 NEUMATIC GmbH. Alle Rechte vorbehalten.
-        </div>
-        
-        <div class="social-links">
-            <a class="social-link" href="#">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a class="social-link" href="#">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a class="social-link" href="#">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
-    </div>
-</footer>
     <script>
-        // Mobile Menu Toggle
+        // Performance Optimizations
+        'use strict';
+
+        // Mobile Menu Toggle - Optimized
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileCloseBtn = document.getElementById('mobileCloseBtn');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.style.display = 'block';
-            setTimeout(() => {
-                mobileMenu.style.opacity = '1';
-            }, 10);
-        });
-
-        mobileCloseBtn.addEventListener('click', () => {
-            mobileMenu.style.opacity = '0';
-            setTimeout(() => {
-                mobileMenu.style.display = 'none';
-            }, 300);
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.style.opacity = '0';
-                setTimeout(() => {
-                    mobileMenu.style.display = 'none';
-                }, 300);
-            });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('mainHeader');
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = 'rgba(10, 10, 10, 0.98)';
-                header.style.padding = '10px 30px';
-            } else {
-                header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
-                header.style.padding = '15px 30px';
-            }
-        });
-
-        // Hero Slider Script
-        let heroSlides = document.querySelectorAll('.hero-slider .slide');
-        let currentHeroSlide = 0;
-
-        function showHeroSlide(index) {
-            heroSlides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if(i === index) slide.classList.add('active');
+        function toggleMobileMenu() {
+            const isOpen = mobileMenu.style.display === 'block';
+            mobileMenu.style.display = isOpen ? 'none' : 'block';
+            mobileMenu.style.opacity = isOpen ? '0' : '1';
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = isOpen ? 'auto' : 'hidden';
+            
+            // Request animation frame for smooth performance
+            requestAnimationFrame(() => {
+                mobileMenu.style.transition = 'opacity 0.3s ease';
             });
         }
 
-        // Show first slide
-        showHeroSlide(currentHeroSlide);
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        mobileCloseBtn.addEventListener('click', toggleMobileMenu);
 
-        // Auto slide every 5 seconds
-        setInterval(() => {
-            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-            showHeroSlide(currentHeroSlide);
-        }, 5000);
+        // Close menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const header = document.getElementById('mainHeader');
+
+        function handleScroll() {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 50) {
+        header.style.backgroundColor = '#000000';
+        header.style.padding = '10px 30px';
+        header.style.boxShadow = '0 6px 30px rgba(0, 0, 0, 0.7)';
+    } else {
+        header.style.backgroundColor = '#000000';
+        header.style.padding = '15px 30px';
+        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
+    }
+
+    lastScroll = currentScroll;
+}
+
+
+        // Throttle scroll events for performance
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (!scrollTimeout) {
+                scrollTimeout = setTimeout(() => {
+                    handleScroll();
+                    scrollTimeout = null;
+                }, 10);
+            }
+        });
+
+        // Scroll to contact function
+        function scrollToContact() {
+            const contactSection = document.getElementById('contact');
+            contactSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation class
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
 
         // ============================================
-        // PORTFOLIO SLIDER - FIXED VERSION
+        // PORTFOLIO SLIDER - OPTIMIZED VERSION
         // ============================================
 
-        // Images Array - استخدام صور مختلفة لتجنب مشاكل الروابط
+          // Images Array - استخدام صور مختلفة لتجنب مشاكل الروابط
         const sliderImages = [
             { 
                 src: 'https://images.pexels.com/photos/10827342/pexels-photo-10827342.jpeg',
@@ -1221,43 +1497,34 @@ footer::after {
         let autoSlideInterval;
         const totalSlides = sliderImages.length;
         let isAnimating = false;
+        let touchStartX = 0;
+        let touchEndX = 0;
 
         // Initialize Slider
         function initSlider() {
             // Clear loading message
             sliderTrack.innerHTML = '';
             
-            // Create slides
+            // Create slides with lazy loading
             sliderImages.forEach((image, index) => {
                 // Create slide container
                 const slideItem = document.createElement('div');
                 slideItem.className = 'slide-item';
                 
-                // Create image with error handling
+                // Create image with lazy loading and error handling
                 const img = document.createElement('img');
                 img.className = 'slide-img';
                 img.src = image.src;
                 img.alt = image.alt;
                 img.loading = 'lazy';
+                img.decoding = 'async';
                 
-                // Add error handler for broken images
+                // Add error handler
                 img.onerror = function() {
                     this.onerror = null;
                     this.src = 'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1200&h=800&fit=crop&q=80';
-                    
-                    // Create fallback content
-                    const fallback = document.createElement('div');
-                    fallback.className = 'img-error';
-                    fallback.innerHTML = `
-                        <i class="fas fa-truck"></i>
-                        <div>${image.alt}</div>
-                        <small>Image loading, please wait...</small>
-                    `;
-                    
-                    this.parentNode.appendChild(fallback);
                 };
                 
-                // Add image to slide
                 slideItem.appendChild(img);
                 sliderTrack.appendChild(slideItem);
                 
@@ -1267,27 +1534,16 @@ footer::after {
                 dot.dataset.index = index;
                 if (index === 0) dot.classList.add('active');
                 
-                // Add click event to dot
                 dot.addEventListener('click', () => {
-                    if (!isAnimating) {
-                        goToSlide(index);
-                    }
+                    if (!isAnimating) goToSlide(index);
                 });
+                
                 dotsContainer.appendChild(dot);
             });
             
-            // Add event listeners to buttons
-            prevBtn.addEventListener('click', () => {
-                if (!isAnimating) {
-                    goToPrevSlide();
-                }
-            });
-            
-            nextBtn.addEventListener('click', () => {
-                if (!isAnimating) {
-                    goToNextSlide();
-                }
-            });
+            // Add event listeners
+            prevBtn.addEventListener('click', () => !isAnimating && goToPrevSlide());
+            nextBtn.addEventListener('click', () => !isAnimating && goToNextSlide());
             
             // Keyboard navigation
             document.addEventListener('keydown', (e) => {
@@ -1297,46 +1553,39 @@ footer::after {
                 }
             });
             
-            // Touch events for mobile swipe
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
+            // Touch events
             sliderTrack.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
+                touchStartX = e.touches[0].clientX;
                 pauseAutoSlide();
-            });
+            }, { passive: true });
             
             sliderTrack.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                if (!isAnimating) {
-                    handleSwipe();
-                }
+                touchEndX = e.changedTouches[0].clientX;
+                if (!isAnimating) handleSwipe();
                 startAutoSlide();
-            });
+            }, { passive: true });
             
             // Start auto slide
             startAutoSlide();
         }
 
-        // Go to specific slide with smooth animation
+        // Go to specific slide
         function goToSlide(slideIndex) {
             if (isAnimating || slideIndex === currentSlide) return;
             
             isAnimating = true;
-            
-            // Update current slide
             currentSlide = slideIndex;
             
-            // Move slider track with smooth transition
+            // Use transform for hardware acceleration
             sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
             
             // Update dots
             updateDots();
             
-            // Reset animation flag after transition
+            // Reset animation flag
             setTimeout(() => {
                 isAnimating = false;
-            }, 800);
+            }, 500);
             
             // Reset auto slide timer
             resetAutoSlide();
@@ -1358,11 +1607,7 @@ footer::after {
         function updateDots() {
             const dots = document.querySelectorAll('.dot');
             dots.forEach((dot, index) => {
-                if (index === currentSlide) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
+                dot.classList.toggle('active', index === currentSlide);
             });
         }
 
@@ -1394,7 +1639,7 @@ footer::after {
             }
         }
 
-        // Preload images for better performance
+        // Preload images
         function preloadImages() {
             sliderImages.forEach(image => {
                 const img = new Image();
@@ -1403,7 +1648,7 @@ footer::after {
         }
 
         // Initialize when page loads
-        window.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             // Initialize mobile menu
             mobileMenu.style.display = 'none';
             mobileMenu.style.opacity = '0';
@@ -1417,7 +1662,7 @@ footer::after {
                 // Add initial animation
                 sliderTrack.style.opacity = '0';
                 setTimeout(() => {
-                    sliderTrack.style.transition = 'opacity 1s ease';
+                    sliderTrack.style.transition = 'opacity 0.5s ease';
                     sliderTrack.style.opacity = '1';
                 }, 100);
             }, 500);
@@ -1435,10 +1680,51 @@ footer::after {
             });
         });
 
-        // Handle window resize
+        // Handle window resize efficiently
+        let resizeTimeout;
         window.addEventListener('resize', () => {
-            // Update slider position on resize
-            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }, 250);
+        });
+
+        // Service cards hover effect
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+                this.style.transition = 'opacity 0.3s ease';
+            });
+            
+            img.style.opacity = '0';
         });
     </script>
 </body>
