@@ -103,7 +103,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px;
-    background-color: #000000; /* أسود صريح */
+    background-color: #000000;
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     z-index: 1000;
@@ -155,8 +155,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 22px;
             font-weight: 700;
-                        color: var(--gold);
-
+            color: var(--gold);
             letter-spacing: 1px;
         }
 
@@ -180,7 +179,7 @@
 .nav-link {
     font-size: 16px;
     font-weight: 500;
-    color: #ffffff; /* أبيض */
+    color: #ffffff;
     text-decoration: none;
     position: relative;
     padding: 8px 0;
@@ -308,32 +307,68 @@
             justify-content: center;
         }
 
-        /* ===== Hero Section - OPTIMIZED ===== */
-        .hero-section {
+        /* ===== Hero Slider Section - NEW ===== */
+        .hero-slider-section {
             position: relative;
             height: 100vh;
             min-height: 600px;
-              background:
-        url('https://media.istockphoto.com/id/1076613816/photo/electricity-installation-in-an-old-apartment.jpg?s=1024x1024&w=is&k=20&c=XveI1fxcKvnH00gjqV1XLIpwPm7ik0Qvh5LfW7ruDbc=')
-        center / cover no-repeat;
-            display: flex;
-            align-items: center;
-            padding: 0 5%;
             margin-top: 80px;
+            overflow: hidden;
         }
 
-        .hero-content {
-            max-width: 700px;
+        .hero-slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-slide-content {
             position: relative;
             z-index: 2;
+            max-width: 800px;
+            text-align: center;
+            padding: 0 20px;
+            color: white;
         }
 
         .hero-title {
             font-size: 2.5rem;
             line-height: 1.3;
             margin-bottom: 30px;
-            color: var(--text-dark);
+            color: white;
             font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         .hero-title span {
@@ -354,13 +389,75 @@
             font-weight: 600;
             transition: all 0.3s ease;
             cursor: pointer;
-            box-shadow: var(--shadow);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .hero-btn:hover {
             background-color: var(--gold-dark);
             transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Slider Dots */
+        .hero-slider-dots {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            z-index: 3;
+        }
+
+        .hero-slider-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .hero-slider-dot.active {
+            background: var(--gold);
+            transform: scale(1.2);
+            border-color: white;
+        }
+
+        /* Slider Navigation */
+        .hero-slider-nav {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 3;
+        }
+
+        .hero-slider-nav-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--gold);
+            color: white;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .hero-slider-nav-btn:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: scale(1.1);
         }
 
         /* ========================================= */
@@ -405,7 +502,7 @@
         }
 
         /* ========================================= */
-        /* SERVICES GRID SECTION - OPTIMIZED */
+        /* SERVICES GRID SECTION - OPTIMIZED (3 CARDS ONLY) */
         /* ========================================= */
         .services-section {
             padding: 5rem 2rem;
@@ -449,7 +546,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
@@ -475,7 +572,7 @@
 
         .service-img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
@@ -745,8 +842,7 @@
 
         .footer-about-text {
             font-family: 'Open Sans', sans-serif;
-                        color: var(--gold);
-
+            color: var(--gold);
             font-size: 0.9rem;
             line-height: 1.7;
             max-width: 320px;
@@ -789,8 +885,7 @@
 
         .footer-link {
             font-family: 'Open Sans', sans-serif;
-                        color: var(--gold);
-
+            color: var(--gold);
             text-decoration: none;
             font-size: 0.9rem;
             transition: all 0.3s ease;
@@ -821,8 +916,7 @@
 
         .footer-contact p {
             font-family: 'Open Sans', sans-serif;
-                        color: var(--gold);
-
+            color: var(--gold);
             font-size: 0.9rem;
             margin-bottom: 0.6rem;
             line-height: 1.6;
@@ -979,9 +1073,9 @@
                 font-size: 28px;
             }
             
-            .hero-section {
+            .hero-slider-section {
                 min-height: 500px;
-                padding: 0 20px;
+                height: 70vh;
             }
             
             .hero-title {
@@ -1057,8 +1151,8 @@
         }
 
         /* Performance Optimizations */
-        .hero-section {
-            will-change: transform;
+        .hero-slide {
+            will-change: opacity;
         }
 
         .service-card {
@@ -1096,13 +1190,13 @@
 </head>
 <body>
     <!-- NAVBAR -->
-     <div class="layout-container">
+    <div class="layout-container">
         <!-- Header / Navigation - Professional Navbar -->
         <header id="mainHeader">
             <div class="logo-container">
                 <a href="#" class="logo">
                     <span class="material-symbols-outlined logo-icon">local_shipping</span>
-                    <span class="logo-text">Gmbh</span>
+                    <span class="logo-text">NEUMATIC GmbH</span>
                 </a>
             </div>
 
@@ -1146,14 +1240,54 @@
         </nav>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="hero-content animate-on-scroll">
-            <h1 class="hero-title">
-                Professionelle Umzugs- und Transportdienstleistungen
-                <span>Seit über 10 Jahren für Sie im Einsatz</span>
-            </h1>
-            <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
+    <!-- Hero Slider Section -->
+    <section class="hero-slider-section" id="home">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" style="background-image: url('./img/646c2325-e8aa-4108-8016-c052e52c4821.jfif')">
+                <div class="hero-slide-content animate-on-scroll">
+                    <h1 class="hero-title">
+                        Professionelle Dienstleistungen
+                        <span>Erdarbeiten mit Bagger</span>
+                    </h1>
+                    <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="hero-slide" style="background-image: url('./img/a93d3204-2182-44ff-a70d-87a5d5330ffc.jfif')">
+                <div class="hero-slide-content animate-on-scroll">
+                    <h1 class="hero-title">
+                        Professionelle Reinigung
+                        <span>Sauberkeit auf höchstem Niveau</span>
+                    </h1>
+                    <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="hero-slide" style="background-image: url('./img/9d6e3a70-b97e-45b0-97c9-612b1dd5e68a.jfif')">
+                <div class="hero-slide-content animate-on-scroll">
+                    <h1 class="hero-title">
+                        Gartenpflege & Landschaftsbau
+                        <span>Ihr Garten in besten Händen</span>
+                    </h1>
+                    <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Navigation -->
+        <div class="hero-slider-nav">
+            <button class="hero-slider-nav-btn prev-hero-slide" aria-label="Previous slide">❮</button>
+            <button class="hero-slider-nav-btn next-hero-slide" aria-label="Next slide">❯</button>
+        </div>
+        
+        <!-- Slider Dots -->
+        <div class="hero-slider-dots">
+            <div class="hero-slider-dot active" data-index="0"></div>
+            <div class="hero-slider-dot" data-index="1"></div>
+            <div class="hero-slider-dot" data-index="2"></div>
         </div>
     </section>
 
@@ -1169,92 +1303,53 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section - 3 CARDS ONLY -->
     <section class="services-section" id="services">
         <div class="section-header animate-on-scroll">
             <h2 class="section-title">Unsere Dienstleistungen</h2>
             <p class="section-description">
-                Von der Planung bis zur Umsetzung – wir bieten professionelle Umzugs-, Möbel- und
-                Klaviertransporte, Küchenmontage und Entrümpelungen aus einer Hand.
+                Von der Planung bis zur Umsetzung – wir bieten professionelle Dienstleistungen für Erdarbeiten, 
+                Reinigung und Gartenpflege aus einer Hand.
             </p>
         </div>
         
         <div class="services-grid">
-            <!-- Service 1 -->
+            <!-- Service 1 - Erdarbeiten mit Bagger -->
             <div class="service-card animate-on-scroll">
-                <img src="https://plus.unsplash.com/premium_photo-1677182396996-d3bb8329ab7b?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Küchenmontage" 
+                <img src="./img/c2d5d71c-68c2-49af-9e8e-bf11cf925a75.jfif" 
+                     alt="Erdarbeiten mit Bagger" 
                      class="service-img"
                      loading="lazy">
                 <div class="service-content">
-                    <h3 class="service-title">Küchenmontage</h3>
-                    <p class="service-description">Professionelle und präzise Küchenmontage nach deutschen Standards.</p>
-                    <a href="mailto:Info@neumaticgmbh.de?subject=Küchenmontage Anfrage" class="service-btn">Anfrage senden</a>
+                    <h3 class="service-title">Erdarbeiten mit Bagger</h3>
+                    <p class="service-description">Professionelle Erdarbeiten mit modernen Baggern für Baustellen, Grundstücke und Gartenprojekte.</p>
+                    <a href="mailto:Info@neumaticgmbh.de?subject=Erdarbeiten mit Bagger Anfrage" class="service-btn">Anfrage senden</a>
                 </div>
             </div>
             
-            <!-- Service 2 -->
+            <!-- Service 2 - Reinigung -->
             <div class="service-card animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Umzug" 
+                <img src="./img/3f7cc95d-d988-41ba-ad88-c3e53c5d655c.jfif" 
+                     alt="Reinigung" 
                      class="service-img"
                      loading="lazy">
                 <div class="service-content">
-                    <h3 class="service-title">Umzug</h3>
-                    <p class="service-description">Stressfreier Umzug für Privat- und Geschäftskunden – zuverlässig und pünktlich.</p>
-                    <a href="mailto:Info@neumaticgmbh.de?subject=Umzug Anfrage" class="service-btn">Anfrage senden</a>
+                    <h3 class="service-title">Reinigung</h3>
+                    <p class="service-description">Umfassende Reinigungsdienstleistungen für Wohnungen, Büros, Baustellen und Industrieanlagen.</p>
+                    <a href="mailto:Info@neumaticgmbh.de?subject=Reinigung Anfrage" class="service-btn">Anfrage senden</a>
                 </div>
             </div>
             
-            <!-- Service 3 -->
+            <!-- Service 3 - Gartenpflege -->
             <div class="service-card animate-on-scroll">
-                <img src="https://media.istockphoto.com/id/1307825243/photo/photograph-of-dismantling-site.jpg?s=1024x1024&w=is&k=20&c=qUVzloo_RyuIjCUaE6ipY2AQnCMgzTr7R3_-2K-EAO8=" 
-                     alt="Entrümpelungen" 
+                <img src="./img/a93d3204-2182-44ff-a70d-87a5d5330ffc.jfif" 
+                     alt="Gartenpflege" 
                      class="service-img"
                      loading="lazy">
                 <div class="service-content">
-                    <h3 class="service-title">Entrümpelungen</h3>
-                    <p class="service-description">Fachgerechte Entrümpelung von Wohnungen, Häusern und Büros.</p>
-                    <a href="mailto:Info@neumaticgmbh.de?subject=Entrümpelung Anfrage" class="service-btn">Anfrage senden</a>
-                </div>
-            </div>
-            
-            <!-- Service 4 -->
-            <div class="service-card animate-on-scroll">
-                <img src="https://media.istockphoto.com/id/157636619/photo/piano-moving.jpg?s=1024x1024&w=is&k=20&c=3Ex2IwXh6ZuuHpPY4DNoDyxz51Oarr6AUsqRLXDJKZ4=" 
-                     alt="Klaviertransport" 
-                     class="service-img"
-                     loading="lazy">
-                <div class="service-content">
-                    <h3 class="service-title">Klaviertransport</h3>
-                    <p class="service-description">Sicherer und professioneller Transport von Klavieren durch Experten.</p>
-                    <a href="mailto:Info@neumaticgmbh.de?subject=Klaviertransport Anfrage" class="service-btn">Anfrage senden</a>
-                </div>
-            </div>
-            
-            <!-- Service 5 -->
-            <div class="service-card animate-on-scroll">
-                <img src="https://plus.unsplash.com/premium_photo-1661498005837-680e8bfcd60e?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Abbruch Reinigung" 
-                     class="service-img"
-                     loading="lazy">
-                <div class="service-content">
-                    <h3 class="service-title">Abbruch & Reinigung</h3>
-                    <p class="service-description">Schnell, sicher und gründlich – Abbruch und Reinigung aus einer Hand.</p>
-                    <a href="mailto:Info@neumaticgmbh.de?subject=Abbruch Reinigung Anfrage" class="service-btn">Anfrage senden</a>
-                </div>
-            </div>
-            
-            <!-- Service 6 -->
-            <div class="service-card animate-on-scroll">
-                <img src="https://media.istockphoto.com/id/957382582/photo/two-female-workers-with-a-truck-moving-furniture.jpg?s=1024x1024&w=is&k=20&c=il_LxIAZdQbMudUeEitoabkv88AvMbWI8ZD0GnJV-T4=" 
-                     alt="Möbeltransport" 
-                     class="service-img"
-                     loading="lazy">
-                <div class="service-content">
-                    <h3 class="service-title">Möbeltransport</h3>
-                    <p class="service-description">Zuverlässiger Möbeltransport mit größter Sorgfalt und Erfahrung.</p>
-                    <a href="mailto:Info@neumaticgmbh.de?subject=Möbeltransport Anfrage" class="service-btn">Anfrage senden</a>
+                    <h3 class="service-title">Gartenpflege</h3>
+                    <p class="service-description">Professionelle Gartenpflege, Landschaftsbau und Grünflächenbetreuung für Privat- und Geschäftskunden.</p>
+                    <a href="mailto:Info@neumaticgmbh.de?subject=Gartenpflege Anfrage" class="service-btn">Anfrage senden</a>
                 </div>
             </div>
         </div>
@@ -1295,7 +1390,7 @@
                     <h2 class="footer-logo-text">NEU<span>MATIC</span> GmbH</h2>
                 </div>
                 <p class="footer-about-text">
-                    Professionelle Umzugs- und Transportdienstleistungen in ganz Deutschland. 
+                    Professionelle Dienstleistungen für Erdarbeiten, Reinigung und Gartenpflege in ganz Deutschland. 
                     Seit über 10 Jahren für Sie im Einsatz.
                 </p>
             </div>
@@ -1382,21 +1477,20 @@
         const header = document.getElementById('mainHeader');
 
         function handleScroll() {
-    const currentScroll = window.pageYOffset;
+            const currentScroll = window.pageYOffset;
 
-    if (currentScroll > 50) {
-        header.style.backgroundColor = '#000000';
-        header.style.padding = '10px 30px';
-        header.style.boxShadow = '0 6px 30px rgba(0, 0, 0, 0.7)';
-    } else {
-        header.style.backgroundColor = '#000000';
-        header.style.padding = '15px 30px';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
-    }
+            if (currentScroll > 50) {
+                header.style.backgroundColor = '#000000';
+                header.style.padding = '10px 30px';
+                header.style.boxShadow = '0 6px 30px rgba(0, 0, 0, 0.7)';
+            } else {
+                header.style.backgroundColor = '#000000';
+                header.style.padding = '15px 30px';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
+            }
 
-    lastScroll = currentScroll;
-}
-
+            lastScroll = currentScroll;
+        }
 
         // Throttle scroll events for performance
         let scrollTimeout;
@@ -1439,51 +1533,123 @@
         });
 
         // ============================================
+        // HERO SLIDER - NEW AUTOMATIC SLIDER
+        // ============================================
+        
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroDots = document.querySelectorAll('.hero-slider-dot');
+        const prevHeroBtn = document.querySelector('.prev-hero-slide');
+        const nextHeroBtn = document.querySelector('.next-hero-slide');
+        
+        let currentHeroSlide = 0;
+        let heroSlideInterval;
+        const totalHeroSlides = heroSlides.length;
+        
+        // Initialize Hero Slider
+        function initHeroSlider() {
+            // Start automatic sliding
+            startHeroSlide();
+            
+            // Add event listeners for navigation
+            prevHeroBtn.addEventListener('click', goToPrevHeroSlide);
+            nextHeroBtn.addEventListener('click', goToNextHeroSlide);
+            
+            // Add event listeners for dots
+            heroDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.getAttribute('data-index'));
+                    goToHeroSlide(slideIndex);
+                });
+            });
+            
+            // Pause on hover
+            const heroSlider = document.querySelector('.hero-slider-section');
+            heroSlider.addEventListener('mouseenter', pauseHeroSlide);
+            heroSlider.addEventListener('mouseleave', startHeroSlide);
+        }
+        
+        // Go to specific hero slide
+        function goToHeroSlide(slideIndex) {
+            // Hide current slide
+            heroSlides[currentHeroSlide].classList.remove('active');
+            heroDots[currentHeroSlide].classList.remove('active');
+            
+            // Update current slide
+            currentHeroSlide = slideIndex;
+            
+            // Show new slide
+            heroSlides[currentHeroSlide].classList.add('active');
+            heroDots[currentHeroSlide].classList.add('active');
+            
+            // Reset auto slide timer
+            resetHeroSlide();
+        }
+        
+        // Go to next hero slide
+        function goToNextHeroSlide() {
+            const nextSlide = (currentHeroSlide + 1) % totalHeroSlides;
+            goToHeroSlide(nextSlide);
+        }
+        
+        // Go to previous hero slide
+        function goToPrevHeroSlide() {
+            const prevSlide = (currentHeroSlide - 1 + totalHeroSlides) % totalHeroSlides;
+            goToHeroSlide(prevSlide);
+        }
+        
+        // Auto slide functionality
+        function startHeroSlide() {
+            heroSlideInterval = setInterval(goToNextHeroSlide, 5000); // Change every 5 seconds
+        }
+        
+        function pauseHeroSlide() {
+            clearInterval(heroSlideInterval);
+        }
+        
+        function resetHeroSlide() {
+            pauseHeroSlide();
+            startHeroSlide();
+        }
+
+        // ============================================
         // PORTFOLIO SLIDER - OPTIMIZED VERSION
         // ============================================
 
-          // Images Array - استخدام صور مختلفة لتجنب مشاكل الروابط
+        // Images Array
         const sliderImages = [
             { 
-                src: 'https://images.pexels.com/photos/10827342/pexels-photo-10827342.jpeg',
+                src: './img/646c2325-e8aa-4108-8016-c052e52c4821.jfif',
                 alt: 'Transport Service 1'
             },
             { 
-                src: 'https://images.pexels.com/photos/7464703/pexels-photo-7464703.jpeg',
+                src: './img/26d9b2b0-a813-4df8-a991-773ec927022f.jfif',
                 alt: 'Transport Service 2'
             },
             { 
-                src: 'https://images.pexels.com/photos/4792548/pexels-photo-4792548.jpeg',
+                src: './img/3f7cc95d-d988-41ba-ad88-c3e53c5d655c.jfif',
                 alt: 'Logistics Service'
             },
             { 
-                src: 'https://images.pexels.com/photos/2378209/pexels-photo-2378209.jpeg',
+                src: './img/646c2325-e8aa-4108-8016-c052e52c4821.jfif',
                 alt: 'Truck Transport'
             },
             { 
-                src: 'https://images.pexels.com/photos/30149174/pexels-photo-30149174.jpeg',
+                src: './img/92c02838-3ff4-4157-97c9-d601230795cb.jfif',
                 alt: 'Moving Service'
             },
             { 
-                src: 'https://images.pexels.com/photos/4088004/pexels-photo-4088004.jpeg',
+                src: './img/c2d5d71c-68c2-49af-9e8e-bf11cf925a75.jfif',
                 alt: 'Cargo Transport'
             },
             { 
-                src: 'https://images.pexels.com/photos/32473245/pexels-photo-32473245.png',
+                src: './img/9dcb84d7-d5bd-49f2-b37e-4cabe8d18ecc.jfif',
                 alt: 'Delivery Service'
             },
             { 
-                src: 'https://images.pexels.com/photos/4246266/pexels-photo-4246266.jpeg',
+                src: './img/9d6e3a70-b97e-45b0-97c9-612b1dd5e68a.jfif',
                 alt: 'Shipping Service'
             },
-            { 
-                src: 'https://media.istockphoto.com/id/1620862879/photo/builder-cleaning-room-after-demolition-jobs-from-old-concrete-by-collecting-it-in-sugar-bags.jpg?s=1024x1024&w=is&k=20&c=5YVlU1U3ysQiRf3CTWZo_Yu7h63iFNkLTMb4Vs96NNA=',
-                alt: 'Freight Service'
-            },
-            { 
-                src: 'https://media.istockphoto.com/id/905393510/photo/building-walls-to-crack.jpg?s=1024x1024&w=is&k=20&c=NMcJtCtvJk7oJi-30OBnPTbsGuhnOicTD02sheQicR8=',
-                alt: 'Transport Final'
-            }
+           
         ];
 
         // DOM Elements
@@ -1653,6 +1819,9 @@
             mobileMenu.style.display = 'none';
             mobileMenu.style.opacity = '0';
             mobileMenu.style.transition = 'opacity 0.3s ease';
+            
+            // Initialize hero slider
+            initHeroSlider();
             
             // Initialize portfolio slider
             setTimeout(() => {
