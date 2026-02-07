@@ -364,6 +364,7 @@
             overflow: hidden;
             margin: 0;
         }
+/* طبقة الشفافية */
 
         .hero-track {
             display: flex;
@@ -382,15 +383,16 @@
         }
 
         /* تحسين الطبقة الشفافة للنص */
-        .slide-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-           
-        }
+       .slide-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* درجة الشفافية */
+}
+
 
         /* النص على اليسار */
         .slide-info {
@@ -422,7 +424,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
-            color: black;
+            color: rgb(255, 255, 255);
             margin-bottom: 1.2rem;
             line-height: 1.2;
         }
@@ -2228,7 +2230,7 @@
                 <div class="slide-card"
                     style="background-image: url('https://images.pexels.com/photos/5997050/pexels-photo-5997050.jpeg');">
                     <div class="slide-info">
-                        <div class="slide-title">Sicherer Klaviertransport – professionell und zuverlässig</div>
+                        <div class="slide-title">Sicherer Klaviertransport professionell und zuverlässig</div>
                         <button onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Klaviertransport Anfrage'">Anfrage schicken</button>
                     </div>
                 </div>
