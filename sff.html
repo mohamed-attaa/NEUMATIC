@@ -1,0 +1,297 @@
+<!-- Start Team Members-->
+<div class="team" id="team">
+  <h2 class="main-title">Team Members</h2>
+  <div class="container">
+    <div class="box">
+      <div class="data">
+        <img src="./img/WhatsApp Image 2026-02-02 at 4.19.33 PM.jpeg" alt="Galal Abd El-Baset">
+      </div>
+      <div class="info">
+        <h2>Galal Abd El-Baset</h2>
+        <p>Front End Developer</p>
+        <div class="contact-icons">
+          <div class="icon-item">
+            <i class="fas fa-envelope"></i>
+            <span>galal@example.com</span>
+          </div>
+          <div class="icon-item">
+            <i class="fas fa-phone"></i>
+            <span>+20 100 000 0001</span>
+          </div>
+          <div class="icon-item">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="data">
+        <img src="./img/WhatsApp Image 2026-02-02 at 4.19.33 PM.jpeg" alt="Mohamed Hmada">
+      </div>
+      <div class="info">
+        <h2>Mohamed Hmada</h2>
+        <p>Front End Developer</p>
+        <div class="contact-icons">
+          <div class="icon-item">
+            <i class="fas fa-envelope"></i>
+            <span>mohamed@example.com</span>
+          </div>
+          <div class="icon-item">
+            <i class="fas fa-phone"></i>
+            <span>+20 100 000 0002</span>
+          </div>
+          <div class="icon-item">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="data">
+        <img src="./img/WhatsApp Image 2026-02-02 at 4.19.33 PM.jpeg" alt="Mariam Ashraf">
+      </div>
+      <div class="info">
+        <h2>Mariam Ashraf</h2>
+        <p>Front End Developer</p>
+        <div class="contact-icons">
+          <div class="icon-item">
+            <i class="fas fa-envelope"></i>
+            <span>mariam@example.com</span>
+          </div>
+          <div class="icon-item">
+            <i class="fas fa-phone"></i>
+            <span>+20 100 000 0003</span>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Team Members -->
+<style>
+/* ================= Start Team Section ================= */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gold: #c9a227;
+  --gold-soft: rgba(201, 163, 39, 0.8);
+}
+
+.team {
+  background-color: var(--white);
+  color: var(--black);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.team .container {
+  width: 90% !important;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  gap: 30px;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .team .container {
+    justify-items: center;
+  }
+}
+
+.team .box {
+  position: relative;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+@media (max-width: 1024px) {
+  .team .box {
+    width: 70%;
+  }
+}
+
+.team .box:hover {
+  transform: translateY(-15px);
+}
+
+.team .box .data {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  position: relative;
+}
+
+.team .box .data img {
+  width: calc(100% - 80px);
+  height: 200px;
+  transition: filter 0.3s ease;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.team .box:hover img {
+  filter: grayscale(100%);
+}
+
+.team .box .info {
+  padding: 20px 20px 25px 80px;
+  text-align: left;
+}
+
+.team .box .info h2 {
+  color: var(--black);
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.team .box:hover .info h2 {
+  color: var(--gold);
+}
+
+.team .box .info p {
+  margin: 0 0 15px 0;
+  color: var(--black);
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.team .box .info .contact-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.team .box .info .contact-icons .icon-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--black);
+  transition: all 0.3s ease;
+}
+
+.team .box .info .contact-icons .icon-item:hover {
+  color: var(--gold);
+}
+
+.team .box .info .contact-icons .icon-item i {
+  width: 20px;
+  text-align: center;
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.team .box:hover .info .contact-icons .icon-item i {
+  color: var(--black);
+}
+
+.team .box:hover .info .contact-icons .icon-item:hover i {
+  color: var(--gold);
+}
+
+.team .box .info .contact-icons .icon-item span {
+  color: var(--black);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.team .box:hover .info .contact-icons .icon-item:hover span {
+  opacity: 1;
+  color: var(--gold);
+}
+
+/* ===== Global Styles for Team Section ===== */
+
+.main-title {
+  text-transform: uppercase;
+  margin: 0 auto 80px;
+  border: 2px solid var(--gold);
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.main-title::before,
+.main-title::after {
+  content: "";
+  background-color: var(--gold);
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-title::before {
+  left: -30px;
+}
+
+.main-title:hover::before {
+  animation: left-move 0.3s linear forwards;
+  z-index: -1;
+}
+
+.main-title::after {
+  right: -30px;
+}
+
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-move 0.3s linear forwards;
+}
+
+.main-title:hover {
+  color: var(--white);
+  border: 2px solid var(--gold);
+  transition-delay: 0.3s;
+}
+
+@keyframes left-move {
+  50% {
+    left: 0;
+    height: 12px;
+    width: 12px;
+  }
+  100% {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+@keyframes right-move {
+  50% {
+    right: 0;
+    height: 12px;
+    width: 12px;
+  }
+  100% {
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color: var(--gold);
+  }
+}
+
+/* ===== End Team ===== */
+</style>
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

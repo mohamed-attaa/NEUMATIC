@@ -5,30 +5,32 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>NEUMATIC - Professionelle Dienstleistungen</title>
-    
+
     <!-- تحسينات SEO وسرعة التحميل -->
-    <meta name="description" content="Professionelle Dienstleistungen für Küchenmontage, Umzug, Möbeltransport, Entrümpelungen und Klaviertransport in ganz Deutschland.">
+    <meta name="description"
+        content="Professionelle Dienstleistungen für Küchenmontage, Umzug, Möbeltransport, Entrümpelungen und Klaviertransport in ganz Deutschland.">
     <meta name="keywords" content="Umzug, Küchenmontage, Möbeltransport, Entrümpelung, Klaviertransport, Deutschland">
     <meta name="author" content="NEUMATIC GmbH">
-    
+
     <!-- Preconnect للموارد الخارجية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+
     <!-- تحميل CSS بشكل غير متزامن -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-          media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'" />
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     </noscript>
-    
+
     <!-- Fonts مع تحميل متأخر -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap" 
-          rel="stylesheet" media="print" onload="this.media='all'" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
-          rel="stylesheet" media="print" onload="this.media='all'" />
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
+
     <style>
         /* CSS Variables - UPDATED FOR WHITE BACKGROUND */
         :root {
@@ -59,7 +61,8 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             width: 100%;
             font-family: 'Montserrat', sans-serif;
@@ -95,26 +98,27 @@
         /* NAVBAR PROFESSIONAL STYLE - UPDATED FOR WHITE */
         /* ========================= */
         header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background-color: #000000;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-    z-index: 1000;
-    width: 100%;
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: #000000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            width: 100%;
+        }
 
         @keyframes slideDown {
             from {
                 transform: translateY(-100%);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -147,8 +151,15 @@
         }
 
         @keyframes pulseGold {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
         }
 
         .logo-text {
@@ -176,37 +187,39 @@
             align-items: center;
             gap: 30px;
         }
-.nav-link {
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffffff;
-    text-decoration: none;
-    position: relative;
-    padding: 8px 0;
-    transition: color 0.3s ease;
-}
 
-.nav-link:hover {
-    color: var(--gold);
-}
+        .nav-link {
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+        }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--gold);
-    transition: width 0.3s ease;
-}
+        .nav-link:hover {
+            color: var(--gold);
+        }
 
-.nav-link:hover::after {
-    width: 100%;
-}
-.logo:hover {
-    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
-}
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .logo:hover {
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+        }
 
         /* Profile Image */
         .profile-image-container {
@@ -234,7 +247,8 @@
             display: none;
             align-items: center;
             justify-content: center;
-            background: var(--gold-soft);
+            background-color: #B8961E;
+
             border: 1px solid var(--border);
             color: var(--text-dark);
             cursor: pointer;
@@ -246,7 +260,8 @@
         }
 
         .mobile-menu-btn:hover {
-            background: var(--gold-soft);
+            background-color: #B8961E;
+
             transform: scale(0.95);
         }
 
@@ -284,7 +299,8 @@
         }
 
         .mobile-nav-link:hover {
-            background: var(--gold-soft);
+            background-color: #bd970f70;
+
             color: var(--gold);
             border-left-color: var(--gold);
             transform: translateX(5px);
@@ -296,7 +312,8 @@
             right: 20px;
             width: 45px;
             height: 45px;
-            background: var(--gold-soft);
+            background-color: #B8961E;
+
             border: 1px solid var(--border);
             border-radius: 8px;
             color: var(--text-dark);
@@ -744,8 +761,8 @@
         /* ========================================= */
         /* ENHANCED GOLDEN FOOTER - UPDATED FOR WHITE */
         /* ========================================= */
-       /* ENHANCED GOLDEN FOOTER */
-          footer {
+        /* ENHANCED GOLDEN FOOTER */
+        footer {
             background-color: #000000;
             border-top: 3px solid var(--gold);
             margin-top: auto;
@@ -764,12 +781,12 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                var(--gold) 20%, 
-                var(--gold-light) 50%, 
-                var(--gold) 80%, 
-                transparent 100%);
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    var(--gold) 20%,
+                    var(--gold-light) 50%,
+                    var(--gold) 80%,
+                    transparent 100%);
             z-index: 1;
         }
 
@@ -780,12 +797,12 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                rgba(212, 175, 55, 0.1) 20%, 
-                rgba(212, 175, 55, 0.3) 50%, 
-                rgba(212, 175, 55, 0.1) 80%, 
-                transparent 100%);
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(212, 175, 55, 0.1) 20%,
+                    rgba(212, 175, 55, 0.3) 50%,
+                    rgba(212, 175, 55, 0.1) 80%,
+                    transparent 100%);
             transform: translateY(-50%);
         }
 
@@ -1037,24 +1054,24 @@
             .nav-desktop {
                 display: none;
             }
-            
+
             .mobile-menu-btn {
                 display: flex;
             }
-            
+
             .logo-text {
                 font-size: 20px;
             }
-            
+
             .profile-image {
                 width: 50px;
                 height: 50px;
             }
-            
+
             .hero-title {
                 font-size: 2rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
@@ -1064,48 +1081,48 @@
             header {
                 padding: 12px 20px;
             }
-            
+
             .logo-text {
                 font-size: 18px;
             }
-            
+
             .logo-icon {
                 font-size: 28px;
             }
-            
+
             .hero-slider-section {
                 min-height: 500px;
                 height: 70vh;
             }
-            
+
             .hero-title {
                 font-size: 1.8rem;
             }
-            
+
             .hero-btn {
                 padding: 12px 30px;
                 font-size: 1rem;
             }
-            
+
             .services-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .slider-container {
                 height: 400px;
             }
-            
+
             .nav-btn {
                 width: 40px;
                 height: 40px;
                 font-size: 20px;
             }
-            
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
+
             .footer-logo-text {
                 font-size: 1.5rem;
             }
@@ -1115,36 +1132,36 @@
             .hero-title {
                 font-size: 1.5rem;
             }
-            
+
             .quick-info-title {
                 font-size: 1.5rem;
             }
-            
+
             .quick-info-text {
                 font-size: 1rem;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
             }
-            
+
             .section-description {
                 font-size: 1rem;
             }
-            
+
             .service-card {
                 margin-bottom: 20px;
             }
-            
+
             .footer-bottom {
                 flex-direction: column;
                 gap: 1.5rem;
             }
-            
+
             .social-links {
                 order: 1;
             }
-            
+
             .copyright {
                 order: 2;
             }
@@ -1169,6 +1186,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1188,6 +1206,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- NAVBAR -->
     <div class="layout-container">
@@ -1206,695 +1225,701 @@
                     <a class="nav-link" href="./index.html">Startseite</a>
                     <a class="nav-link" href="./Dienstleistungen.html">Dienstleistungen</a>
                     <a class="nav-link" href="./index.html#faq">FAQ</a>
+<a class="nav-link" href="./Kontakt.html#availability">Arbeitszeiten</a>
+
                     <a class="nav-link" href="./index.html#about">Über uns</a>
                     <a class="nav-link" href="./Kontakt.html">Kontakt</a>
                 </div>
             </nav>
 
-        <!-- Profile Image -->
-        <div class="profile-image-container">
-            <img src="./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg" 
-                 alt="Geschäftsführer" 
-                 class="profile-image"
-                 loading="lazy"
-                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA3MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNzAiIGhlaWdodD0iNjAiIHJ4PSIzMCIgZmlsbD0iI0Q0QUYzNyIvPjx0ZXh0IHg9IjM1IiB5PSIzMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNFTzwvdGV4dD48L3N2Zz4='">
-        </div>
+            <!-- Profile Image -->
+            <div class="profile-image-container">
+                <img src="./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg" alt="Geschäftsführer"
+                    class="profile-image" loading="lazy"
+                    onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA3MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNzAiIGhlaWdodD0iNjAiIHJ4PSIzMCIgZmlsbD0iI0Q0QUYzNyIvPjx0ZXh0IHg9IjM1IiB5PSIzMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNFTzwvdGV4dD48L3N2Zz4='">
+            </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-    </header>
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
-            <span class="material-symbols-outlined">close</span>
-        </button>
-        <nav class="mobile-nav">
-            <a class="mobile-nav-link" href="./index.html">Startseite</a>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <nav class="mobile-nav">
+                <a class="mobile-nav-link" href="./index.html">Startseite</a>
                 <a class="mobile-nav-link" href="./Dienstleistungen.html">Dienstleistungen</a>
+                <a class="mobile-nav-link" href="./Kontakt.html#availability">Arbeitszeiten</a>
+
                 <a class="mobile-nav-link" href="#faq">FAQ</a>
                 <a class="mobile-nav-link" href="#about">Über uns</a>
                 <a class="mobile-nav-link" href="./Kontakt.html">Kontakt</a>
-        </nav>
-    </div>
+            </nav>
+        </div>
 
-    <!-- Hero Slider Section -->
-    <section class="hero-slider-section" id="home">
-        <div class="hero-slider">
-            <!-- Slide 1 -->
-            <div class="hero-slide active" style="background-image: url('./img/646c2325-e8aa-4108-8016-c052e52c4821.jfif')">
-                <div class="hero-slide-content animate-on-scroll">
-                    <h1 class="hero-title">
-                        Professionelle Dienstleistungen
-                        <span>Erdarbeiten mit Bagger</span>
-                    </h1>
-                    <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
+        <!-- Hero Slider Section -->
+        <section class="hero-slider-section" id="home">
+            <div class="hero-slider">
+                <!-- Slide 1 -->
+                <div class="hero-slide active"
+                    style="background-image: url('./img/646c2325-e8aa-4108-8016-c052e52c4821.jfif')">
+                    <div class="hero-slide-content animate-on-scroll">
+                        <h1 class="hero-title">
+                            Professionelle Dienstleistungen
+                            <span>Erdarbeiten mit Bagger</span>
+                        </h1>
+                        <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Slide 2 -->
-            <div class="hero-slide" style="background-image: url('./img/a93d3204-2182-44ff-a70d-87a5d5330ffc.jfif')">
-                <div class="hero-slide-content animate-on-scroll">
-                    <h1 class="hero-title">
-                        Professionelle Reinigung
-                        <span>Sauberkeit auf höchstem Niveau</span>
-                    </h1>
-                    <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
-                </div>
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="hero-slide" style="background-image: url('./img/9d6e3a70-b97e-45b0-97c9-612b1dd5e68a.jfif')">
-                <div class="hero-slide-content animate-on-scroll">
-                    <h1 class="hero-title">
-                        Gartenpflege & Landschaftsbau
-                        <span>Ihr Garten in besten Händen</span>
-                    </h1>
-                    <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Slider Navigation -->
-        <div class="hero-slider-nav">
-            <button class="hero-slider-nav-btn prev-hero-slide" aria-label="Previous slide">❮</button>
-            <button class="hero-slider-nav-btn next-hero-slide" aria-label="Next slide">❯</button>
-        </div>
-        
-        <!-- Slider Dots -->
-        <div class="hero-slider-dots">
-            <div class="hero-slider-dot active" data-index="0"></div>
-            <div class="hero-slider-dot" data-index="1"></div>
-            <div class="hero-slider-dot" data-index="2"></div>
-        </div>
-    </section>
 
-    <!-- Quick Info Section -->
-    <section class="quick-info-section animate-on-scroll">
-        <div class="quick-info-content">
-            <h2 class="quick-info-title">Ganz einfach – rufen Sie uns an</h2>
-            <p class="quick-info-text">
-                Wir vereinbaren einen Termin und klären die Transportdetails. Wir garantieren Pünktlichkeit, 
-                professionellen Service und die absolute Sicherheit Ihrer Gegenstände.
-                <span class="quick-info-highlight">Und Ihre Zufriedenheit liegt uns am Herzen.</span>
-            </p>
-        </div>
-    </section>
+                <!-- Slide 2 -->
+                <div class="hero-slide"
+                    style="background-image: url('./img/a93d3204-2182-44ff-a70d-87a5d5330ffc.jfif')">
+                    <div class="hero-slide-content animate-on-scroll">
+                        <h1 class="hero-title">
+                            Professionelle Reinigung
+                            <span>Sauberkeit auf höchstem Niveau</span>
+                        </h1>
+                        <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
+                    </div>
+                </div>
 
-    <!-- Services Section - 3 CARDS ONLY -->
-    <section class="services-section" id="services">
-        <div class="section-header animate-on-scroll">
-            <h2 class="section-title">Unsere Dienstleistungen</h2>
-            <p class="section-description">
-                Von der Planung bis zur Umsetzung – wir bieten professionelle Dienstleistungen für Erdarbeiten, 
-                Reinigung und Gartenpflege aus einer Hand.
-            </p>
-        </div>
-        
-        <div class="services-grid">
-            <!-- Service 1 - Erdarbeiten mit Bagger -->
-            <div class="service-card animate-on-scroll">
-                <img src="./img/c2d5d71c-68c2-49af-9e8e-bf11cf925a75.jfif" 
-                     alt="Erdarbeiten mit Bagger" 
-                     class="service-img"
-                     loading="lazy">
-                <div class="service-content">
-                    <h3 class="service-title">Erdarbeiten mit Bagger</h3>
-                    <p class="service-description">Professionelle Erdarbeiten mit modernen Baggern für Baustellen, Grundstücke und Gartenprojekte.</p>
-                    <a href="mailto:Info@neumaticgmbh.de?subject=Erdarbeiten mit Bagger Anfrage" class="service-btn">Anfrage senden</a>
+                <!-- Slide 3 -->
+                <div class="hero-slide"
+                    style="background-image: url('./img/9d6e3a70-b97e-45b0-97c9-612b1dd5e68a.jfif')">
+                    <div class="hero-slide-content animate-on-scroll">
+                        <h1 class="hero-title">
+                            Gartenpflege & Landschaftsbau
+                            <span>Ihr Garten in besten Händen</span>
+                        </h1>
+                        <button class="hero-btn" onclick="scrollToContact()">Jetzt Kontaktieren</button>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Service 2 - Reinigung -->
-            <div class="service-card animate-on-scroll">
-                <img src="./img/3f7cc95d-d988-41ba-ad88-c3e53c5d655c.jfif" 
-                     alt="Reinigung" 
-                     class="service-img"
-                     loading="lazy">
-                <div class="service-content">
-                    <h3 class="service-title">Reinigung</h3>
-                    <p class="service-description">Umfassende Reinigungsdienstleistungen für Wohnungen, Büros, Baustellen und Industrieanlagen.</p>
-                    <a href="mailto:Info@neumaticgmbh.de?subject=Reinigung Anfrage" class="service-btn">Anfrage senden</a>
-                </div>
-            </div>
-            
-            <!-- Service 3 - Gartenpflege -->
-            <div class="service-card animate-on-scroll">
-                <img src="./img/a93d3204-2182-44ff-a70d-87a5d5330ffc.jfif" 
-                     alt="Gartenpflege" 
-                     class="service-img"
-                     loading="lazy">
-                <div class="service-content">
-                    <h3 class="service-title">Gartenpflege</h3>
-                    <p class="service-description">Professionelle Gartenpflege, Landschaftsbau und Grünflächenbetreuung für Privat- und Geschäftskunden.</p>
-                    <a href="mailto:Info@neumaticgmbh.de?subject=Gartenpflege Anfrage" class="service-btn">Anfrage senden</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Portfolio Slider Section -->
-    <section class="portfolio-section" id="portfolio">
-        <div class="slider-title animate-on-scroll">
-            <h1>Unsere <span>Arbeiten</span></h1>
-            <p class="section-description">Einblicke in unsere professionellen Dienstleistungen</p>
-        </div>
-        
-        <div class="slider-container">
-            <div class="slider-track" id="sliderTrack">
-                <!-- Slides will be loaded dynamically -->
-                <div class="slide-loading">
-                    <i class="fas fa-spinner fa-spin"></i> Loading...
-                </div>
+            <!-- Slider Navigation -->
+            <div class="hero-slider-nav">
+                <button class="hero-slider-nav-btn prev-hero-slide" aria-label="Previous slide">❮</button>
+                <button class="hero-slider-nav-btn next-hero-slide" aria-label="Next slide">❯</button>
             </div>
-            
-            <div class="slider-nav">
-                <button class="nav-btn prev-btn" aria-label="Previous slide">❮</button>
-                <button class="nav-btn next-btn" aria-label="Next slide">❯</button>
-            </div>
-            
-            <div class="dots-container" id="dotsContainer">
-                <!-- Dots will be added by JavaScript -->
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-grid">
-            <div class="footer-about">
-                <div class="footer-logo">
-                    <span class="material-symbols-outlined footer-logo-icon">local_shipping</span>
-                    <h2 class="footer-logo-text">NEU<span>MATIC</span> GmbH</h2>
-                </div>
-                <p class="footer-about-text">
-                    Professionelle Dienstleistungen für Erdarbeiten, Reinigung und Gartenpflege in ganz Deutschland. 
-                    Seit über 10 Jahren für Sie im Einsatz.
+            <!-- Slider Dots -->
+            <div class="hero-slider-dots">
+                <div class="hero-slider-dot active" data-index="0"></div>
+                <div class="hero-slider-dot" data-index="1"></div>
+                <div class="hero-slider-dot" data-index="2"></div>
+            </div>
+        </section>
+
+        <!-- Quick Info Section -->
+        <section class="quick-info-section animate-on-scroll">
+            <div class="quick-info-content">
+                <h2 class="quick-info-title">Ganz einfach – rufen Sie uns an</h2>
+                <p class="quick-info-text">
+                    Wir vereinbaren einen Termin und klären die Transportdetails. Wir garantieren Pünktlichkeit,
+                    professionellen Service und die absolute Sicherheit Ihrer Gegenstände.
+                    <span class="quick-info-highlight">Und Ihre Zufriedenheit liegt uns am Herzen.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section - 3 CARDS ONLY -->
+        <section class="services-section" id="services">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Unsere Dienstleistungen</h2>
+                <p class="section-description">
+                    Von der Planung bis zur Umsetzung – wir bieten professionelle Dienstleistungen für Erdarbeiten,
+                    Reinigung und Gartenpflege aus einer Hand.
                 </p>
             </div>
 
-            <div class="footer-column">
-                <h3 class="footer-title">Menü</h3>
-                <div class="footer-links">
-                    <a class="footer-link" href="#home">Startseite</a>
-                    <a class="footer-link" href="#services">Dienstleistungen</a>
-                    <a class="footer-link" href="#portfolio">Portfolio</a>
-                    <a class="footer-link" href="#contact">Kontakt</a>
+            <div class="services-grid">
+                <!-- Service 1 - Erdarbeiten mit Bagger -->
+                <div class="service-card animate-on-scroll">
+                    <img src="./img/c2d5d71c-68c2-49af-9e8e-bf11cf925a75.jfif" alt="Erdarbeiten mit Bagger"
+                        class="service-img" loading="lazy">
+                    <div class="service-content">
+                        <h3 class="service-title">Erdarbeiten mit Bagger</h3>
+                        <p class="service-description">Professionelle Erdarbeiten mit modernen Baggern für Baustellen,
+                            Grundstücke und Gartenprojekte.</p>
+                        <a href="mailto:Info@neumaticgmbh.de?subject=Erdarbeiten mit Bagger Anfrage"
+                            class="service-btn">Anfrage senden</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 - Reinigung -->
+                <div class="service-card animate-on-scroll">
+                    <img src="./img/3f7cc95d-d988-41ba-ad88-c3e53c5d655c.jfif" alt="Reinigung" class="service-img"
+                        loading="lazy">
+                    <div class="service-content">
+                        <h3 class="service-title">Reinigung</h3>
+                        <p class="service-description">Umfassende Reinigungsdienstleistungen für Wohnungen, Büros,
+                            Baustellen und Industrieanlagen.</p>
+                        <a href="mailto:Info@neumaticgmbh.de?subject=Reinigung Anfrage" class="service-btn">Anfrage
+                            senden</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 - Gartenpflege -->
+                <div class="service-card animate-on-scroll">
+                    <img src="./img/a93d3204-2182-44ff-a70d-87a5d5330ffc.jfif" alt="Gartenpflege" class="service-img"
+                        loading="lazy">
+                    <div class="service-content">
+                        <h3 class="service-title">Gartenpflege</h3>
+                        <p class="service-description">Professionelle Gartenpflege, Landschaftsbau und
+                            Grünflächenbetreuung für Privat- und Geschäftskunden.</p>
+                        <a href="mailto:Info@neumaticgmbh.de?subject=Gartenpflege Anfrage" class="service-btn">Anfrage
+                            senden</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Slider Section -->
+        <section class="portfolio-section" id="portfolio">
+            <div class="slider-title animate-on-scroll">
+                <h1>Unsere <span>Arbeiten</span></h1>
+                <p class="section-description">Einblicke in unsere professionellen Dienstleistungen</p>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-track" id="sliderTrack">
+                    <!-- Slides will be loaded dynamically -->
+                    <div class="slide-loading">
+                        <i class="fas fa-spinner fa-spin"></i> Loading...
+                    </div>
+                </div>
+
+                <div class="slider-nav">
+                    <button class="nav-btn prev-btn" aria-label="Previous slide">❮</button>
+                    <button class="nav-btn next-btn" aria-label="Next slide">❯</button>
+                </div>
+
+                <div class="dots-container" id="dotsContainer">
+                    <!-- Dots will be added by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="material-symbols-outlined footer-logo-icon">local_shipping</span>
+                        <h2 class="footer-logo-text">NEU<span>MATIC</span> GmbH</h2>
+                    </div>
+                    <p class="footer-about-text">
+                        Professionelle Dienstleistungen für Erdarbeiten, Reinigung und Gartenpflege in ganz Deutschland.
+                        Seit über 10 Jahren für Sie im Einsatz.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Menü</h3>
+                    <div class="footer-links">
+                        <a class="footer-link" href="#home">Startseite</a>
+                        <a class="footer-link" href="#services">Dienstleistungen</a>
+                        <a class="footer-link" href="#portfolio">Portfolio</a>
+                        <a class="footer-link" href="#contact">Kontakt</a>
+                    </div>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3 class="footer-title">Kontakt</h3>
+                    <div class="footer-links">
+                        <p>Deutschlandweit im Einsatz</p>
+                        <a class="footer-link" href="mailto:Info@neumaticgmbh.de">
+                            <i class="fas fa-envelope"></i> Info@neumaticgmbh.de
+                        </a>
+                        <a class="footer-link" href="tel:+4915115358451">
+                            <i class="fas fa-phone"></i> +49 1511 53 58 451
+                        </a>
+                        <a class="footer-link" href="https://wa.me/491725951898" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> WhatsApp: +49 172 5951898
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-column footer-contact">
-                <h3 class="footer-title">Kontakt</h3>
-                <div class="footer-links">
-                    <p>Deutschlandweit im Einsatz</p>
-                    <a class="footer-link" href="mailto:Info@neumaticgmbh.de">
-                        <i class="fas fa-envelope"></i> Info@neumaticgmbh.de
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 NEUMATIC GmbH. Alle Rechte vorbehalten.
+                </div>
+
+                <div class="social-links">
+                    <a class="social-link" href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="footer-link" href="tel:+4915115358451">
-                        <i class="fas fa-phone"></i> +49 1511 53 58 451
+                    <a class="social-link" href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="footer-link" href="https://wa.me/491725951898" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i> WhatsApp: +49 172 5951898
+                    <a class="social-link" href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>
-        </div>
+        </footer>
 
-        <div class="footer-bottom">
-            <div class="copyright">
-                &copy; 2026 NEUMATIC GmbH. Alle Rechte vorbehalten.
-            </div>
-            
-            <div class="social-links">
-                <a class="social-link" href="#" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="social-link" href="#" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a class="social-link" href="#" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
+        <script>
+            // Performance Optimizations
+            'use strict';
 
-    <script>
-        // Performance Optimizations
-        'use strict';
+            // Mobile Menu Toggle - Optimized
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileCloseBtn = document.getElementById('mobileCloseBtn');
 
-        // Mobile Menu Toggle - Optimized
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+            function toggleMobileMenu() {
+                const isOpen = mobileMenu.style.display === 'block';
+                mobileMenu.style.display = isOpen ? 'none' : 'block';
+                mobileMenu.style.opacity = isOpen ? '0' : '1';
 
-        function toggleMobileMenu() {
-            const isOpen = mobileMenu.style.display === 'block';
-            mobileMenu.style.display = isOpen ? 'none' : 'block';
-            mobileMenu.style.opacity = isOpen ? '0' : '1';
-            
-            // Prevent body scroll when menu is open
-            document.body.style.overflow = isOpen ? 'auto' : 'hidden';
-            
-            // Request animation frame for smooth performance
-            requestAnimationFrame(() => {
-                mobileMenu.style.transition = 'opacity 0.3s ease';
-            });
-        }
+                // Prevent body scroll when menu is open
+                document.body.style.overflow = isOpen ? 'auto' : 'hidden';
 
-        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-        mobileCloseBtn.addEventListener('click', toggleMobileMenu);
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', toggleMobileMenu);
-        });
-
-        // Navbar scroll effect
-        let lastScroll = 0;
-        const header = document.getElementById('mainHeader');
-
-        function handleScroll() {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 50) {
-                header.style.backgroundColor = '#000000';
-                header.style.padding = '10px 30px';
-                header.style.boxShadow = '0 6px 30px rgba(0, 0, 0, 0.7)';
-            } else {
-                header.style.backgroundColor = '#000000';
-                header.style.padding = '15px 30px';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
+                // Request animation frame for smooth performance
+                requestAnimationFrame(() => {
+                    mobileMenu.style.transition = 'opacity 0.3s ease';
+                });
             }
 
-            lastScroll = currentScroll;
-        }
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            mobileCloseBtn.addEventListener('click', toggleMobileMenu);
 
-        // Throttle scroll events for performance
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            if (!scrollTimeout) {
-                scrollTimeout = setTimeout(() => {
-                    handleScroll();
-                    scrollTimeout = null;
-                }, 10);
-            }
-        });
-
-        // Scroll to contact function
-        function scrollToContact() {
-            const contactSection = document.getElementById('contact');
-            contactSection.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
+            // Close menu when clicking on a link
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', toggleMobileMenu);
             });
-        }
 
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+            // Navbar scroll effect
+            let lastScroll = 0;
+            const header = document.getElementById('mainHeader');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
+            function handleScroll() {
+                const currentScroll = window.pageYOffset;
 
-        // Observe all elements with animation class
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // ============================================
-        // HERO SLIDER - NEW AUTOMATIC SLIDER
-        // ============================================
-        
-        const heroSlides = document.querySelectorAll('.hero-slide');
-        const heroDots = document.querySelectorAll('.hero-slider-dot');
-        const prevHeroBtn = document.querySelector('.prev-hero-slide');
-        const nextHeroBtn = document.querySelector('.next-hero-slide');
-        
-        let currentHeroSlide = 0;
-        let heroSlideInterval;
-        const totalHeroSlides = heroSlides.length;
-        
-        // Initialize Hero Slider
-        function initHeroSlider() {
-            // Start automatic sliding
-            startHeroSlide();
-            
-            // Add event listeners for navigation
-            prevHeroBtn.addEventListener('click', goToPrevHeroSlide);
-            nextHeroBtn.addEventListener('click', goToNextHeroSlide);
-            
-            // Add event listeners for dots
-            heroDots.forEach(dot => {
-                dot.addEventListener('click', function() {
-                    const slideIndex = parseInt(this.getAttribute('data-index'));
-                    goToHeroSlide(slideIndex);
-                });
-            });
-            
-            // Pause on hover
-            const heroSlider = document.querySelector('.hero-slider-section');
-            heroSlider.addEventListener('mouseenter', pauseHeroSlide);
-            heroSlider.addEventListener('mouseleave', startHeroSlide);
-        }
-        
-        // Go to specific hero slide
-        function goToHeroSlide(slideIndex) {
-            // Hide current slide
-            heroSlides[currentHeroSlide].classList.remove('active');
-            heroDots[currentHeroSlide].classList.remove('active');
-            
-            // Update current slide
-            currentHeroSlide = slideIndex;
-            
-            // Show new slide
-            heroSlides[currentHeroSlide].classList.add('active');
-            heroDots[currentHeroSlide].classList.add('active');
-            
-            // Reset auto slide timer
-            resetHeroSlide();
-        }
-        
-        // Go to next hero slide
-        function goToNextHeroSlide() {
-            const nextSlide = (currentHeroSlide + 1) % totalHeroSlides;
-            goToHeroSlide(nextSlide);
-        }
-        
-        // Go to previous hero slide
-        function goToPrevHeroSlide() {
-            const prevSlide = (currentHeroSlide - 1 + totalHeroSlides) % totalHeroSlides;
-            goToHeroSlide(prevSlide);
-        }
-        
-        // Auto slide functionality
-        function startHeroSlide() {
-            heroSlideInterval = setInterval(goToNextHeroSlide, 5000); // Change every 5 seconds
-        }
-        
-        function pauseHeroSlide() {
-            clearInterval(heroSlideInterval);
-        }
-        
-        function resetHeroSlide() {
-            pauseHeroSlide();
-            startHeroSlide();
-        }
-
-        // ============================================
-        // PORTFOLIO SLIDER - OPTIMIZED VERSION
-        // ============================================
-
-        // Images Array
-        const sliderImages = [
-            { 
-                src: './img/646c2325-e8aa-4108-8016-c052e52c4821.jfif',
-                alt: 'Transport Service 1'
-            },
-            { 
-                src: './img/26d9b2b0-a813-4df8-a991-773ec927022f.jfif',
-                alt: 'Transport Service 2'
-            },
-            { 
-                src: './img/3f7cc95d-d988-41ba-ad88-c3e53c5d655c.jfif',
-                alt: 'Logistics Service'
-            },
-            { 
-                src: './img/646c2325-e8aa-4108-8016-c052e52c4821.jfif',
-                alt: 'Truck Transport'
-            },
-            { 
-                src: './img/92c02838-3ff4-4157-97c9-d601230795cb.jfif',
-                alt: 'Moving Service'
-            },
-            { 
-                src: './img/c2d5d71c-68c2-49af-9e8e-bf11cf925a75.jfif',
-                alt: 'Cargo Transport'
-            },
-            { 
-                src: './img/9dcb84d7-d5bd-49f2-b37e-4cabe8d18ecc.jfif',
-                alt: 'Delivery Service'
-            },
-            { 
-                src: './img/9d6e3a70-b97e-45b0-97c9-612b1dd5e68a.jfif',
-                alt: 'Shipping Service'
-            },
-           
-        ];
-
-        // DOM Elements
-        const sliderTrack = document.getElementById('sliderTrack');
-        const dotsContainer = document.getElementById('dotsContainer');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-
-        // Slider Variables
-        let currentSlide = 0;
-        let autoSlideInterval;
-        const totalSlides = sliderImages.length;
-        let isAnimating = false;
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        // Initialize Slider
-        function initSlider() {
-            // Clear loading message
-            sliderTrack.innerHTML = '';
-            
-            // Create slides with lazy loading
-            sliderImages.forEach((image, index) => {
-                // Create slide container
-                const slideItem = document.createElement('div');
-                slideItem.className = 'slide-item';
-                
-                // Create image with lazy loading and error handling
-                const img = document.createElement('img');
-                img.className = 'slide-img';
-                img.src = image.src;
-                img.alt = image.alt;
-                img.loading = 'lazy';
-                img.decoding = 'async';
-                
-                // Add error handler
-                img.onerror = function() {
-                    this.onerror = null;
-                    this.src = 'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1200&h=800&fit=crop&q=80';
-                };
-                
-                slideItem.appendChild(img);
-                sliderTrack.appendChild(slideItem);
-                
-                // Create dot indicator
-                const dot = document.createElement('div');
-                dot.className = 'dot';
-                dot.dataset.index = index;
-                if (index === 0) dot.classList.add('active');
-                
-                dot.addEventListener('click', () => {
-                    if (!isAnimating) goToSlide(index);
-                });
-                
-                dotsContainer.appendChild(dot);
-            });
-            
-            // Add event listeners
-            prevBtn.addEventListener('click', () => !isAnimating && goToPrevSlide());
-            nextBtn.addEventListener('click', () => !isAnimating && goToNextSlide());
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (!isAnimating) {
-                    if (e.key === 'ArrowLeft') goToPrevSlide();
-                    if (e.key === 'ArrowRight') goToNextSlide();
-                }
-            });
-            
-            // Touch events
-            sliderTrack.addEventListener('touchstart', (e) => {
-                touchStartX = e.touches[0].clientX;
-                pauseAutoSlide();
-            }, { passive: true });
-            
-            sliderTrack.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].clientX;
-                if (!isAnimating) handleSwipe();
-                startAutoSlide();
-            }, { passive: true });
-            
-            // Start auto slide
-            startAutoSlide();
-        }
-
-        // Go to specific slide
-        function goToSlide(slideIndex) {
-            if (isAnimating || slideIndex === currentSlide) return;
-            
-            isAnimating = true;
-            currentSlide = slideIndex;
-            
-            // Use transform for hardware acceleration
-            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            // Update dots
-            updateDots();
-            
-            // Reset animation flag
-            setTimeout(() => {
-                isAnimating = false;
-            }, 500);
-            
-            // Reset auto slide timer
-            resetAutoSlide();
-        }
-
-        // Go to next slide
-        function goToNextSlide() {
-            const nextSlide = (currentSlide + 1) % totalSlides;
-            goToSlide(nextSlide);
-        }
-
-        // Go to previous slide
-        function goToPrevSlide() {
-            const prevSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            goToSlide(prevSlide);
-        }
-
-        // Update active dot
-        function updateDots() {
-            const dots = document.querySelectorAll('.dot');
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        // Auto slide functionality
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(goToNextSlide, 5000);
-        }
-
-        function pauseAutoSlide() {
-            clearInterval(autoSlideInterval);
-        }
-
-        function resetAutoSlide() {
-            pauseAutoSlide();
-            startAutoSlide();
-        }
-
-        // Handle swipe gestures
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const swipeDistance = touchEndX - touchStartX;
-            
-            if (Math.abs(swipeDistance) > swipeThreshold) {
-                if (swipeDistance > 0) {
-                    goToPrevSlide();
+                if (currentScroll > 50) {
+                    header.style.backgroundColor = '#000000';
+                    header.style.padding = '10px 30px';
+                    header.style.boxShadow = '0 6px 30px rgba(0, 0, 0, 0.7)';
                 } else {
-                    goToNextSlide();
+                    header.style.backgroundColor = '#000000';
+                    header.style.padding = '15px 30px';
+                    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
+                }
+
+                lastScroll = currentScroll;
+            }
+
+            // Throttle scroll events for performance
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(() => {
+                        handleScroll();
+                        scrollTimeout = null;
+                    }, 10);
+                }
+            });
+
+            // Scroll to contact function
+            function scrollToContact() {
+                const contactSection = document.getElementById('contact');
+                contactSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with animation class
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // ============================================
+            // HERO SLIDER - NEW AUTOMATIC SLIDER
+            // ============================================
+
+            const heroSlides = document.querySelectorAll('.hero-slide');
+            const heroDots = document.querySelectorAll('.hero-slider-dot');
+            const prevHeroBtn = document.querySelector('.prev-hero-slide');
+            const nextHeroBtn = document.querySelector('.next-hero-slide');
+
+            let currentHeroSlide = 0;
+            let heroSlideInterval;
+            const totalHeroSlides = heroSlides.length;
+
+            // Initialize Hero Slider
+            function initHeroSlider() {
+                // Start automatic sliding
+                startHeroSlide();
+
+                // Add event listeners for navigation
+                prevHeroBtn.addEventListener('click', goToPrevHeroSlide);
+                nextHeroBtn.addEventListener('click', goToNextHeroSlide);
+
+                // Add event listeners for dots
+                heroDots.forEach(dot => {
+                    dot.addEventListener('click', function () {
+                        const slideIndex = parseInt(this.getAttribute('data-index'));
+                        goToHeroSlide(slideIndex);
+                    });
+                });
+
+                // Pause on hover
+                const heroSlider = document.querySelector('.hero-slider-section');
+                heroSlider.addEventListener('mouseenter', pauseHeroSlide);
+                heroSlider.addEventListener('mouseleave', startHeroSlide);
+            }
+
+            // Go to specific hero slide
+            function goToHeroSlide(slideIndex) {
+                // Hide current slide
+                heroSlides[currentHeroSlide].classList.remove('active');
+                heroDots[currentHeroSlide].classList.remove('active');
+
+                // Update current slide
+                currentHeroSlide = slideIndex;
+
+                // Show new slide
+                heroSlides[currentHeroSlide].classList.add('active');
+                heroDots[currentHeroSlide].classList.add('active');
+
+                // Reset auto slide timer
+                resetHeroSlide();
+            }
+
+            // Go to next hero slide
+            function goToNextHeroSlide() {
+                const nextSlide = (currentHeroSlide + 1) % totalHeroSlides;
+                goToHeroSlide(nextSlide);
+            }
+
+            // Go to previous hero slide
+            function goToPrevHeroSlide() {
+                const prevSlide = (currentHeroSlide - 1 + totalHeroSlides) % totalHeroSlides;
+                goToHeroSlide(prevSlide);
+            }
+
+            // Auto slide functionality
+            function startHeroSlide() {
+                heroSlideInterval = setInterval(goToNextHeroSlide, 5000); // Change every 5 seconds
+            }
+
+            function pauseHeroSlide() {
+                clearInterval(heroSlideInterval);
+            }
+
+            function resetHeroSlide() {
+                pauseHeroSlide();
+                startHeroSlide();
+            }
+
+            // ============================================
+            // PORTFOLIO SLIDER - OPTIMIZED VERSION
+            // ============================================
+
+            // Images Array
+            const sliderImages = [
+                {
+                    src: './img/646c2325-e8aa-4108-8016-c052e52c4821.jfif',
+                    alt: 'Transport Service 1'
+                },
+                {
+                    src: './img/26d9b2b0-a813-4df8-a991-773ec927022f.jfif',
+                    alt: 'Transport Service 2'
+                },
+                {
+                    src: './img/3f7cc95d-d988-41ba-ad88-c3e53c5d655c.jfif',
+                    alt: 'Logistics Service'
+                },
+                {
+                    src: './img/646c2325-e8aa-4108-8016-c052e52c4821.jfif',
+                    alt: 'Truck Transport'
+                },
+                {
+                    src: './img/92c02838-3ff4-4157-97c9-d601230795cb.jfif',
+                    alt: 'Moving Service'
+                },
+                {
+                    src: './img/c2d5d71c-68c2-49af-9e8e-bf11cf925a75.jfif',
+                    alt: 'Cargo Transport'
+                },
+                {
+                    src: './img/9dcb84d7-d5bd-49f2-b37e-4cabe8d18ecc.jfif',
+                    alt: 'Delivery Service'
+                },
+                {
+                    src: './img/9d6e3a70-b97e-45b0-97c9-612b1dd5e68a.jfif',
+                    alt: 'Shipping Service'
+                },
+
+            ];
+
+            // DOM Elements
+            const sliderTrack = document.getElementById('sliderTrack');
+            const dotsContainer = document.getElementById('dotsContainer');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+
+            // Slider Variables
+            let currentSlide = 0;
+            let autoSlideInterval;
+            const totalSlides = sliderImages.length;
+            let isAnimating = false;
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            // Initialize Slider
+            function initSlider() {
+                // Clear loading message
+                sliderTrack.innerHTML = '';
+
+                // Create slides with lazy loading
+                sliderImages.forEach((image, index) => {
+                    // Create slide container
+                    const slideItem = document.createElement('div');
+                    slideItem.className = 'slide-item';
+
+                    // Create image with lazy loading and error handling
+                    const img = document.createElement('img');
+                    img.className = 'slide-img';
+                    img.src = image.src;
+                    img.alt = image.alt;
+                    img.loading = 'lazy';
+                    img.decoding = 'async';
+
+                    // Add error handler
+                    img.onerror = function () {
+                        this.onerror = null;
+                        this.src = 'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1200&h=800&fit=crop&q=80';
+                    };
+
+                    slideItem.appendChild(img);
+                    sliderTrack.appendChild(slideItem);
+
+                    // Create dot indicator
+                    const dot = document.createElement('div');
+                    dot.className = 'dot';
+                    dot.dataset.index = index;
+                    if (index === 0) dot.classList.add('active');
+
+                    dot.addEventListener('click', () => {
+                        if (!isAnimating) goToSlide(index);
+                    });
+
+                    dotsContainer.appendChild(dot);
+                });
+
+                // Add event listeners
+                prevBtn.addEventListener('click', () => !isAnimating && goToPrevSlide());
+                nextBtn.addEventListener('click', () => !isAnimating && goToNextSlide());
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (!isAnimating) {
+                        if (e.key === 'ArrowLeft') goToPrevSlide();
+                        if (e.key === 'ArrowRight') goToNextSlide();
+                    }
+                });
+
+                // Touch events
+                sliderTrack.addEventListener('touchstart', (e) => {
+                    touchStartX = e.touches[0].clientX;
+                    pauseAutoSlide();
+                }, { passive: true });
+
+                sliderTrack.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].clientX;
+                    if (!isAnimating) handleSwipe();
+                    startAutoSlide();
+                }, { passive: true });
+
+                // Start auto slide
+                startAutoSlide();
+            }
+
+            // Go to specific slide
+            function goToSlide(slideIndex) {
+                if (isAnimating || slideIndex === currentSlide) return;
+
+                isAnimating = true;
+                currentSlide = slideIndex;
+
+                // Use transform for hardware acceleration
+                sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                // Update dots
+                updateDots();
+
+                // Reset animation flag
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 500);
+
+                // Reset auto slide timer
+                resetAutoSlide();
+            }
+
+            // Go to next slide
+            function goToNextSlide() {
+                const nextSlide = (currentSlide + 1) % totalSlides;
+                goToSlide(nextSlide);
+            }
+
+            // Go to previous slide
+            function goToPrevSlide() {
+                const prevSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                goToSlide(prevSlide);
+            }
+
+            // Update active dot
+            function updateDots() {
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            // Auto slide functionality
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(goToNextSlide, 5000);
+            }
+
+            function pauseAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            function resetAutoSlide() {
+                pauseAutoSlide();
+                startAutoSlide();
+            }
+
+            // Handle swipe gestures
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const swipeDistance = touchEndX - touchStartX;
+
+                if (Math.abs(swipeDistance) > swipeThreshold) {
+                    if (swipeDistance > 0) {
+                        goToPrevSlide();
+                    } else {
+                        goToNextSlide();
+                    }
                 }
             }
-        }
 
-        // Preload images
-        function preloadImages() {
-            sliderImages.forEach(image => {
-                const img = new Image();
-                img.src = image.src;
-            });
-        }
+            // Preload images
+            function preloadImages() {
+                sliderImages.forEach(image => {
+                    const img = new Image();
+                    img.src = image.src;
+                });
+            }
 
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            // Initialize mobile menu
-            mobileMenu.style.display = 'none';
-            mobileMenu.style.opacity = '0';
-            mobileMenu.style.transition = 'opacity 0.3s ease';
-            
-            // Initialize hero slider
-            initHeroSlider();
-            
-            // Initialize portfolio slider
-            setTimeout(() => {
-                preloadImages();
-                initSlider();
-                
-                // Add initial animation
-                sliderTrack.style.opacity = '0';
+            // Initialize when page loads
+            document.addEventListener('DOMContentLoaded', () => {
+                // Initialize mobile menu
+                mobileMenu.style.display = 'none';
+                mobileMenu.style.opacity = '0';
+                mobileMenu.style.transition = 'opacity 0.3s ease';
+
+                // Initialize hero slider
+                initHeroSlider();
+
+                // Initialize portfolio slider
                 setTimeout(() => {
-                    sliderTrack.style.transition = 'opacity 0.5s ease';
-                    sliderTrack.style.opacity = '1';
-                }, 100);
-            }, 500);
-            
-            // Pause auto slide when user interacts
-            const sliderContainer = document.querySelector('.slider-container');
-            sliderContainer.addEventListener('mouseenter', pauseAutoSlide);
-            sliderContainer.addEventListener('mouseleave', startAutoSlide);
-            
-            // Add click events to navigation buttons
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
+                    preloadImages();
+                    initSlider();
+
+                    // Add initial animation
+                    sliderTrack.style.opacity = '0';
+                    setTimeout(() => {
+                        sliderTrack.style.transition = 'opacity 0.5s ease';
+                        sliderTrack.style.opacity = '1';
+                    }, 100);
+                }, 500);
+
+                // Pause auto slide when user interacts
+                const sliderContainer = document.querySelector('.slider-container');
+                sliderContainer.addEventListener('mouseenter', pauseAutoSlide);
+                sliderContainer.addEventListener('mouseleave', startAutoSlide);
+
+                // Add click events to navigation buttons
+                document.querySelectorAll('.nav-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
                 });
             });
-        });
 
-        // Handle window resize efficiently
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-            }, 250);
-        });
+            // Handle window resize efficiently
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                }, 250);
+            });
 
-        // Service cards hover effect
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-10px)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
-        });
+            // Service cards hover effect
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px)';
+                });
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
             });
-        });
 
-        // Add loading animation for images
-        document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-                this.style.transition = 'opacity 0.3s ease';
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             });
-            
-            img.style.opacity = '0';
-        });
-    </script>
+
+            // Add loading animation for images
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('load', function () {
+                    this.style.opacity = '1';
+                    this.style.transition = 'opacity 0.3s ease';
+                });
+
+                img.style.opacity = '0';
+            });
+        </script>
 </body>
+
 </html>

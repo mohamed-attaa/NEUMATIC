@@ -5,30 +5,32 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>NEUMATIC - Professionelle Dienstleistungen</title>
-    
+
     <!-- تحسينات SEO وسرعة التحميل -->
-    <meta name="description" content="Professionelle Dienstleistungen für Küchenmontage, Umzug, Möbeltransport, Entrümpelungen und Klaviertransport in ganz Deutschland.">
+    <meta name="description"
+        content="Professionelle Dienstleistungen für Küchenmontage, Umzug, Möbeltransport, Entrümpelungen und Klaviertransport in ganz Deutschland.">
     <meta name="keywords" content="Umzug, Küchenmontage, Möbeltransport, Entrümpelung, Klaviertransport, Deutschland">
     <meta name="author" content="NEUMATIC GmbH">
-    
+
     <!-- Preconnect للموارد الخارجية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+
     <!-- تحميل CSS بشكل غير متزامن -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-          media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'" />
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     </noscript>
-    
+
     <!-- Fonts مع تحميل متأخر -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap" 
-          rel="stylesheet" media="print" onload="this.media='all'" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
-          rel="stylesheet" media="print" onload="this.media='all'" />
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
+
     <style>
         /* تحسينات الأداء */
         * {
@@ -38,12 +40,14 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        html, body {
+        html,
+        body {
             height: 100%;
             overflow-x: hidden;
             scroll-behavior: smooth;
             touch-action: manipulation;
-            font-family: system-ui, -apple-system, sans-serif; /* استخدام خطوط النظام أولاً */
+            font-family: system-ui, -apple-system, sans-serif;
+            /* استخدام خطوط النظام أولاً */
         }
 
         /* تحسين تحميل الصور */
@@ -65,7 +69,10 @@
 
         /* إزالة بعض الأنيميشن غير الضرورية للأداء */
         @media (prefers-reduced-motion: reduce) {
-            *, ::before, ::after {
+
+            *,
+            ::before,
+            ::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
@@ -77,7 +84,7 @@
             --primary: #C4B59D;
             --primary-dark: #a8987d;
             --background-light: #ffffff;
-            --background-dark:#ffffff;
+            --background-dark: #ffffff;
             --text-white: #ffffff;
             --text-dark: #1A1A1A;
             --text-gray: #666666;
@@ -236,8 +243,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--gold-soft);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            background-color: #B8961E;
+            border: 1px solid rgba(202, 159, 18, 0.842);
             color: var(--text-dark);
             cursor: pointer;
             width: 50px;
@@ -250,12 +257,12 @@
         }
 
         .mobile-menu-btn:hover {
-            background-color: var(--gold-soft);
+            background-color: #B8961E;
             transform: scale(0.95);
         }
 
         .mobile-menu-btn.active {
-            background-color: rgba(212, 175, 55, 0.3);
+            background-color: rgb(211, 163, 7);
             transform: rotate(90deg);
         }
 
@@ -364,7 +371,8 @@
             overflow: hidden;
             margin: 0;
         }
-/* طبقة الشفافية */
+
+        /* طبقة الشفافية */
 
         .hero-track {
             display: flex;
@@ -383,15 +391,16 @@
         }
 
         /* تحسين الطبقة الشفافة للنص */
-       .slide-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* درجة الشفافية */
-}
+        .slide-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            /* درجة الشفافية */
+        }
 
 
         /* النص على اليسار */
@@ -535,7 +544,7 @@
                 height: calc(100vh - 70px);
                 min-height: 500px;
             }
-            
+
             .slider-nav {
                 bottom: 15px;
                 gap: 1rem;
@@ -979,171 +988,467 @@
         }
 
         /* ========================================= */
-        /* KUNDENSTIMMEN SECTION - UPDATED */
+        /* TESTIMONIALS SECTION - UPDATED HEADER */
         /* ========================================= */
         .testimonials-section {
             padding: 4rem 0;
-            background: var(--background-dark);
-            border-radius: 24px;
-            margin: 3rem 0;
+            background: var(--background-light);
+            position: relative;
         }
 
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.2rem;
-            padding: 1.8rem;
-            margin: 1.8rem auto;
-            max-width: 750px;
-            background: var(--gold-softer);
-            border-radius: 16px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        @media (min-width: 768px) {
-            .stats-bar {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        .stat-item {
+        .testimonials-header {
             text-align: center;
-            padding: 1rem;
+            max-width: 800px;
+            margin: 0 auto 3.5rem;
         }
 
-        .stat-number {
+        .testimonials-header .section-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--gold);
-            margin-bottom: 0.4rem;
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+            line-height: 1.2;
         }
 
-        .stat-label {
+        .testimonials-header .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            border-radius: 2px;
+        }
+
+        .testimonials-header .section-description {
             font-family: 'Open Sans', sans-serif;
-            font-size: 0.85rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
             color: var(--text-gray);
-        }
-
-        /* تحديث تخطيط شبكة التقييمات */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.8rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .testimonials-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        /* شبكة التقييمات الثانية */
-        .testimonials-grid-2 {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.8rem;
-            max-width: 700px;
+            max-width: 650px;
             margin: 2rem auto 0;
             padding: 0 1rem;
         }
 
-        @media (min-width: 768px) {
-            .testimonials-grid-2 {
-                grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 768px) {
+            .testimonials-header .section-title {
+                font-size: 2rem;
+            }
+            
+            .testimonials-header .section-description {
+                font-size: 1rem;
             }
         }
 
-        .testimonial-card {
+        @media (max-width: 480px) {
+            .testimonials-header .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .testimonials-header .section-description {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ========================================= */
+        /* TESTIMONIALS SLIDER STYLES - IMPROVED */
+        /* ========================================= */
+        .testimonials-slider-container {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 80px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        @media (max-width: 1200px) {
+            .testimonials-slider-container {
+                padding: 0 70px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-slider-container {
+                padding: 0 60px;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .testimonials-slider-container {
+                padding: 0 50px;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-slider-container {
+                padding: 0 40px;
+                gap: 12px;
+            }
+        }
+
+        .testimonials-slider-wrapper {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 12px;
+            background: transparent;
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            gap: 30px;
+            will-change: transform;
+            padding: 10px 5px;
+        }
+
+        .testimonials-track .testimonial-card {
+            flex: 0 0 calc(100% - 40px);
             background: var(--card-bg);
-            border-radius: 16px;
-            padding: 1.8rem;
-            border: 1px solid var(--border-light);
-            transition: all 0.3s ease;
+            border-radius: 20px;
+            padding: 2rem 1.8rem;
+            border: 2px solid rgba(212, 175, 55, 0.15);
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 40px);
+            margin: 0 20px;
             position: relative;
             overflow: hidden;
-            box-shadow: var(--card-shadow);
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
+        .testimonials-track .testimonial-card:hover {
+            transform: translateY(-8px);
             border-color: var(--gold);
-            box-shadow: var(--card-shadow-hover);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
         }
 
-        .quote-icon {
+        .testimonials-track .quote-icon {
             font-size: 1.8rem;
             color: var(--gold);
-            opacity: 0.3;
-            margin-bottom: 1rem;
+            opacity: 0.2;
+            margin-bottom: 1.2rem;
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
 
-        .testimonial-text p {
+        .testimonials-track .testimonial-text p {
             font-family: 'Open Sans', sans-serif;
             font-size: 0.95rem;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-dark);
             margin-bottom: 1.2rem;
             font-style: italic;
-        }
-
-        .client-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 1.2rem;
-            padding-top: 1.2rem;
-            border-top: 1px solid var(--border-light);
-        }
-
-        .client-avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--gold);
-        }
-
-        .client-info div {
             flex: 1;
         }
 
-        .client-info h3 {
+        .testimonials-track .client-info {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            margin-top: auto;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .testimonials-track .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .testimonials-track .client-info div {
+            flex: 1;
+        }
+
+        .testimonials-track .client-info h3 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
+            font-size: 1.05rem;
+            font-weight: 600;
             color: var(--text-dark);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.3rem;
         }
 
-        .client-service {
+        .testimonials-track .client-service {
             font-family: 'Open Sans', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             color: var(--gold);
-            margin-bottom: 0.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
         }
 
-        .rating-stars {
+        .testimonials-track .rating-stars {
             color: var(--gold);
             font-size: 0.85rem;
         }
 
-        .floating-cta {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 1.8rem;
-            background: var(--gold-softer);
-            border-radius: 16px;
-            border: 1px dashed rgba(212, 175, 55, 0.3);
+        /* Mobile: 1 card */
+        @media (max-width: 767px) {
+            .testimonials-track .testimonial-card {
+                flex: 0 0 calc(100% - 40px);
+                width: calc(100% - 40px);
+                padding: 1.8rem 1.5rem;
+                min-height: 260px;
+            }
         }
 
-        .floating-cta p {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            color: var(--text-gray);
-            margin-bottom: 1.2rem;
+        /* Tablet: 2 cards */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .testimonials-track .testimonial-card {
+                flex: 0 0 calc(50% - 35px);
+                width: calc(50% - 35px);
+                min-height: 280px;
+            }
+        }
+
+        /* Desktop: 3 cards */
+        @media (min-width: 1024px) and (max-width: 1399px) {
+            .testimonials-track .testimonial-card {
+                flex: 0 0 calc(33.333% - 30px);
+                width: calc(33.333% - 30px);
+                min-height: 280px;
+            }
+        }
+
+        /* Large Desktop: 4 cards */
+        @media (min-width: 1400px) {
+            .testimonials-track .testimonial-card {
+                flex: 0 0 calc(25% - 30px);
+                width: calc(25% - 30px);
+                min-height: 280px;
+            }
+        }
+
+        /* ========================================= */
+        /* IMPROVED ARROW BUTTONS */
+        /* ========================================= */
+        .slider-arrow {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border: 2px solid var(--gold-light);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            z-index: 10;
+            box-shadow: 
+                0 4px 15px rgba(212, 175, 55, 0.4),
+                inset 0 1px 3px rgba(255, 255, 255, 0.3),
+                inset 0 -1px 3px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-arrow i {
+            color: #000;
+            font-size: 1.3rem;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .slider-arrow:hover:not(:disabled) {
+            transform: scale(1.15);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            box-shadow: 
+                0 6px 20px rgba(212, 175, 55, 0.5),
+                inset 0 2px 4px rgba(255, 255, 255, 0.4),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider-arrow:hover:not(:disabled) i {
+            transform: scale(1.2);
+        }
+
+        .slider-arrow:active:not(:disabled) {
+            transform: scale(0.95);
+            box-shadow: 
+                0 3px 10px rgba(212, 175, 55, 0.3),
+                inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-arrow:disabled {
+            opacity: 0.25;
+            cursor: not-allowed;
+            background: linear-gradient(135deg, #777777, #999999);
+            border-color: #888888;
+            box-shadow: none;
+        }
+
+        .slider-arrow:disabled i {
+            color: #444444;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 1200px) {
+            .slider-arrow {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .slider-arrow i {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider-arrow {
+                width: 40px;
+                height: 40px;
+                border-width: 1.5px;
+            }
+            
+            .slider-arrow i {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .slider-arrow {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .slider-arrow i {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-arrow {
+                width: 32px;
+                height: 32px;
+            }
+            
+            .slider-arrow i {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* تحسين المسافات حول الأسهم */
+        .testimonials-slider-container {
+            padding: 0 60px;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-slider-container {
+                padding: 0 50px;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-slider-container {
+                padding: 0 40px;
+                gap: 12px;
+            }
+        }
+
+        /* ========================================= */
+        /* ENHANCED DOTS NAVIGATION */
+        /* ========================================= */
+        .testimonials-dots {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .testimonial-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-dot::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gold);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-dot.active::before {
+            transform: scale(1);
+        }
+
+        .testimonial-dot.active {
+            border-color: var(--gold-light);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            transform: scale(1.2);
+        }
+
+        .testimonial-dot:hover {
+            transform: scale(1.3);
+            background: var(--gold-light);
+        }
+
+        /* ========================================= */
+        /* ACTIVE CARD HIGHLIGHT */
+        /* ========================================= */
+        .testimonials-track .testimonial-card.active {
+            border-color: var(--gold);
+            background: linear-gradient(145deg, #ffffff, #f8f8f8);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.15);
+        }
+
+        /* ========================================= */
+        /* PARTIAL VISIBILITY FOR NEXT/PREV CARDS */
+        /* ========================================= */
+        @media (min-width: 768px) {
+            .testimonials-slider-wrapper::before,
+            .testimonials-slider-wrapper::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 80px;
+                z-index: 5;
+                pointer-events: none;
+            }
+            
+            .testimonials-slider-wrapper::before {
+                left: 0;
+                background: linear-gradient(to right, var(--background-light) 30%, transparent);
+            }
+            
+            .testimonials-slider-wrapper::after {
+                right: 0;
+                background: linear-gradient(to left, var(--background-light) 30%, transparent);
+            }
         }
 
         /* ========================================= */
@@ -1404,12 +1709,12 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                var(--gold) 20%, 
-                var(--gold-light) 50%, 
-                var(--gold) 80%, 
-                transparent 100%);
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    var(--gold) 20%,
+                    var(--gold-light) 50%,
+                    var(--gold) 80%,
+                    transparent 100%);
             z-index: 1;
         }
 
@@ -1420,12 +1725,12 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                rgba(212, 175, 55, 0.1) 20%, 
-                rgba(212, 175, 55, 0.3) 50%, 
-                rgba(212, 175, 55, 0.1) 80%, 
-                transparent 100%);
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(212, 175, 55, 0.1) 20%,
+                    rgba(212, 175, 55, 0.3) 50%,
+                    rgba(212, 175, 55, 0.1) 80%,
+                    transparent 100%);
             transform: translateY(-50%);
         }
 
@@ -1987,12 +2292,12 @@
             .layout-container {
                 padding-top: 70px;
             }
-            
+
             /* تحسين الكروت على الموبايل */
             .mini-card {
                 margin-bottom: 20px;
             }
-            
+
             .features-container {
                 grid-template-columns: 1fr;
             }
@@ -2038,7 +2343,7 @@
                 padding: 1rem;
                 font-size: 1rem;
             }
-            
+
             .services-row {
                 grid-template-columns: 1fr;
             }
@@ -2164,7 +2469,7 @@
                 <a href="#" class="logo">
                     <span class="material-symbols-outlined logo-icon">local_shipping</span>
                     <span class="logo-text">NEUMATIC GmbH
-</span>
+                    </span>
                 </a>
             </div>
 
@@ -2174,6 +2479,7 @@
                     <a class="nav-link" href="./index.html">Startseite</a>
                     <a class="nav-link" href="./Dienstleistungen.html">Dienstleistungen</a>
                     <a class="nav-link" href="#faq">FAQ</a>
+<a class="nav-link" href="./Kontakt.html#availability">Arbeitszeiten</a>
                     <a class="nav-link" href="#about">Über uns</a>
                     <a class="nav-link" href="./Kontakt.html">Kontakt</a>
                 </div>
@@ -2200,6 +2506,7 @@
                 <a class="mobile-nav-link" href="./index.html">Startseite</a>
                 <a class="mobile-nav-link" href="./Dienstleistungen.html">Dienstleistungen</a>
                 <a class="mobile-nav-link" href="#faq">FAQ</a>
+                <a class="mobile-nav-link" href="./Kontakt.html#availability">Arbeitszeiten</a>
                 <a class="mobile-nav-link" href="#about">Über uns</a>
                 <a class="mobile-nav-link" href="./Kontakt.html">Kontakt</a>
             </div>
@@ -2213,7 +2520,9 @@
                     style="background-image: url('https://images.pexels.com/photos/29455191/pexels-photo-29455191.jpeg');">
                     <div class="slide-info">
                         <div class="slide-title">Küchenmontage, Umzug, Möbeltransport</div>
-                        <button onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Küchenmontage Anfrage'">Anfrage schicken</button>
+                        <button
+                            onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Küchenmontage Anfrage'">Anfrage
+                            schicken</button>
                     </div>
                 </div>
 
@@ -2222,16 +2531,20 @@
                     style="background-image: url('https://images.pexels.com/photos/7203788/pexels-photo-7203788.jpeg');">
                     <div class="slide-info">
                         <div class="slide-title">Effiziente Entrümpelung von Wohnungen, Kellern und Büros</div>
-                        <button onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Entrümpelung Anfrage'">Anfrage schicken</button>
+                        <button
+                            onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Entrümpelung Anfrage'">Anfrage
+                            schicken</button>
                     </div>
                 </div>
 
                 <!-- Slide 3 -->
                 <div class="slide-card"
-                    style="background-image: url('https://images.pexels.com/photos/5997050/pexels-photo-5997050.jpeg');">
+                    style="background-image: url('https://images.pexels.com/photos/2043571/pexels-photo-2043571.jpeg');">
                     <div class="slide-info">
                         <div class="slide-title">Sicherer Klaviertransport professionell und zuverlässig</div>
-                        <button onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Klaviertransport Anfrage'">Anfrage schicken</button>
+                        <button
+                            onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Klaviertransport Anfrage'">Anfrage
+                            schicken</button>
                     </div>
                 </div>
 
@@ -2240,7 +2553,9 @@
                     style="background-image: url('https://www.blitzservice24.de/wp-content/uploads/2020/12/Aussenaufzug_Aschaffenburg_Umzug_Entruempelung.jpeg');">
                     <div class="slide-info">
                         <div class="slide-title">Professionelle Umzugsdienstleistungen</div>
-                        <button onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Umzug Anfrage'">Anfrage schicken</button>
+                        <button
+                            onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Umzug Anfrage'">Anfrage
+                            schicken</button>
                     </div>
                 </div>
 
@@ -2249,7 +2564,9 @@
                     style="background-image: url('https://www.blitzservice24.de/wp-content/uploads/2020/12/Haushaltsaufloesung_Aschaffenburg.jpeg');">
                     <div class="slide-info">
                         <div class="slide-title">Ihr zuverlässiger Partner für alle Transporte</div>
-                        <button onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Transport Anfrage'">Anfrage schicken</button>
+                        <button
+                            onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Transport Anfrage'">Anfrage
+                            schicken</button>
                     </div>
                 </div>
             </div>
@@ -2259,7 +2576,7 @@
                 <button class="prev-btn" id="prevBtn">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                
+
                 <div class="slider-dots" id="sliderDots">
                     <span class="slider-dot active" data-index="0"></span>
                     <span class="slider-dot" data-index="1"></span>
@@ -2267,7 +2584,7 @@
                     <span class="slider-dot" data-index="3"></span>
                     <span class="slider-dot" data-index="4"></span>
                 </div>
-                
+
                 <button class="next-btn" id="nextBtn">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -2277,9 +2594,11 @@
         <!-- New Section After Hero -->
         <section class="quick-info-section">
             <div class="quick-info-content">
-                <h2 class="quick-info-title">Ganz einfach – rufen Sie uns an, und wir vereinbaren einen Termin und klären die Transportdetails.</h2>
+                <h2 class="quick-info-title">Ganz einfach – rufen Sie uns an, und wir vereinbaren einen Termin und
+                    klären die Transportdetails.</h2>
                 <p class="quick-info-text">
-                    Wir garantieren Pünktlichkeit, professionellen Service und die absolute Sicherheit Ihrer Gegenstände.
+                    Wir garantieren Pünktlichkeit, professionellen Service und die absolute Sicherheit Ihrer
+                    Gegenstände.
                     <span class="quick-info-highlight">Und ihre Zufriedenheit liegt uns am Herzen.</span>
                 </p>
             </div>
@@ -2296,17 +2615,21 @@
 
                 <!-- CEO Image -->
                 <div class="ceo">
-                    <img src="./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg" alt="CEO Bild" class="lazy-img" loading="lazy">
+                    <img src="./img/WhatsApp Image 2026-02-02 at 3.04.49 PM.jpeg" alt="CEO Bild" class="lazy-img"
+                        loading="lazy">
                     <div class="ceo-info">NEUMATIC - Ihr Partner für Umzug & Transport</div>
                 </div>
 
                 <!-- CTA Button -->
-                <button class="cta-button" onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Allgemeine Anfrage'">Anfrage schicken</button>
+                <button class="cta-button"
+                    onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Allgemeine Anfrage'">Anfrage
+                    schicken</button>
             </div>
 
             <!-- Side Image -->
             <div class="about-image">
-                <img src="./img/WhatsApp Image 2026-02-02 at 4.19.33 PM.jpeg" alt="Company Team" class="lazy-img" loading="lazy">
+                <img src="./img/WhatsApp Image 2026-02-02 at 4.19.33 PM.jpeg" alt="Company Team" class="lazy-img"
+                    loading="lazy">
             </div>
         </section>
 
@@ -2319,24 +2642,27 @@
                     Klaviertransporte, Küchenmontage und Entrümpelungen aus einer Hand.
                 </p>
             </div>
-            
+
             <div class="services-row">
                 <!-- Service 1 -->
                 <div class="mini-card">
                     <div class="img-container">
-                        <img src="https://plus.unsplash.com/premium_photo-1677182396996-d3bb8329ab7b?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Küchenmontage" class="lazy-img" loading="lazy">
+                        <img src="https://plus.unsplash.com/premium_photo-1677182396996-d3bb8329ab7b?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Küchenmontage" class="lazy-img" loading="lazy">
                     </div>
                     <div class="mini-card-content">
                         <h2>Küchenmontage</h2>
                         <p>Professionelle und präzise Küchenmontage nach deutschen Standards.</p>
-                        <a href="mailto:Info@neumaticgmbh.de?subject=Küchenmontage Anfrage" class="gold-btn">Anfrage senden</a>
+                        <a href="mailto:Info@neumaticgmbh.de?subject=Küchenmontage Anfrage" class="gold-btn">Anfrage
+                            senden</a>
                     </div>
                 </div>
-                
+
                 <!-- Service 2 -->
                 <div class="mini-card">
                     <div class="img-container">
-                        <img src="https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Umzug" class="lazy-img" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Umzug" class="lazy-img" loading="lazy">
                     </div>
                     <div class="mini-card-content">
                         <h2>Umzug</h2>
@@ -2344,50 +2670,58 @@
                         <a href="mailto:Info@neumaticgmbh.de?subject=Umzug Anfrage" class="gold-btn">Anfrage senden</a>
                     </div>
                 </div>
-                
+
                 <!-- Service 3 -->
                 <div class="mini-card">
                     <div class="img-container">
-                        <img src="https://media.istockphoto.com/id/1307825243/photo/photograph-of-dismantling-site.jpg?s=1024x1024&w=is&k=20&c=qUVzloo_RyuIjCUaE6ipY2AQnCMgzTr7R3_-2K-EAO8=" alt="Entrümpelungen" class="lazy-img" loading="lazy">
+                        <img src="https://media.istockphoto.com/id/1307825243/photo/photograph-of-dismantling-site.jpg?s=1024x1024&w=is&k=20&c=qUVzloo_RyuIjCUaE6ipY2AQnCMgzTr7R3_-2K-EAO8="
+                            alt="Entrümpelungen" class="lazy-img" loading="lazy">
                     </div>
                     <div class="mini-card-content">
                         <h2>Entrümpelungen</h2>
                         <p>Fachgerechte Entrümpelung von Wohnungen, Häusern und Büros.</p>
-                        <a href="mailto:Info@neumaticgmbh.de?subject=Entrümpelung Anfrage" class="gold-btn">Anfrage senden</a>
+                        <a href="mailto:Info@neumaticgmbh.de?subject=Entrümpelung Anfrage" class="gold-btn">Anfrage
+                            senden</a>
                     </div>
                 </div>
-                
+
                 <!-- Service 4 -->
                 <div class="mini-card">
                     <div class="img-container">
-                        <img src="https://media.istockphoto.com/id/157636619/photo/piano-moving.jpg?s=1024x1024&w=is&k=20&c=3Ex2IwXh6ZuuHpPY4DNoDyxz51Oarr6AUsqRLXDJKZ4=" alt="Klaviertransport" class="lazy-img" loading="lazy">
+                        <img src="https://media.istockphoto.com/id/157636619/photo/piano-moving.jpg?s=1024x1024&w=is&k=20&c=3Ex2IwXh6ZuuHpPY4DNoDyxz51Oarr6AUsqRLXDJKZ4="
+                            alt="Klaviertransport" class="lazy-img" loading="lazy">
                     </div>
                     <div class="mini-card-content">
                         <h2>Klaviertransport</h2>
                         <p>Sicherer und professioneller Transport von Klavieren durch Experten.</p>
-                        <a href="mailto:Info@neumaticgmbh.de?subject=Klaviertransport Anfrage" class="gold-btn">Anfrage senden</a>
+                        <a href="mailto:Info@neumaticgmbh.de?subject=Klaviertransport Anfrage" class="gold-btn">Anfrage
+                            senden</a>
                     </div>
                 </div>
                 <div class="mini-card">
                     <div class="img-container">
-                        <img src="./img/646c2325-e8aa-4108-8016-c052e52c4821.jfif" alt="Abbruch Reinigung" class="lazy-img" loading="lazy">
+                        <img src="./img/646c2325-e8aa-4108-8016-c052e52c4821.jfif" alt="Abbruch Reinigung"
+                            class="lazy-img" loading="lazy">
                     </div>
                     <div class="mini-card-content">
                         <h2>Abbruch Reinigung</h2>
                         <p>Schnell, sicher und gründlich – Abbruch und Reinigung aus einer Hand.</p>
-                        <a href="mailto:Info@neumaticgmbh.de?subject=Abbruch Reinigung Anfrage" class="gold-btn">Anfrage senden</a>
+                        <a href="mailto:Info@neumaticgmbh.de?subject=Abbruch Reinigung Anfrage" class="gold-btn">Anfrage
+                            senden</a>
                     </div>
                 </div>
-                
+
                 <!-- Service 5 -->
                 <div class="mini-card">
                     <div class="img-container">
-                        <img src="https://media.istockphoto.com/id/957382582/photo/two-female-workers-with-a-truck-moving-furniture.jpg?s=1024x1024&w=is&k=20&c=il_LxIAZdQbMudUeEitoabkv88AvMbWI8ZD0GnJV-T4=" alt="Möbeltransport" class="lazy-img" loading="lazy">
+                        <img src="https://media.istockphoto.com/id/957382582/photo/two-female-workers-with-a-truck-moving-furniture.jpg?s=1024x1024&w=is&k=20&c=il_LxIAZdQbMudUeEitoabkv88AvMbWI8ZD0GnJV-T4="
+                            alt="Möbeltransport" class="lazy-img" loading="lazy">
                     </div>
                     <div class="mini-card-content">
                         <h2>Möbeltransport</h2>
                         <p>Zuverlässiger Möbeltransport mit größter Sorgfalt und Erfahrung.</p>
-                        <a href="mailto:Info@neumaticgmbh.de?subject=Möbeltransport Anfrage" class="gold-btn">Anfrage senden</a>
+                        <a href="mailto:Info@neumaticgmbh.de?subject=Möbeltransport Anfrage" class="gold-btn">Anfrage
+                            senden</a>
                     </div>
                 </div>
             </div>
@@ -2408,181 +2742,650 @@
                         <span class="icon">🛡️</span>
                         <h3>Versichert gegen Schäden</h3>
                     </div>
-                    <p>Wir führen alle Arbeiten gewissenhaft und sorgfältig durch. Für den Fall der Fälle sind etwaige Schäden selbstverständlich versichert.</p>
+                    <p>Wir führen alle Arbeiten gewissenhaft und sorgfältig durch. Für den Fall der Fälle sind etwaige
+                        Schäden selbstverständlich versichert.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-title">
                         <span class="icon">🏗️</span>
                         <h3>Außenaufzug</h3>
                     </div>
-                    <p>Laufwege bis ins 5. Stockwerk sowie Schäden am Treppenhaus vermeiden wir und nutzen stattdessen einen Außenaufzug. Ohne zusätzliche Kosten.</p>
+                    <p>Laufwege bis ins 5. Stockwerk sowie Schäden am Treppenhaus vermeiden wir und nutzen stattdessen
+                        einen Außenaufzug. Ohne zusätzliche Kosten.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-title">
                         <span class="icon">📨</span>
                         <h3>Übernahme behördlicher Anträge</h3>
                     </div>
-                    <p>Wir nehmen Ihnen nicht nur die Last, sondern auch den Stress ab. Postnachsendeantrag, Gas- und Wasserabmeldung und Telefonumzug sind kostenfrei inklusive.</p>
+                    <p>Wir nehmen Ihnen nicht nur die Last, sondern auch den Stress ab. Postnachsendeantrag, Gas- und
+                        Wasserabmeldung und Telefonumzug sind kostenfrei inklusive.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-title">
                         <span class="icon">💸</span>
                         <h3>Wertanrechnung</h3>
                     </div>
-                    <p>Im Rahmen unseres Angebots berücksichtigen wir Gegenstände, die Sie veräußern möchten. Häufig lässt sich hierdurch für Sie noch Geld sparen.</p>
+                    <p>Im Rahmen unseres Angebots berücksichtigen wir Gegenstände, die Sie veräußern möchten. Häufig
+                        lässt sich hierdurch für Sie noch Geld sparen.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-title">
                         <span class="icon">♻️</span>
                         <h3>Umweltgerechte Entsorgung</h3>
                     </div>
-                    <p>Alle anfallenden Materialien sowie nicht mehr notwendige Gegenstände entsorgen wir umweltgerecht und führen sie dem Recyclingkreislauf zu.</p>
+                    <p>Alle anfallenden Materialien sowie nicht mehr notwendige Gegenstände entsorgen wir umweltgerecht
+                        und führen sie dem Recyclingkreislauf zu.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Kundenstimmen Section -->
+        <!-- Kundenstimmen Section - IMPROVED -->
         <section class="testimonials-section" id="kundenstimmen">
-            <div class="services-header">
-                <h2 class="section-title">Was unsere Kunden sagen</h2>
+            <div class="testimonials-header">
+                <h1 class="section-title">Was unsere Kunden sagen</h1>
                 <p class="section-description">
                     Vertrauen und Zufriedenheit stehen bei uns an erster Stelle. Lesen Sie, was unsere Kunden
                     über unsere Arbeit berichten.
                 </p>
             </div>
 
-            <!-- First Row: 3 Testimonials -->
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        <p>"Hervorragender Service! Die Küchenmontage wurde termingerecht und professionell
-                            durchgeführt. Sehr kompetentes Team."</p>
-                    </div>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kunde"
-                            class="client-avatar lazy-img" loading="lazy">
-                        <div>
-                            <h3>Thomas Schmidt</h3>
-                            <div class="client-service">Küchenmontage</div>
-                            <div class="rating-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+            <!-- Testimonials Slider Container -->
+            <div class="testimonials-slider-container">
+                <!-- Navigation Arrows -->
+                <button class="slider-arrow left-arrow" id="prevTestimonial" aria-label="Vorherige Kundenbewertung">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="testimonials-slider-wrapper">
+                    <div class="testimonials-track" id="testimonialsTrack">
+                        <!-- Testimonial 1 - Küchenmontage -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Die Küchenmontage war perfekt! Das Team von NEUMATIC hat unsere Traumküche präzise und termingerecht montiert. Jedes Detail stimmt - von den Schränken bis zur Elektroinstallation. Absolute Profis!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Sarah Müller</h3>
+                                    <div class="client-service">Küchenmontage</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Testimonial 2 - Umzug -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Unser Umzug von München nach Frankfurt war stressfrei dank NEUMATIC. Alles wurde perfekt organisiert - Verpackung, Transport, Aufbau. Besonders beeindruckend war die sorgfältige Behandlung unserer Möbel."</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Thomas Weber</h3>
+                                    <div class="client-service">Umzug</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 - Entrümpelungen -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Die Entrümpelung unseres Elternhauses nach 40 Jahren war eine Herausforderung. NEUMATIC hat alles professionell erledigt - von der Sortierung bis zur umweltgerechten Entsorgung. Saubere Arbeit zu fairen Preisen!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Petra Schmidt</h3>
+                                    <div class="client-service">Entrümpelungen</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 - Klaviertransport -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Der Transport meines Flügels war eine Delikatesse! Das NEUMATIC-Team behandelte das Instrument wie ein rohes Ei. Fachgerechte Verpackung, schonender Transport - mein Klavier ist heil angekommen. Absolute Experten!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Dr. Markus Wagner</h3>
+                                    <div class="client-service">Klaviertransport</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 - Möbeltransport -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Möbeltransport über 250km - alles kam perfekt an! Das Team war pünktlich, freundlich und extrem sorgfältig. Besonders geschätzt habe ich die transparente Preisgestaltung ohne versteckte Kosten. Sehr zu empfehlen!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Anna Fischer</h3>
+                                    <div class="client-service">Möbeltransport</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 6 - Küchenmontage -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Unsere neue Einbauküche wurde perfekt montiert. Die Handwerker von NEUMATIC waren präzise, sauber und hatten Lösungen für jede Herausforderung. Die Arbeitsplatte passt millimetergenau - einfach perfekt!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Klaus Hoffmann</h3>
+                                    <div class="client-service">Küchenmontage</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 7 - Büroumzug -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Unser Büroumzug inklusive IT-Equipment war eine logistische Meisterleistung. NEUMATIC hat alles reibungslos durchgeführt - kein einziger Ausfall, alle Geräte funktionieren. Perfekte Planung und Umsetzung!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Robert Bauer</h3>
+                                    <div class="client-service">Büroumzug</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 8 - Entrümpelung -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Die Entrümpelung meines Dachbodens nach 30 Jahren war in einem Tag erledigt. Das Team war effizient, respektvoll mit Erinnerungsstücken und hat alles fachgerecht entsorgt. Großer Dank für diese Erleichterung!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Monika Schulz</h3>
+                                    <div class="client-service">Entrümpelung</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 9 - Klaviertransport -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Mein Konzertflügel musste ins 3. Obergeschoss. Mit Spezialausrüstung und größter Vorsicht hat NEUMATIC diese Herausforderung gemeistert. Keine Kratzer, keine Macken - einfach beeindruckend professionell!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Elena Richter</h3>
+                                    <div class="client-service">Klaviertransport</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 10 - Komplettservice -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Wir haben mehrere Dienstleistungen kombiniert: Entrümpelung, Umzug und Möbeltransport. NEUMATIC war unser Rundum-Sorglos-Paket. Alles aus einer Hand, perfekt koordiniert. Unser Umzug war stressfrei - danke!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Martin Koch</h3>
+                                    <div class="client-service">Komplettservice</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 11 - Additional 1 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Der Umzug unseres Büros war eine logistische Meisterleistung. NEUMATIC hat alles perfekt organisiert - von der IT-Verkabelung bis zur Möbelmontage. Kein Tag Ausfallzeit für unser Unternehmen!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Andreas Meier</h3>
+                                    <div class="client-service">Büroumzug</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 12 - Additional 2 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Die Entrümpelung unserer Lagerhalle war in Rekordzeit erledigt. Das Team arbeitete professionell und effizient. Besonders beeindruckt hat mich die umweltgerechte Entsorgung aller Materialien."</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Julia Weber</h3>
+                                    <div class="client-service">Entrümpelung</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 13 - Additional 3 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Die Küchenmontage in unserer neuen Wohnung war makellos. Die Handwerker waren pünktlich, sauber und extrem professionell. Jedes Detail wurde perfekt umgesetzt - wir sind absolut begeistert!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Michael Schmidt</h3>
+                                    <div class="client-service">Küchenmontage</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 14 - Additional 4 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Der Transport unseres Flügels in den 4. Stock war eine Herausforderung, die NEUMATIC mit Bravour gemeistert hat. Mit spezieller Ausrüstung und größter Vorsicht wurde das Instrument sicher transportiert."</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Sophia Wagner</h3>
+                                    <div class="client-service">Klaviertransport</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 15 - Additional 5 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Unser internationaler Umzug nach Österreich wurde von NEUMATIC perfekt organisiert. Zollformalitäten, Verpackung, Transport - alles aus einer Hand. Absolute Zuverlässigkeit und Professionalität!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Daniel Fischer</h3>
+                                    <div class="client-service">Internationaler Umzug</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 16 - Additional 6 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Die Entrümpelung unserer kompletten Wohnung war in Rekordzeit erledigt. Das Team war unglaublich effizient und hat sogar noch brauchbare Möbel für soziale Zwecke separiert. Großartige Arbeit!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Lisa Hoffmann</h3>
+                                    <div class="client-service">Komplette Wohnungsentrümpelung</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 17 - Additional 7 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Unsere Einbauküche wurde perfekt montiert! Das NEUMATIC-Team hat nicht nur die Küche aufgebaut, sondern auch alle Elektrogeräte fachgerecht angeschlossen. Absolute Präzision und Sauberkeit!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/58.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Stefan Weber</h3>
+                                    <div class="client-service">Küchenmontage & Elektroinstallation</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 18 - Additional 8 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Der Transport unserer empfindlichen Antiquitäten war eine Herausforderung. NEUMATIC hat jedes Stück speziell verpackt und sicher transportiert. Diese Sorgfalt findet man selten!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Dr. Thomas Berger</h3>
+                                    <div class="client-service">Antikentransport</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 19 - Additional 9 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Die Abbruchreinigung nach unserer Renovierung war perfekt. Das Team hat nicht nur den Bauschutt entfernt, sondern die Räume auch besenrein hinterlassen. Sehr zuverlässig und gründlich!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/53.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Katharina Neumann</h3>
+                                    <div class="client-service">Abbruch & Reinigung</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 20 - Additional 10 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Wir haben alle Dienstleistungen kombiniert: Küchenmontage, Möbeltransport und Entrümpelung. NEUMATIC war unser One-Stop-Shop für alles. Perfekte Koordination, faire Preise und exzellenter Service!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Sabine Lehmann</h3>
+                                    <div class="client-service">Komplettpaket (3 Dienstleistungen)</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 21 - Additional 11 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Der Transport unseres gesamten Hausstands von Berlin nach Hamburg war eine Meisterleistung. Alles kam sicher und pünktlich an. Die Profis von NEUMATIC haben unsere Erwartungen weit übertroffen!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Christian Wolf</h3>
+                                    <div class="client-service">Kompletter Hausstandtransport</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 22 - Additional 12 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Die Entrümpelung unseres alten Bauernhofs war eine riesige Aufgabe. NEUMATIC hat in kürzester Zeit alles erledigt - von alten Möbeln bis zu Bauschutt. Unglaubliche Effizienz und Professionalität!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/71.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Marion Schneider</h3>
+                                    <div class="client-service">Großprojekt Entrümpelung</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 23 - Additional 13 (Neue) -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Die Montage unserer Designer-Küche war eine echte Herausforderung. NEUMATIC hat alles perfekt umgesetzt - von der Aufstellung bis zur Feinjustierung. Absolute Perfektionisten!"</p>
+                            </div>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/84.jpg" alt="Kunde"
+                                    class="client-avatar lazy-img" loading="lazy">
+                                <div>
+                                    <h3>Oliver König</h3>
+                                    <div class="client-service">Designer-Küchenmontage</div>
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        <p>"Der Klaviertransport war absolut professionell. Mein Flügel kam sicher und ohne
-                            Beschädigungen an. Vielen Dank!"</p>
-                    </div>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Kunde"
-                            class="client-avatar lazy-img" loading="lazy">
-                        <div>
-                            <h3>Maria Weber</h3>
-                            <div class="client-service">Klaviertransport</div>
-                            <div class="rating-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        <p>"Stressfreier Umzug dank NEUMATIC. Alles wurde perfekt organisiert. Sehr zuverlässig
-                            und preiswert!"</p>
-                    </div>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Kunde"
-                            class="client-avatar lazy-img" loading="lazy">
-                        <div>
-                            <h3>Robert Müller</h3>
-                            <div class="client-service">Umzugsservice</div>
-                            <div class="rating-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Navigation Arrows -->
+                <button class="slider-arrow right-arrow" id="nextTestimonial" aria-label="Nächste Kundenbewertung">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
 
-            <!-- Second Row: 2 Testimonials -->
-            <div class="testimonials-grid-2">
-                <!-- Testimonial 4 - Umzug -->
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        <p>"Der Umzug war perfekt organisiert! Das Team von NEUMATIC hat alles schnell und effizient erledigt. Besonders beeindruckt war ich von der sorgfältigen Verpackung meiner Möbel. Absolute Empfehlung!"</p>
-                    </div>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Kunde"
-                            class="client-avatar lazy-img" loading="lazy">
-                        <div>
-                            <h3>Sabine Hoffmann</h3>
-                            <div class="client-service">Umzug</div>
-                            <div class="rating-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 5 - Umzug -->
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        <p>"Wir sind mit unserem Büroumzug extrem zufrieden. Die Jungs waren pünktlich, professionell und haben alle Geräte sicher transportiert. Der Preis war fair und es gab keine versteckten Kosten. Top Service!"</p>
-                    </div>
-                    <div class="client-info">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Kunde"
-                            class="client-avatar lazy-img" loading="lazy">
-                        <div>
-                            <h3>Markus Bauer</h3>
-                            <div class="client-service">Büroumzug</div>
-                            <div class="rating-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Dots Navigation -->
+            <div class="testimonials-dots" id="testimonialsDots">
+                <!-- Dots will be generated by JavaScript -->
             </div>
         </section>
 
@@ -2649,7 +3452,7 @@
                         <p>Wir bieten vorab eine kostenlose Besichtigung an, um die genaue Dauer zu schätzen.</p>
                     </div>
                 </div>
-               
+
 
                 <!-- FAQ Item 4 -->
                 <div class="faq-item">
@@ -2681,7 +3484,8 @@
             </p>
 
             <div class="cta-buttons">
-                <button class="order-now-btn" onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Anfrage per E-Mail'">
+                <button class="order-now-btn"
+                    onclick="window.location.href='mailto:Info@neumaticgmbh.de?subject=Anfrage per E-Mail'">
                     <i class="fas fa-envelope"></i>
                     Anfrage per E-Mail
                 </button>
@@ -2700,7 +3504,7 @@
                 <div class="footer-logo">
                     <span class="material-symbols-outlined footer-logo-icon">local_shipping</span>
                     <h2 class="footer-logo-text">NEUMATIC GmbH
-</h2>
+                    </h2>
                 </div>
                 <p class="footer-about-text">
                     Professionelle Umzugs- und Transportdienstleistungen in ganz Deutschland. Seit über 10 Jahren für
@@ -2740,7 +3544,7 @@
             <div class="copyright">
                 &copy; 2026 NEUMATIC GmbH. Alle Rechte vorbehalten.
             </div>
-            
+
             <div class="social-links">
                 <a class="social-link" href="#">
                     <i class="fab fa-facebook-f"></i>
@@ -2764,7 +3568,7 @@
         // تحسينات الأداء - توقف الأنيميشن عند عدم التركيز
         let isPageActive = true;
         let autoSlideInterval;
-        
+
         // متغيرات أساسية
         let currentSlide = 0;
         const totalSlides = 5;
@@ -2773,19 +3577,22 @@
         // تهيئة الصفحة
         document.addEventListener('DOMContentLoaded', function () {
             console.log('NEUMATIC Website loaded - Performance Optimized');
-            
+
             // تحميل الفونتات بشكل غير متزامن
             loadFonts();
-            
+
             // تهيئة lazy loading للصور
             initLazyLoading();
-            
+
             // إعداد المكونات
             setupEventListeners();
             initSlider();
             initFAQ();
             initScrollProgress();
             initNavbarScroll();
+            
+            // تهيئة السلايدر المحسن للآراء
+            initEnhancedTestimonialsSlider();
         });
 
         // =========================================
@@ -2796,7 +3603,7 @@
                 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:wght@700&display=swap',
                 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap'
             ];
-            
+
             // تحميل الفونتات باستخدام FontFace API
             if ('fonts' in document) {
                 fonts.forEach(fontUrl => {
@@ -2821,7 +3628,7 @@
         // =========================================
         function initLazyLoading() {
             const lazyImages = document.querySelectorAll('.lazy-img');
-            
+
             if ('IntersectionObserver' in window) {
                 const imageObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
@@ -2848,7 +3655,7 @@
         // =========================================
         // إدارة أداء الصفحة
         // =========================================
-        document.addEventListener('visibilitychange', function() {
+        document.addEventListener('visibilitychange', function () {
             if (document.hidden) {
                 isPageActive = false;
                 pauseAutoSlide();
@@ -2866,18 +3673,18 @@
             const mobileMenu = document.getElementById('mobileMenu');
             const mobileCloseBtn = document.getElementById('mobileCloseBtn');
             const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-            
+
             if (!mobileMenuBtn || !mobileMenu) {
                 console.error('Mobile menu elements not found!');
                 return;
             }
-            
+
             // Function to toggle menu
             function toggleMobileMenu() {
                 mobileMenu.classList.toggle('active');
                 mobileMenuBtn.classList.toggle('active');
                 document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-                
+
                 // Add/remove active class to button
                 if (mobileMenu.classList.contains('active')) {
                     mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined">close</span>';
@@ -2885,17 +3692,17 @@
                     mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined">menu</span>';
                 }
             }
-            
+
             // Click event for menu button
-            mobileMenuBtn.addEventListener('click', function(e) {
+            mobileMenuBtn.addEventListener('click', function (e) {
                 e.stopPropagation();
                 e.preventDefault();
                 toggleMobileMenu();
             });
-            
+
             // Click event for close button
             if (mobileCloseBtn) {
-                mobileCloseBtn.addEventListener('click', function(e) {
+                mobileCloseBtn.addEventListener('click', function (e) {
                     e.stopPropagation();
                     mobileMenu.classList.remove('active');
                     mobileMenuBtn.classList.remove('active');
@@ -2903,21 +3710,21 @@
                     document.body.style.overflow = 'auto';
                 });
             }
-            
+
             // Click event for menu links
             mobileNavLinks.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     mobileMenu.classList.remove('active');
                     mobileMenuBtn.classList.remove('active');
                     mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined">menu</span>';
                     document.body.style.overflow = 'auto';
                 });
             });
-            
+
             // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (mobileMenu.classList.contains('active') && 
-                    !mobileMenu.contains(e.target) && 
+            document.addEventListener('click', function (e) {
+                if (mobileMenu.classList.contains('active') &&
+                    !mobileMenu.contains(e.target) &&
                     e.target !== mobileMenuBtn) {
                     mobileMenu.classList.remove('active');
                     mobileMenuBtn.classList.remove('active');
@@ -2925,9 +3732,9 @@
                     document.body.style.overflow = 'auto';
                 }
             });
-            
+
             // Close menu on scroll
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 if (mobileMenu.classList.contains('active')) {
                     mobileMenu.classList.remove('active');
                     mobileMenuBtn.classList.remove('active');
@@ -2968,7 +3775,7 @@
         function createDots() {
             const dotsContainer = document.getElementById('sliderDots');
             dotsContainer.innerHTML = '';
-            
+
             for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('span');
                 dot.className = 'slider-dot';
@@ -2981,18 +3788,18 @@
 
         function updateSlider() {
             if (isAnimating) return;
-            
+
             isAnimating = true;
             const heroTrack = document.getElementById('heroTrack');
             if (heroTrack) {
                 heroTrack.style.transform = `translateX(-${currentSlide * 20}%)`;
-                
+
                 // Update active dot
                 document.querySelectorAll('.slider-dot').forEach((dot, index) => {
                     dot.classList.toggle('active', index === currentSlide);
                 });
             }
-            
+
             setTimeout(() => {
                 isAnimating = false;
             }, 800);
@@ -3000,7 +3807,7 @@
 
         function goToSlide(index) {
             if (isAnimating) return;
-            
+
             currentSlide = index;
             updateSlider();
             resetAutoSlide();
@@ -3008,7 +3815,7 @@
 
         function goToNextSlide() {
             if (isAnimating || !isPageActive) return;
-            
+
             currentSlide = (currentSlide + 1) % totalSlides;
             updateSlider();
             resetAutoSlide();
@@ -3016,7 +3823,7 @@
 
         function goToPrevSlide() {
             if (isAnimating || !isPageActive) return;
-            
+
             currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
             updateSlider();
             resetAutoSlide();
@@ -3050,16 +3857,299 @@
         }
 
         // =========================================
+        // ENHANCED TESTIMONIALS SLIDER
+        // =========================================
+        function initEnhancedTestimonialsSlider() {
+            const track = document.getElementById('testimonialsTrack');
+            const prevBtn = document.getElementById('prevTestimonial');
+            const nextBtn = document.getElementById('nextTestimonial');
+            const dotsContainer = document.getElementById('testimonialsDots');
+            
+            if (!track || !prevBtn || !nextBtn) {
+                console.error('Testimonials slider elements not found');
+                return;
+            }
+            
+            const cards = track.querySelectorAll('.testimonial-card');
+            const totalCards = cards.length;
+            let currentIndex = 0;
+            let cardsPerView = 1;
+            let cardWidth = 0;
+            let gap = 30;
+            let isAnimating = false;
+            let autoPlayInterval = null;
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            // Calculate cards per view based on screen size
+            function calculateCardsPerView() {
+                const width = window.innerWidth;
+                
+                if (width >= 1400) {
+                    return 4;
+                } else if (width >= 1024) {
+                    return 3;
+                } else if (width >= 768) {
+                    return 2;
+                } else {
+                    return 1;
+                }
+            }
+            
+            // Update slider
+            function updateSlider(instant = false) {
+                if (isAnimating) return;
+                
+                isAnimating = true;
+                cardsPerView = calculateCardsPerView();
+                const containerWidth = track.parentElement.offsetWidth;
+                
+                // Calculate card width dynamically
+                cardWidth = (containerWidth / cardsPerView) - gap + (gap / cardsPerView);
+                
+                // Set card width
+                cards.forEach(card => {
+                    card.style.width = `${cardWidth}px`;
+                    card.style.flex = `0 0 ${cardWidth}px`;
+                });
+                
+                // Update track width
+                const trackWidth = (cardWidth * totalCards) + (gap * (totalCards - 1));
+                track.style.width = `${trackWidth}px`;
+                
+                // Update slider position
+                const translateX = -currentIndex * (cardWidth + gap);
+                
+                if (instant) {
+                    track.style.transition = 'none';
+                    track.style.transform = `translateX(${translateX}px)`;
+                    // Force reflow
+                    track.offsetHeight;
+                    track.style.transition = 'transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)';
+                } else {
+                    track.style.transform = `translateX(${translateX}px)`;
+                }
+                
+                // Update active cards
+                updateActiveCards();
+                updateDots();
+                updateButtons();
+                
+                // Reset animation flag
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 700);
+            }
+            
+            // Update active cards styling
+            function updateActiveCards() {
+                cards.forEach((card, index) => {
+                    const isActive = index >= currentIndex && index < currentIndex + cardsPerView;
+                    card.classList.toggle('active', isActive);
+                });
+            }
+            
+            // Create dots
+            function createDots() {
+                dotsContainer.innerHTML = '';
+                const dotsCount = Math.ceil(totalCards / cardsPerView);
+                
+                for (let i = 0; i < dotsCount; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = 'testimonial-dot';
+                    if (i === Math.floor(currentIndex / cardsPerView)) {
+                        dot.classList.add('active');
+                    }
+                    dot.addEventListener('click', () => goToSlide(i));
+                    dotsContainer.appendChild(dot);
+                }
+            }
+            
+            // Update dots
+            function updateDots() {
+                const dots = dotsContainer.querySelectorAll('.testimonial-dot');
+                const dotsCount = Math.ceil(totalCards / cardsPerView);
+                const activeDotIndex = Math.floor(currentIndex / cardsPerView);
+                
+                if (dots.length !== dotsCount) {
+                    createDots();
+                    return;
+                }
+                
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === activeDotIndex);
+                });
+            }
+            
+            // Update buttons state
+            function updateButtons() {
+                const maxIndex = totalCards - cardsPerView;
+                
+                prevBtn.disabled = currentIndex <= 0;
+                nextBtn.disabled = currentIndex >= maxIndex;
+                
+                // Visual feedback for disabled state
+                prevBtn.style.opacity = prevBtn.disabled ? '0.25' : '1';
+                nextBtn.style.opacity = nextBtn.disabled ? '0.25' : '1';
+            }
+            
+            // Go to specific slide
+            function goToSlide(slideIndex) {
+                if (isAnimating) return;
+                
+                const maxSlideIndex = Math.ceil(totalCards / cardsPerView) - 1;
+                const targetIndex = Math.min(Math.max(slideIndex, 0), maxSlideIndex) * cardsPerView;
+                
+                const actualMaxIndex = Math.max(totalCards - cardsPerView, 0);
+                currentIndex = Math.min(targetIndex, actualMaxIndex);
+                
+                updateSlider();
+                restartAutoPlay();
+            }
+            
+            // Next slide
+            function nextSlide() {
+                if (isAnimating) return;
+                
+                const maxIndex = totalCards - cardsPerView;
+                if (currentIndex < maxIndex) {
+                    currentIndex += cardsPerView;
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex;
+                    }
+                    updateSlider();
+                    restartAutoPlay();
+                } else {
+                    // Loop to beginning
+                    currentIndex = 0;
+                    updateSlider();
+                    restartAutoPlay();
+                }
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                if (isAnimating) return;
+                
+                if (currentIndex > 0) {
+                    currentIndex -= cardsPerView;
+                    if (currentIndex < 0) {
+                        currentIndex = 0;
+                    }
+                    updateSlider();
+                    restartAutoPlay();
+                } else {
+                    // Loop to end
+                    const maxIndex = totalCards - cardsPerView;
+                    currentIndex = maxIndex;
+                    updateSlider();
+                    restartAutoPlay();
+                }
+            }
+            
+            // Start autoplay
+            function startAutoPlay() {
+                stopAutoPlay();
+                autoPlayInterval = setInterval(() => {
+                    nextSlide();
+                }, 6000); // 6 seconds
+            }
+            
+            // Stop autoplay
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = null;
+                }
+            }
+            
+            // Restart autoplay
+            function restartAutoPlay() {
+                stopAutoPlay();
+                startAutoPlay();
+            }
+            
+            // Touch events for mobile
+            track.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                track.style.transition = 'none';
+                stopAutoPlay();
+            }, { passive: true });
+            
+            track.addEventListener('touchmove', (e) => {
+                if (!touchStartX) return;
+                e.preventDefault();
+                touchEndX = e.touches[0].clientX;
+                const diff = touchStartX - touchEndX;
+                const currentTranslate = -currentIndex * (cardWidth + gap);
+                const newTranslate = currentTranslate - diff;
+                track.style.transform = `translateX(${newTranslate}px)`;
+            }, { passive: false });
+            
+            track.addEventListener('touchend', () => {
+                if (!touchStartX) return;
+                track.style.transition = 'transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)';
+                
+                const diff = touchStartX - touchEndX;
+                const swipeThreshold = 50;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                } else {
+                    updateSlider(true);
+                }
+                
+                touchStartX = 0;
+                touchEndX = 0;
+                restartAutoPlay();
+            }, { passive: true });
+            
+            // Event listeners
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            });
+            
+            // Pause autoplay on hover
+            track.addEventListener('mouseenter', stopAutoPlay);
+            track.addEventListener('mouseleave', startAutoPlay);
+            
+            // Resize handling
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    cardsPerView = calculateCardsPerView();
+                    updateSlider(true);
+                    createDots();
+                }, 250);
+            });
+            
+            // Initialize
+            updateSlider(true);
+            createDots();
+            startAutoPlay();
+        }
+
+        // =========================================
         // EVENT LISTENERS SETUP
         // =========================================
         function setupEventListeners() {
             // Setup mobile menu FIRST
             setupMobileMenu();
-            
+
             // Slider navigation buttons
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
-            
+
             if (prevBtn) prevBtn.addEventListener('click', goToPrevSlide);
             if (nextBtn) nextBtn.addEventListener('click', goToNextSlide);
 
@@ -3208,7 +4298,7 @@
                     img.style.opacity = '1';
                 });
             }, 100);
-            
+
             // إعلام بتحميل الصفحة
             console.log('Page fully loaded and optimized');
         });
