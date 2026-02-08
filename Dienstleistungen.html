@@ -1448,10 +1448,7 @@
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <div class="copyright">
-                    &copy; 2026 NEUMATIC GmbH. Alle Rechte vorbehalten.
-                </div>
+           
 
                 <div class="social-links">
                     <a class="social-link" href="#" aria-label="Facebook">
@@ -1466,7 +1463,56 @@
                 </div>
             </div>
         </footer>
+<section class="quick-info-bar">
+    <div class="container">
+        <p class="quick-info-text">
+            NEUMATIC GmbH | Exportverpackung & Professionelle Dienstleistungen |
+            Geschäftsführer: Suliman Bani Yaseen |
+            Hauptstraße 48, 63811 Stockstadt, Deutschland |
+            Telefon: +49 1511 53 58 451 |
+            E-Mail: info@neumaticgmbh.de |
+            Impressum | Datenschutz  Datenschutzerklärung
+        </p>
+    </div>
+</section>
 
+
+<!-- إضافة تنسيقات استجابة للشريط -->
+<style>
+   .quick-info-bar {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 12px 0;
+    border-top: 3px solid var(--gold);
+    border-bottom: 3px solid var(--gold);
+}
+
+.quick-info-bar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.quick-info-text {
+    color: #fff;              /* ✅ أبيض */
+    margin: 0;
+    font-size: .9rem;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+    .quick-info-text {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
+
+</style>
         <script>
             // Performance Optimizations
             'use strict';

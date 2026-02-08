@@ -2700,54 +2700,24 @@
     </div>
 
     <!-- Enhanced Gold Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-about">
-                <div class="footer-logo">
-                    <span class="material-symbols-outlined footer-logo-icon" aria-hidden="true">local_shipping</span>
-                    <h2 class="footer-logo-text">NEUMATIC GmbH</h2>
-                </div>
-                <p class="footer-about-text">
-                    Professionelle Umzugs- und Transportdienstleistungen in ganz Deutschland. Seit über 10 Jahren für
-                    Sie im Einsatz.
-                </p>
-            </div>
+  <!-- من نهاية الفوتر، قم بإزالة قسم السوشيال ميديا من .footer-bottom ونقلها داخل .footer-grid -->
+<!-- ثم أضف الشريط الأزرق بعد الفوتر مباشرة -->
 
-            <div class="footer-column">
-                <h3 class="footer-title">Menü</h3>
-                <div class="footer-links">
-                    <a class="footer-link" href="./index.html">Startseite</a>
-                    <a class="footer-link" href="./index.html#dienstleistungen">Dienstleistungen</a>
-                    <a class="footer-link" href="./index.html#faq">FAQ</a>
-                    <a class="footer-link" href="./index.html#about">Über uns</a>
-                    <a class="footer-link" href="./Kontakt.html">Kontakt</a>
-                </div>
+<!-- Enhanced Gold Footer -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-about">
+            <div class="footer-logo">
+                <span class="material-symbols-outlined footer-logo-icon" aria-hidden="true">local_shipping</span>
+                <h2 class="footer-logo-text">NEUMATIC GmbH</h2>
             </div>
-
-            <div class="footer-column footer-contact">
-                <h3 class="footer-title">Kontakt</h3>
-                <div class="footer-links">
-                    <p>Deutschlandweit im Einsatz</p>
-                    <a class="footer-link email-link" data-email="Info@neumaticgmbh.de">
-                        <i class="fas fa-envelope" aria-hidden="true"></i> Info@neumaticgmbh.de
-                    </a>
-                    
-                    <a class="footer-link" href="tel:+4915115358451">
-                        <i class="fas fa-phone" aria-hidden="true"></i> +49 1511 53 58 451
-                    </a>
-                    <a class="footer-link" href="https://wa.me/491725951898" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp: +49 1511 53 58 451
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="copyright">
-                &copy; 2026 NEUMATIC GmbH. Alle Rechte vorbehalten.
-            </div>
+            <p class="footer-about-text">
+                Professionelle Umzugs- und Transportdienstleistungen in ganz Deutschland. Seit über 10 Jahren für
+                Sie im Einsatz.
+            </p>
             
-            <div class="social-links">
+            <!-- إضافة روابط السوشيال ميديا هنا داخل الفوتر -->
+            <div class="social-links" style="margin-top: 1.5rem;">
                 <a class="social-link" href="#" aria-label="Facebook">
                     <i class="fab fa-facebook-f" aria-hidden="true"></i>
                 </a>
@@ -2759,7 +2729,91 @@
                 </a>
             </div>
         </div>
-    </footer>
+
+        <div class="footer-column">
+            <h3 class="footer-title">Menü</h3>
+            <div class="footer-links">
+                <a class="footer-link" href="./index.html">Startseite</a>
+                <a class="footer-link" href="./index.html#dienstleistungen">Dienstleistungen</a>
+                <a class="footer-link" href="./index.html#faq">FAQ</a>
+                <a class="footer-link" href="./index.html#about">Über uns</a>
+                <a class="footer-link" href="./Kontakt.html">Kontakt</a>
+            </div>
+        </div>
+
+        <div class="footer-column footer-contact">
+            <h3 class="footer-title">Kontakt</h3>
+            <div class="footer-links">
+                <p>Deutschlandweit im Einsatz</p>
+                <a class="footer-link email-link" data-email="Info@neumaticgmbh.de">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> Info@neumaticgmbh.de
+                </a>
+                
+                <a class="footer-link" href="tel:+4915115358451">
+                    <i class="fas fa-phone" aria-hidden="true"></i> +49 1511 53 58 451
+                </a>
+                <a class="footer-link" href="https://wa.me/491725951898" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp: +49 1511 53 58 451
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+        <!-- تم إزالة روابط السوشيال ميديا من هنا -->
+    </div>
+</footer>
+
+<section class="quick-info-bar">
+    <div class="container">
+        <p class="quick-info-text">
+            NEUMATIC GmbH | Exportverpackung & Professionelle Dienstleistungen |
+            Geschäftsführer: Suliman Bani Yaseen |
+            Hauptstraße 48, 63811 Stockstadt, Deutschland |
+            Telefon: +49 1511 53 58 451 |
+            E-Mail: info@neumaticgmbh.de |
+            Impressum | Datenschutz  Datenschutzerklärung
+        </p>
+    </div>
+</section>
+
+
+<!-- إضافة تنسيقات استجابة للشريط -->
+<style>
+   .quick-info-bar {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 12px 0;
+    border-top: 3px solid var(--gold);
+    border-bottom: 3px solid var(--gold);
+}
+
+.quick-info-bar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.quick-info-text {
+    color: #fff;              /* ✅ أبيض */
+    margin: 0;
+    font-size: .9rem;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+    .quick-info-text {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
+
+</style>
 
     <script>
         // Mobile Menu Toggle
