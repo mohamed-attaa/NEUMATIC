@@ -2780,6 +2780,64 @@
 
 <!-- إضافة تنسيقات استجابة للشريط -->
 <style>
+ /* إضافة تنسيق خاص لأرقام الهواتف في بطاقات الفريق */
+    .team .box .info .contact-icons .icon-item span {
+        color: var(--gold) !important; /* ✅ لون ذهبي ثابت */
+        opacity: 0.8;
+        transition: all 0.3s ease;
+        word-break: break-word;
+        text-decoration: none !important;
+    }
+
+    .team .box:hover .info .contact-icons .icon-item span {
+        opacity: 1;
+        color: var(--gold-light) !important; /* ✅ لون ذهبي فاتح عند التحويم */
+    }
+
+    .team .box .info .contact-icons .icon-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        color: var(--white);
+        transition: all 0.3s ease;
+        justify-content: center;
+        cursor: pointer;
+        text-decoration: none !important;
+    }
+
+    /* إزالة التنسيق الأزرق الافتراضي للروابط */
+    .team .box .info .contact-icons .icon-item * {
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+
+    /* التأكد من عدم ظهور اللون الأزرق */
+    a[data-phone] span,
+    a[data-email] span {
+        color: var(--gold) !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    .quick-info-bar {
     background: linear-gradient(135deg, #1e3c72, #2a5298);
     margin: 0;
