@@ -479,94 +479,95 @@
         }
 
         /* Slider Navigation Buttons */
-        .slider-nav {
-            position: absolute;
-            transform: translateY(-20px); /* لفوق */
-            bottom: 70px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            z-index: 3;
-        }
+       .slider-nav {
+    position: absolute;
+    bottom: 100px; /* تحريكها للأعلى */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem; /* تقليل المسافة بين العناصر */
+    z-index: 3;
+}
 
         .prev-btn,
-        .next-btn {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: 2px solid rgba(0, 0, 0, 0.1);
-            background-color: rgba(255, 255, 255, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: var(--text-dark);
-            font-size: 1.2rem;
-        }
-
+.next-btn {
+    width: 36px; /* تصغير حجم الزر */
+    height: 36px; /* تصغير حجم الزر */
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.4); /* تخفيف الحدود */
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية أغمق قليلاً */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--gold); /* اللون الذهبي */
+    font-size: 1rem; /* تصغير حجم الأيقونة */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
         .prev-btn:hover,
-        .next-btn:hover {
-            background-color: var(--gold);
-            border-color: var(--gold);
-            transform: scale(1.1);
-            color: #000;
-        }
+.next-btn:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    transform: scale(1.05);
+    color: #000;
+}
 
-        .slider-dots {
-            display: flex;
-            gap: 10px;
-        }
+.slider-dots {
+    display: flex;
+    gap: 8px; /* تقليل المسافة بين النقاط */
+    margin: 0 15px;
+}
 
         .slider-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+    width: 8px; /* تصغير حجم النقطة */
+    height: 8px; /* تصغير حجم النقطة */
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-        .slider-dot.active {
-            background-color: var(--gold);
-            transform: scale(1.2);
-        }
+.slider-dot.active {
+    background-color: var(--gold);
+    transform: scale(1.2);
+}
 
-        .slider-dot:hover {
-            background-color: var(--gold-light);
-            transform: scale(1.1);
-        }
+       .slider-dot:hover {
+    background-color: var(--gold-light);
+    transform: scale(1.1);
+}
 
-        @media (max-width: 768px) {
-            .hero-slider {
-                height: calc(100vh - 70px);
-                min-height: 500px;
-            }
+@media (max-width: 768px) {
+    .hero-slider {
+        height: calc(100vh - 70px);
+        min-height: 500px;
+    }
 
             .slider-nav {
-                bottom: 15px;
-                gap: 1rem;
-            }
+        bottom: 80px; /* رفع أكثر على الموبايل */
+        gap: 1rem;
+    }
 
-            .prev-btn,
-            .next-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
+    .prev-btn,
+    .next-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
 
-            .slider-dots {
-                gap: 6px;
-            }
+    .slider-dots {
+        gap: 5px;
+    }
 
-            .slider-dot {
-                width: 8px;
-                height: 8px;
-            }
-        }
+           .slider-dot {
+        width: 6px;
+        height: 6px;
+    }
+}
 
         /* Content Container */
         .layout-content-container {
@@ -576,7 +577,11 @@
             margin: 0 auto;
             padding: 0 1rem;
         }
-
+@media (max-width: 480px) {
+    .slider-nav {
+        bottom: 60px; /* رفع أكثر على الشاشات الصغيرة */
+        gap: 0.8rem;
+    }
         @media (min-width: 768px) {
             .layout-content-container {
                 padding: 0 2.5rem;
