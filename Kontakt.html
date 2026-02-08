@@ -1014,10 +1014,10 @@
         }
 
         .contact-value a {
-                        color: var(--gold);
-
+            color: var(--gold);
             text-decoration: none;
             transition: color 0.3s ease;
+            cursor: pointer;
         }
 
         .contact-value a:hover {
@@ -1536,6 +1536,7 @@
             gap: 6px;
             padding: 0.2rem 0;
             position: relative;
+            cursor: pointer;
         }
 
         @media (min-width: 768px) {
@@ -2075,6 +2076,7 @@
             color: var(--white);
             transition: all 0.3s ease;
             justify-content: center;
+            cursor: pointer;
         }
 
         @media (min-width: 768px) {
@@ -2125,7 +2127,7 @@
         }
 
         .team .box .info .contact-icons .icon-item span {
-color: var(--gold);
+            color: var(--gold);
             opacity: 0.8;
             transition: all 0.3s ease;
             word-break: break-word;
@@ -2412,44 +2414,6 @@ color: var(--gold);
         <div class="team" id="team">
             <h2 class="main-title">Unser Team</h2>
             <div class="container">
-                <div class="box">
-                    <div class="data">
-                        <img src="./img/WhatsApp Image 2026-02-02 at 4.19.33 PM.jpeg" alt="Galal Abd El-Baset">
-                    </div>
-                    <div class="info">
-                        <h2>Alyunes Ali</h2>
-                        <p>Manager</p>
-                        <div class="contact-icons">
-                            <div class="icon-item">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                                <span>neumatic.trading.dienstleistung@gmail.com</span>
-                            </div>
-                            <div class="icon-item">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                <span>+49 152 13362813</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="data">
-                        <img src="./img/WhatsApp Image 2026-02-02 at 4.19.33 PM.jpeg" alt="Mohamed Hmada">
-                    </div>
-                    <div class="info">
-                        <h2>Awad Ali</h2>
-                        <p>Manager</p>
-                        <div class="contact-icons">
-                            <div class="icon-item">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                                <span>aliaoad09@gmail.com</span>
-                            </div>
-                            <div class="icon-item">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                <span>+491725951898</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="box">
                     <div class="data">
@@ -2459,17 +2423,58 @@ color: var(--gold);
                         <h2>Suliman Bani Yaseen</h2>
                         <p>Geschäftsführer</p>
                         <div class="contact-icons">
-                            <div class="icon-item">
+                            <div class="icon-item" data-email="Info@neumaticgmbh.de">
                                 <i class="fas fa-envelope" aria-hidden="true"></i>
                                 <span>Info@neumaticgmbh.de</span>
                             </div>
-                            <div class="icon-item">
+                            <div class="icon-item" data-phone="+49 1511 53 58 451">
                                 <i class="fas fa-phone" aria-hidden="true"></i>
                                 <span>+49 1511 53 58 451</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="box">
+                    <div class="data">
+                        <img src="./img/88888888888.jfif" alt="Galal Abd El-Baset">
+                    </div>
+                    <div class="info">
+                        <h2>Alyunes Ali</h2>
+                        <p>Manager</p>
+                        <div class="contact-icons">
+                            <div class="icon-item" data-email="neumatic.trading.dienstleistung@gmail.com">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span>neumatic.trading.dienstleistung@gmail.com</span>
+                            </div>
+                            <div class="icon-item" data-phone="+49 152 13362813">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <span>+49 152 13362813</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <div class="data">
+                        <img src="./img/3c41e3f8-aa80-491c-8230-91e272d3a877.jfif" alt="Mohamed Hmada">
+                    </div>
+                    <div class="info">
+                        <h2>Awad Ali</h2>
+                        <p>Manager</p>
+                        <div class="contact-icons">
+                            <div class="icon-item" data-email="aliaoad09@gmail.com">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span>aliaoad09@gmail.com</span>
+                            </div>
+                            <div class="icon-item" data-phone="+491725951898">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <span>+491725951898</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -2620,8 +2625,8 @@ color: var(--gold);
                                 <div class="contact-text">
                                     <div class="contact-label">E-Mail</div>
                                     <div class="contact-value">
-                                        <a href="mailto:Info@neumaticgmbh.de">Info@neumaticgmbh.de</a><br>
-                                        <a href="mailto:neumatic.trading.dienstleistung@gmail.com">neumatic.trading.dienstleistung@gmail.com</a>
+                                        <a href="mailto:Info@neumaticgmbh.de" class="email-link" data-email="Info@neumaticgmbh.de">Info@neumaticgmbh.de</a><br>
+                                        <a href="mailto:neumatic.trading.dienstleistung@gmail.com" class="email-link" data-email="neumatic.trading.dienstleistung@gmail.com">neumatic.trading.dienstleistung@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -2723,12 +2728,10 @@ color: var(--gold);
                 <h3 class="footer-title">Kontakt</h3>
                 <div class="footer-links">
                     <p>Deutschlandweit im Einsatz</p>
-                    <a class="footer-link" href="mailto:Info@neumaticgmbh.de">
+                    <a class="footer-link email-link" data-email="Info@neumaticgmbh.de">
                         <i class="fas fa-envelope" aria-hidden="true"></i> Info@neumaticgmbh.de
                     </a>
-                    <a class="footer-link" href="mailto:neumatic.trading.dienstleistung@gmail.com">
-                        <i class="fas fa-envelope" aria-hidden="true"></i> neumatic.trading.dienstleistung@gmail.com
-                    </a>
+                    
                     <a class="footer-link" href="tel:+4915115358451">
                         <i class="fas fa-phone" aria-hidden="true"></i> +49 1511 53 58 451
                     </a>
@@ -3020,6 +3023,118 @@ color: var(--gold);
 
             // Handle touch events for better mobile experience
             document.addEventListener('touchstart', function() {}, {passive: true});
+
+            // ========== EMAIL FUNCTIONALITY ==========
+            
+            // Function to open email client with pre-filled email
+            function openEmailClient(emailAddress, subject = "", body = "") {
+                const encodedSubject = encodeURIComponent(subject);
+                const encodedBody = encodeURIComponent(body);
+                const mailtoLink = `mailto:${emailAddress}?subject=${encodedSubject}&body=${encodedBody}`;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Show notification
+                setTimeout(() => {
+                    alert(`E-Mail-Client wird geöffnet für: ${emailAddress}\nSie können jetzt Ihre Nachricht senden.`);
+                }, 500);
+            }
+            
+            // Add click event to all email elements in team cards
+            document.querySelectorAll('.team .icon-item[data-email]').forEach(emailItem => {
+                emailItem.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const email = this.getAttribute('data-email');
+                    const teamMember = this.closest('.box').querySelector('h2').textContent;
+                    const subject = `Anfrage an ${teamMember} - NEUMATIC GmbH`;
+                    const body = `Sehr geehrter Herr ${teamMember},\n\n`;
+                    
+                    openEmailClient(email, subject, body);
+                });
+                
+                // Add hover effect
+                emailItem.style.cursor = 'pointer';
+                emailItem.title = 'Klicken Sie, um eine E-Mail zu senden';
+            });
+            
+            // Add click event to email links in company info section
+            document.querySelectorAll('.email-link').forEach(emailLink => {
+                emailLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const email = this.getAttribute('data-email') || this.getAttribute('href')?.replace('mailto:', '');
+                    if (email) {
+                        const subject = "Anfrage an NEUMATIC GmbH";
+                        const body = "Sehr geehrtes Team von NEUMATIC GmbH,\n\n";
+                        
+                        openEmailClient(email, subject, body);
+                    }
+                });
+                
+                // Add hover effect
+                emailLink.style.cursor = 'pointer';
+                emailLink.title = 'Klicken Sie, um eine E-Mail zu senden';
+            });
+            
+            // Add click event to email links in footer
+            document.querySelectorAll('.footer-contact .email-link').forEach(emailLink => {
+                emailLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const email = this.getAttribute('data-email');
+                    if (email) {
+                        const subject = "Anfrage an NEUMATIC GmbH";
+                        const body = "Sehr geehrtes Team von NEUMATIC GmbH,\n\n";
+                        
+                        openEmailClient(email, subject, body);
+                    }
+                });
+                
+                // Add hover effect
+                emailLink.style.cursor = 'pointer';
+                emailLink.title = 'Klicken Sie, um eine E-Mail zu senden';
+            });
+            
+            // Add visual feedback for email elements
+            const style = document.createElement('style');
+            style.textContent = `
+                .team .icon-item[data-email]:hover,
+                .email-link:hover,
+                .footer-contact .email-link:hover {
+                    color: var(--gold-light) !important;
+                    transform: translateX(5px);
+                    transition: all 0.3s ease;
+                }
+                
+                .team .icon-item[data-email]:hover i,
+                .email-link:hover i,
+                .footer-contact .email-link:hover i {
+                    color: var(--gold-light) !important;
+                }
+                
+                .team .icon-item[data-email]:hover span,
+                .email-link:hover span,
+                .footer-contact .email-link:hover span {
+                    color: var(--gold-light) !important;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Phone number functionality
+            document.querySelectorAll('.team .icon-item[data-phone]').forEach(phoneItem => {
+                phoneItem.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const phone = this.getAttribute('data-phone');
+                    if (phone) {
+                        // Remove spaces and special characters for tel link
+                        const cleanPhone = phone.replace(/\s+/g, '').replace(/[^0-9+]/g, '');
+                        window.location.href = `tel:${cleanPhone}`;
+                    }
+                });
+                
+                // Add hover effect
+                phoneItem.style.cursor = 'pointer';
+                phoneItem.title = 'Klicken Sie, um anzurufen';
+            });
         });
     </script>
 </body>
